@@ -1,0 +1,347 @@
+record(ao,"TEST-FCT0-HWCF:B-4-Mode") {
+    field(DESC,"DataGenerator mode")
+    field(DTYP,"asynInt32")
+    field(SCAN,"Passive")
+    field(OUT,"@asyn(B-4,0)Mode")
+    field(PREC,"0")
+    field(DRVL,"0")
+    field(DRVH,"1")
+    field(VAL,"1")  # default to NeutronProfile
+}
+
+record(bo,"TEST-FCT0-HWCF:B-4-Publish") {
+    field(DESC,"Publish all temperatures once")
+    field(DTYP,"asynInt32")
+    field(SCAN,"Passive")
+    field(OUT,"@asyn(B-4,0)Publish")
+    field(ZNAM,"IDLE")
+    field(ONAM,"PUBLISH")
+}
+
+record(waveform,"NuclearProfile"){
+    field(DESC,"Nuclear Profile")
+    field(DTYP,"asynFloat32ArrayIn")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)NuclearProfile")
+    field(FTVL, "FLOAT")
+    field(NELM,"920")
+}
+record(ai,"PlasmaParameter"){
+    field(DESC,"Plasma Parameter")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)PlasmaParameter")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature00"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature00")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature01"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature01")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature02"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature02")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature03"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature03")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature04"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature04")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature05"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature05")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature06"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature06")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature07"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature07")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature08"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature08")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature09"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature09")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature10"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature10")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature11"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature11")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature12"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature12")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature13"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature13")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature14"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature14")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature15"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature15")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature16"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature16")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature17"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature17")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature18"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature18")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature19"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature19")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature20"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature20")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature21"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature21")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature22"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature22")
+}
+record(ai,"TEST-FCT0-HWCF:B-4-Temperature23"){
+    field(DESC,"Device Temperature")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"Passive")
+    field(PINI,"YES")
+    field(INP,"@asyn(B-4,0)Temperature23")
+}
+# Detector Module Number
+record(ai,"TEST-FCT0-HWCF:B-3-Detector24"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector24")
+}
+record(ai,"TEST-FCT0-HWCF:B-3-Detector25"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector25")
+}
+record(ai,"TEST-FCT0-HWCF:B-3-Detector26"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector26")
+}
+record(ai,"TEST-FCT0-HWCF:B-3-Detector27"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector27")
+}
+record(ai,"TEST-FCT0-HWCF:B-3-Detector28"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector28")
+}
+record(ai,"TEST-FCT0-HWCF:B-3-Detector29"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector29")
+}
+record(ai,"TEST-FCT0-HWCF:B-3-Detector30"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector30")
+}
+record(ai,"TEST-FCT0-HWCF:B-3-Detector31"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector31")
+}
+record(ai,"TEST-FCT0-HWCF:B-3-Detector32"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector32")
+}
+record(ai,"TEST-FCT0-HWCF:B-3-Detector33"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector33")
+}
+record(ai,"TEST-FCT0-HWCF:B-3-Detector34"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector34")
+}
+record(ai,"TEST-FCT0-HWCF:B-3-Detector35"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector35")
+}
+record(ai,"TEST-FCT0-HWCF:B-3-Detector36"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector36")
+}
+record(ai,"TEST-FCT0-HWCF:B-3-Detector37"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector37")
+}
+record(ai,"TEST-FCT0-HWCF:B-3-Detector38"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector38")
+}
+record(ai,"TEST-FCT0-HWCF:B-3-Detector39"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector39")
+}
+record(ai,"TEST-FCT0-HWCF:B-3-Detector40"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector40")
+}
+record(ai,"TEST-FCT0-HWCF:B-3-Detector41"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector41")
+}
+record(ai,"TEST-FCT0-HWCF:B-3-Detector42"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector42")
+}
+record(ai,"TEST-FCT0-HWCF:B-3-Detector43"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector43")
+}
+record(ai,"TEST-FCT0-HWCF:B-3-Detector44"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector44")
+}
+record(ai,"TEST-FCT0-HWCF:B-3-Detector45"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector45")
+}
+record(ai,"TEST-FCT0-HWCF:B-3-Detector46"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector46")
+}
+record(ai,"TEST-FCT0-HWCF:B-3-Detector47"){
+    field(DESC,"Detector Number")
+    field(DTYP,"asynFloat64")
+    field(SCAN,"1 second")
+    field(INP,"@asyn(B-3,0)Detector47")
+}

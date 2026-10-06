@@ -1,0 +1,54 @@
+include "nds-dan_NDSDAN.template"
+
+record(ao, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(DAN_NAME)-MaxAcquisitionTime") {
+    field(DESC, "Maximum acquisition time")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-MaxAcquisitionTime")
+}
+
+record(ai, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(DAN_NAME)-MaxAcquisitionTime_RBV") {
+    field(DESC, "Readback value of Maximum ACQ time")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-MaxAcquisitionTime_RBV")    
+    field(PINI, "YES")
+}
+
+record(longout, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(DAN_NAME)-NumberOfBlocks") {
+    field(DESC, "Number of data blocs in DAN buffer")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-NumberOfBlocks")
+}
+
+record(longin, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(DAN_NAME)-NumberOfBlocks_RBV") {
+    field(DESC, "Readback number of blocks in DAN buffer")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-NumberOfBlocks_RBV")
+    field(PINI, "YES")
+}
+
+record(ao, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(DAN_NAME)-TimeBetweenBlocks") {
+    field(DESC, "Time between consecutive data blocks")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-TimeBetweenBlocks")
+}
+
+record(ai, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(DAN_NAME)-TimeBetweenBlocks_RBV") {
+    field(DESC, "Readback value of time between blocks")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-TimeBetweenBlocks_RBV")
+    field(PINI, "YES")
+}
+
+
+record(ai, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-SamplesCounter") {
+    field(DESC, "")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)SamplesCounter")
+}

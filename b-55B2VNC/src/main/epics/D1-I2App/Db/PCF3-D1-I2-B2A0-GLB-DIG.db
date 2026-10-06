@@ -1,0 +1,10 @@
+record (ai,"D1-I2-B2A0-GLB-DIG:ID-CO-ST-0000-STREPNNPEN")
+{
+	field(DESC, "Connection status with In Vessel Neutron")
+}
+
+record (ai,"D1-I2-B2A0-GLB-DIG:NE-CO-ST-0000-STREPNNPEN")
+{
+	field(DESC, "55NEX0 System Status")
+}
+

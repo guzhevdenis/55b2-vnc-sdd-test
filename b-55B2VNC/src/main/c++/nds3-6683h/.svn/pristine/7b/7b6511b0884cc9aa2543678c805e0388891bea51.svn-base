@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $HeadURL: https://svnpub.iter.org/codac/iter/codac/dev/units/m-epics-nisync/trunk/src/main/sdd/TemplateNISyncDeviceInfo.xml 
+	$ $Id: TemplateNISyncDeviceInfo.xml 75653 2017-02-24 12:58:54Z cesnikt $ Project 
+	: CODAC Core System Description : NI Sync support template: device info Source: 
+	https://svnpub.iter.org/codac/iter/codac/dev/units/m-epics-nisync/branches/codac-core-4.1/src/main/epics/nisyncApp/Db/nisync_device_info.template, 
+	r38522 Author : D.Stepanov Copyright (c) : 2010-2018 ITER Organization, CS 
+	90 046 13067 St. Paul-lez-Durance Cedex France This file is part of ITER 
+	CODAC software. For the terms and conditions of redistribution or use of 
+	this software refer to the file ITER-LICENSE.TXT located in the top level 
+	directory of the distribution package. -->
+<template name="nds-nisync-Firmware" description="template for firmware"
+        version="600" required="true" usesSubstitutionFiles="true"
+	userCanInstanciate="true" xmlns="http://www.iter.org/CODAC/PlantSystemIandC/2014-2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.iter.org/CODAC/PlantSystemIandC/2014-2 ../xsd/PlantSystemIandC.xsd">
+	<applicableToControlUnit>PCF</applicableToControlUnit>
+	<applicableToIOBoard>NI PXI-6683H-NDS</applicableToIOBoard>
+	<location>nisync_Firmware.template</location>
+	<EPICSDBDName>nds3-epics.dbd</EPICSDBDName>
+	<EPICSLibraryName>nds3-epics</EPICSLibraryName>
+	<!--<variableTemplate name="HWCF:FW-CHASSISNUMBER">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-ChassisNumber"
+				type="longin">
+				<EPICSField name="DESC" value="Chassis Number" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)$(FIRMWARE_NAME)-ChassisNumber" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate> -->
+	<variableTemplate name="HWCF:FW-DRIVER">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-DriverVersion"
+				type="waveform">
+				<EPICSField name="DESC" value="Driver Version" />
+				<EPICSField name="DTYP" value="asynInt8ArrayIn" />
+				<EPICSField name="FTVL" value="CHAR" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="NELM" value="255" />
+				<EPICSField name="INP"	value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FIRMWARE_NAME)-DriverVersion" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+	<!--<variableTemplate name="HWCF:FW-Filepath">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-FilePath"
+				type="waveform">
+				<EPICSField name="DESC" value="Path to the firmware to load" />
+				<EPICSField name="DTYP" value="asynInt8ArraOut" />
+				<EPICSField name="FTVL" value="CHAR" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)$(FIRMWARE_NAME)-FilePath" />
+				<EPICSField name="SCAN" value="Passive" />
+				<EPICSField name="NELM" value="255" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+	<variableTemplate name="HWCF:FW-Filepath_RBV">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-FilePath_RBV"
+				type="waveform">
+				<EPICSField name="DESC" value="Readback PV of the firmware file" />
+				<EPICSField name="DTYP" value="asynInt8ArraIn" />
+				<EPICSField name="FTVL" value="CHAR" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)$(FIRMWARE_NAME)-FilePath" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="NELM" value="255" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate> -->
+
+	<variableTemplate name="HWCF:FW-HWRevision">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-HWRevision"
+				type="waveform">
+				<EPICSField name="DESC" value="Hardware revision" />
+				<EPICSField name="DTYP" value="asynInt8ArrayIn" />
+				<EPICSField name="FTVL" value="CHAR" />
+				<EPICSField name="NELM" value="255" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="INP"	value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FIRMWARE_NAME)-HWRevision" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate> 
+	
+	<variableTemplate name="HWCF:FW-SerialNumber">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-SerialNumber"
+				type="waveform">
+				<EPICSField name="DESC" value="Serial Number" />
+				<EPICSField name="DTYP" value="asynInt8ArrayIn" />
+				<EPICSField name="FTVL" value="CHAR" />
+				<EPICSField name="NELM" value="255" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="INP"	value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FIRMWARE_NAME)-Model" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+	<variableTemplate name="HWCF:FW-Model">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-Model"
+				type="waveform">
+				<EPICSField name="DESC" value="Device Model" />
+				<EPICSField name="DTYP" value="asynInt8ArrayIn" />
+				<EPICSField name="FTVL" value="CHAR" />
+				<EPICSField name="NELM" value="255" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="INP"	value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FIRMWARE_NAME)-Model" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+	
+	<variableTemplate name="HWCF:FW-Type">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-Type"
+				type="waveform">
+				<EPICSField name="DESC" value="Device Type" />
+				<EPICSField name="DTYP" value="asynInt8ArrayIn" />
+				<EPICSField name="FTVL" value="CHAR" />
+				<EPICSField name="NELM" value="255" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="INP"	value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FIRMWARE_NAME)-Type" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+	
+<!--<variableTemplate name="HWCF:FW-SlotNumber">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-SlotNumber"
+				type="waveform">
+				<EPICSField name="DESC" value="Slot Number" />
+				<EPICSField name="DTYP" value="asynInt8ArraIn" />
+				<EPICSField name="FTVL" value="CHAR" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)$(FIRMWARE_NAME)-SlotNumber" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="NELM" value="255" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate> -->
+	
+
+	<variableTemplate name="HWCF:FW-STM-STATUS">
+		<direction>state</direction>
+		<external>true</external>
+		<raisesAlarm>true</raisesAlarm>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-Status"
+				type="mbbi">
+				<EPICSField name="DESC" value="Firmware status" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="INP"	value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FIRMWARE_NAME)-Status" />
+				<EPICSField name="ZRVL" value="0" />
+				<EPICSField name="ZRST" value="OK" />
+				<EPICSField name="ZRSV" value="NO_ALARM" />		
+				<EPICSField name="ONVL" value="1" />
+				<EPICSField name="ONST" value="INITIALIZING" />		
+				<EPICSField name="TWVL" value="2" />
+				<EPICSField name="TWST" value="RESETTING" />		
+				<EPICSField name="THVL" value="3" />
+				<EPICSField name="THST" value="HW_ERROR" />
+				<EPICSField name="THSV" value="MAJOR" />		
+				<EPICSField name="FRVL" value="4" />
+				<EPICSField name="FRST" value="UNAVAILABLE" />
+				<EPICSField name="FRSV" value="MAJOR" />		
+				<EPICSField name="FVVL" value="5" />
+				<EPICSField name="FVST" value="STATIC_CONF_ERROR" />
+				<EPICSField name="FVSV" value="MAJOR" />		
+				<EPICSField name="SXVL" value="6" />
+				<EPICSField name="SXST" value="DYNAMIC_CONF_ERROR" />
+				<EPICSField name="SXSV" value="MAJOR" />		
+				<EPICSField name="SVVL" value="7" />
+				<EPICSField name="SVST" value="RESERVED" />
+				<EPICSField name="EIVL" value="8" />				
+				<EPICSField name="EIST" value="HW_FIFO_OVERFLOW" />
+				<EPICSField name="EISV" value="MINOR" />
+				<EPICSField name="NIVL" value="9" />				
+				<EPICSField name="NIST" value="HW_FPGA_NOT_READY" />
+				<EPICSField name="NISV" value="MINOR" />
+				<EPICSField name="TEVL" value="10" />				
+				<EPICSField name="TEST" value="HW_CLK_NOT_LOCKED" />
+				<EPICSField name="TESV" value="MINOR" />
+				<EPICSField name="ELVL" value="11" />				
+				<EPICSField name="ELST" value="DRV_BUFFER_OVERFLOW" />
+				<EPICSField name="ELSV" value="MAJOR" />				
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>	
+
+<!-- <variableTemplate name="HWCF:FW-Version">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-Version"
+				type="waveform">
+				<EPICSField name="DESC" value="Firmware version" />
+				<EPICSField name="DTYP" value="asynInt8ArrayIn" />
+				<EPICSField name="FTVL" value="CHAR" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FIRMWARE_NAME)-Version" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="NELM" value="255" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate> -->
+	
+	<variableTemplate name="HWCF:FW-STM-STATE">
+		<direction>state</direction>
+		<external>true</external>
+		<raisesAlarm>true</raisesAlarm>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-STM-getState"
+				type="mbbi">
+				<EPICSField name="DESC" value="Get Local State" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="INP"	value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FIRMWARE_NAME)-StateMachine-getState" />
+				<EPICSField name="ZRVL" value="0" />
+				<EPICSField name="ZRST" value="UNKNOWN" />
+				<EPICSField name="ZRSV" value="MINOR" />		
+				<EPICSField name="ONVL" value="1" />
+				<EPICSField name="ONST" value="OFF" />		
+				<EPICSField name="TWVL" value="2" />
+				<EPICSField name="TWST" value="SWITCHING_OFF" />		
+				<EPICSField name="THVL" value="3" />
+				<EPICSField name="THST" value="INITIALIZING" />		
+				<EPICSField name="FRVL" value="4" />
+				<EPICSField name="FRST" value="ON" />		
+				<EPICSField name="FVVL" value="5" />
+				<EPICSField name="FVST" value="STOPPING" />		
+				<EPICSField name="SXVL" value="6" />
+				<EPICSField name="SXST" value="STARTING" />		
+				<EPICSField name="SVVL" value="7" />
+				<EPICSField name="SVST" value="RUNNING" />
+				<EPICSField name="EIVL" value="8" />				
+				<EPICSField name="EIST" value="FAULT" />
+				<EPICSField name="EISV" value="MAJOR" />
+				<EPICSField name="PINI" value="1" />				
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>	
+
+	<variableTemplate name="HWCF:FW-STM-SETSTATE">
+		<direction>configuration</direction>
+		<external>true</external>
+		<raisesAlarm>true</raisesAlarm>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-STM-setState"
+				type="mbbo">
+				<EPICSField name="DESC" value="Set Local State" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="SCAN" value="Passive" />
+				<EPICSField name="OUT"	value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FIRMWARE_NAME)-StateMachine-setState" />
+				<EPICSField name="ONVL" value="1" />
+				<EPICSField name="ONST" value="OFF" />		
+				<EPICSField name="FRVL" value="4" />
+				<EPICSField name="FRST" value="ON" />			
+				<EPICSField name="SVVL" value="7" />				
+				<EPICSField name="SVST" value="RUNNING" />
+				<EPICSField name="PINI" value="1" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+	
+	<macroGroup ID="USER">
+		 <macro name="BOARDTYPE" description="Board type" value="6683H"/> <!--Please never add an space in this value-->
+     		<macro name="FIRMWARE_NAME" description="Firmware NDS Node Name" value="Firm"/>
+		
+        </macroGroup>
+	
+</template>

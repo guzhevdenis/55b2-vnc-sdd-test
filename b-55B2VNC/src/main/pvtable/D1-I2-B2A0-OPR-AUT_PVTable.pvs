@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+
+ <pvtable version="3.0" >
+     <nbMeasure >1</nbMeasure>
+
+     <pvlist >
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:AS-CR-00-0000-CORWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:AS-CS-00-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:AS-PR-00-0000-CORWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:CD-CN-CN-0000-CDREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:CD-CO-AE-0000-CDREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:CD-CO-CA-0000-CDREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:CD-CO-CP-0000-CDREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:CD-CO-FO-0000-CDREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:CD-CO-GS-0000-CDREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:CD-CO-LR-0000-CDREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:CD-CO-SC-0000-CDREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:CD-CO-SM-0000-CDREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:CD-CO-TP-0000-CDREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:CD-PC-NE-0000-CDREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:CD-PS-AA-0000-CDREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:CD-PS-CD-0000-CDREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:CD-PS-ER-0000-CDREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:CD-PS-IC-0000-CDREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:CD-PS-IR-0000-CDREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:CD-PS-PO-0000-CDREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:CD-PS-PP-0000-CDREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:CD-PS-SA-0000-CDREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:CD-PS-SH-0000-CDREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-AUT:CD-PS-SS-0000-CDREPNNPVL</name>
+</pv>
+</pvlist>
+</pvtable>

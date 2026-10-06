@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $HeadURL: https://svnpub.iter.org/codac/iter/codac/dev/units/m-epics-nisync/trunk/src/main/sdd/TemplateNISyncDeviceInfo.xml 
+	$ $Id: TemplateNISyncDeviceInfo.xml 75653 2017-02-24 12:58:54Z cesnikt $ Project 
+	: CODAC Core System Description : NI Sync support template: device info Source: 
+	https://svnpub.iter.org/codac/iter/codac/dev/units/m-epics-nisync/branches/codac-core-4.1/src/main/epics/nisyncApp/Db/nisync_device_info.template, 
+	r38522 Author : D.Stepanov Copyright (c) : 2010-2018 ITER Organization, CS 
+	90 046 13067 St. Paul-lez-Durance Cedex France This file is part of ITER 
+	CODAC software. For the terms and conditions of redistribution or use of 
+	this software refer to the file ITER-LICENSE.TXT located in the top level 
+	directory of the distribution package. -->
+<template name="nds-nisync-FTE" description="template for FTE"
+        version="600" required="true" usesSubstitutionFiles="true"
+	userCanInstanciate="true" xmlns="http://www.iter.org/CODAC/PlantSystemIandC/2014-2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.iter.org/CODAC/PlantSystemIandC/2014-2 ../xsd/PlantSystemIandC.xsd">
+	<applicableToControlUnit>PCF</applicableToControlUnit>
+	<applicableToIOBoard>NI PXI-6683H-NDS</applicableToIOBoard>
+	<location>nisync_FTE.template</location>
+	<EPICSDBDName>nds3-epics.dbd</EPICSDBDName>
+	<EPICSLibraryName>nds3-epics</EPICSLibraryName>
+
+<!--PVs for Future Time Event generation -->
+
+	<variableTemplate name="HWCF:FTE-TERMINALSET">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-TerminalSet"
+				type="longout">
+				<EPICSField name="DESC" value="Terminal to Set FTE" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-TerminalSet" />
+				<EPICSField name="SCAN" value="Passive" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+	
+	<variableTemplate name="HWCF:FTE-MODESET">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-ModeSet"
+				type="mbbo">
+				<EPICSField name="DESC" value="Mode (Single,Pulse,Clk,InmLVL)" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-ModeSet" />
+				<EPICSField name="SCAN" value="Passive" />
+				
+				<EPICSField name="ZRVL" value="0" />		
+				<EPICSField name="ONVL" value="1" />		
+				<EPICSField name="TWVL" value="2" />		
+				<EPICSField name="THVL" value="3" />		
+				
+				<EPICSField name="ZRST" value="SINGLE" />
+				<EPICSField name="ONST" value="PULSE" />
+				<EPICSField name="TWST" value="CLK" />
+				<EPICSField name="THST" value="inmLVL" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+
+	<variableTemplate name="HWCF:FTE-STARTTIMESET">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-StartTimeSet"
+				type="waveform">
+				<EPICSField name="DESC" value="Start Time of FTE" />
+				<EPICSField name="DTYP" value="asynInt32ArrayOut" />
+				<EPICSField name="FTVL" value="LONG" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-StartTimeSet" />
+				<EPICSField name="SCAN" value="Passive" />
+				<EPICSField name="NELM" value="2" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+
+	<variableTemplate name="HWCF:FTE-STOPTTIMESET">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-StopTimeSet"
+				type="waveform">
+				<EPICSField name="DESC" value="Stop Time of FTE" />
+				<EPICSField name="DTYP" value="asynInt32ArrayOut" />
+				<EPICSField name="FTVL" value="LONG" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-StopTimeSet" />
+				<EPICSField name="SCAN" value="Passive" />
+				<EPICSField name="NELM" value="2" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+	<variableTemplate name="HWCF:FTE-LEVELSET">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-LevelSet"
+				type="bo">
+				<EPICSField name="DESC" value="Signal Level of FTE" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-LevelSet" />
+				<EPICSField name="SCAN" value="Passive" />
+				<EPICSField name="ZNAM" value="LOW" />		
+				<EPICSField name="ONAM" value="HIGH" />
+
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+
+	<variableTemplate name="HWCF:FTE-PERIODNSECSET">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-DutyCycleSet"
+				type="longout">
+				<EPICSField name="DESC" value="Duty Cycle in ns" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-DutyCycleSet" />
+				<EPICSField name="SCAN" value="Passive" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+
+	<variableTemplate name="HWCF:FTE-DUTYCYCLESET">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-PeriodNsecSet"
+				type="longout">
+				<EPICSField name="DESC" value="Period in Nanoseconds" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-PeriodNsecSet" />
+				<EPICSField name="SCAN" value="Passive" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+
+	<variableTemplate name="HWCF:FTE-SETCODE">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-SetCode"
+				type="mbbi">
+				<EPICSField name="DESC" value="Success-error setting FTE configuration" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-SetCode" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="ZRVL" value="0" />		
+				<EPICSField name="ONVL" value="1" />		
+				<EPICSField name="FFVL" value="15" />		
+
+
+				<EPICSField name="ZRST" value="OK" />
+				<EPICSField name="ONST" value="WARNING" />
+				<EPICSField name="FFST" value="ERROR" />
+
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+
+
+	<variableTemplate name="HWCF:FTE-SETSTATUS">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-SetStatus"
+				type="waveform">
+				<EPICSField name="DESC" value="Report on FTE Configuration" />
+				<EPICSField name="DTYP" value="asynInt8ArrayIn" />
+				<EPICSField name="FTVL" value="CHAR" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-SetStatus" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="NELM" value="255" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+
+<!--Supressing a FTEn -->
+	<variableTemplate name="HWCF:FTE-TERMINALSUPPRESS">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-TerminalSuppress"
+				type="longout">
+				<EPICSField name="DESC" value="Terminal to suppress FTE" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-TerminalSuppress" />
+				<EPICSField name="SCAN" value="Passive" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+	
+	
+	<variableTemplate name="HWCF:FTE-STARTTIMESUPPRESS">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-StartTimeSuppress"
+				type="waveform">
+				<EPICSField name="DESC" value="Start Time on FTE Suppression" />
+				<EPICSField name="DTYP" value="asynInt32ArrayOut" />
+				<EPICSField name="FTVL" value="LONG" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-StartTimeSuppress" />
+				<EPICSField name="SCAN" value="Passive" />
+				<EPICSField name="NELM" value="2" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+	<variableTemplate name="HWCF:FTE-MODESUPPRESS">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-ModeSuppress"
+				type="bo">
+				<EPICSField name="DESC" value="Mode of Suppress FTE/CLOCK" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-ModeSuppress" />
+				<EPICSField name="SCAN" value="Passive" />
+				<EPICSField name="ZNAM" value="FTE" />		
+				<EPICSField name="ONAM" value="CLK" />
+
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+
+	<variableTemplate name="HWCF:FTE-ALLSUPRESS">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-AllSuppress"
+				type="bo">
+				<EPICSField name="DESC" value="Supress one or Suppress all FTEs" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-AllSuppress" />
+				<EPICSField name="SCAN" value="Passive" />
+				<EPICSField name="ZNAM" value="OFF" />		
+				<EPICSField name="ONAM" value="ON" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+	<variableTemplate name="HWCF:FTE-SUPPRESS">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-Suppress"
+				type="bo">
+				<EPICSField name="DESC" value="Supress" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-Suppress" />
+				<EPICSField name="SCAN" value="Passive" />
+				<EPICSField name="ZNAM" value="OFF" />		
+				<EPICSField name="ONAM" value="ON" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+	
+
+
+	<variableTemplate name="HWCF:FTE-SUPPRESSCODE">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-SuppressCode"
+				type="mbbi">
+				<EPICSField name="DESC" value="Success-error on FTE suppression" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-SuppressCode" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="ZRVL" value="0" />		
+				<EPICSField name="ONVL" value="1" />		
+				<EPICSField name="FFVL" value="15" />		
+
+				<EPICSField name="ZRST" value="OK" />
+				<EPICSField name="ONST" value="WARNING" />
+				<EPICSField name="FFST" value="ERROR" />
+
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+
+
+	<variableTemplate name="HWCF:FTE-SUPPESSSTATUS">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-SuppressStatus"
+				type="waveform">
+				<EPICSField name="DESC" value="Report on FTE Suppression" />
+				<EPICSField name="DTYP" value="asynInt8ArrayIn" />
+				<EPICSField name="FTVL" value="CHAR" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-SuppressStatus" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="NELM" value="255" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+<!--Change Period of schedule clock generation -->
+
+	<variableTemplate name="HWCF:FTE-TERMINALCHGPERIOD">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-TerminalChgPeriod"
+				type="longout">
+				<EPICSField name="DESC" value="Terminal to change the period on FTE" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-TerminalChgPeriod" />
+				<EPICSField name="SCAN" value="Passive" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+	
+	<variableTemplate name="HWCF:FTE-PERIODCHGPERIOD">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-PeriodChgPeriod"
+				type="longout">
+				<EPICSField name="DESC" value="Period in nanoseconds to change the FTE" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-PeriodChgPeriod" />
+				<EPICSField name="SCAN" value="Passive" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+
+	<variableTemplate name="HWCF:FTE-CHGPERIOD">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-ChgPeriod"
+				type="bo">
+				<EPICSField name="DESC" value="Change Period" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-ChgPeriod" />
+				<EPICSField name="SCAN" value="Passive" />
+				<EPICSField name="ZNAM" value="0" />		
+				<EPICSField name="ONAM" value="1" />
+
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+	
+	<variableTemplate name="HWCF:FTE-CHGPERIODCODE">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-ChgPeriodCode"
+				type="mbbi">
+				<EPICSField name="DESC" value="Success-error changing Clock Period" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-ChgPeriodCode" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="ZRVL" value="0" />		
+				<EPICSField name="ONVL" value="1" />		
+				<EPICSField name="FFVL" value="15" />		
+
+				<EPICSField name="ZRST" value="OK" />
+				<EPICSField name="ONST" value="WARNING" />
+				<EPICSField name="FFST" value="ERROR" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+
+
+	<variableTemplate name="HWCF:FTE-CHGPERIODSTATUS">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-ChgPeriodStatus"
+				type="waveform">
+				<EPICSField name="DESC" value="Report on FTE clock period change" />
+				<EPICSField name="DTYP" value="asynInt8ArrayIn" />
+				<EPICSField name="FTVL" value="CHAR" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-ChgPeriodStatus" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="NELM" value="255" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+<!--Status of pending FTEs -->
+
+
+	<variableTemplate name="HWCF:FTE-TERMINALPENDING">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-TerminalPending"
+				type="longout">
+				<EPICSField name="DESC" value="Terminal Pending" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-TerminalPending" />
+				<EPICSField name="SCAN" value="Passive" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+	
+	<variableTemplate name="HWCF:FTE-PENDINGVALUE">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-PendingValue"
+				type="longin">
+				<EPICSField name="DESC" value="Pending FTEs in the terminal" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-PendingValue" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate> 
+
+
+	
+
+	
+	<variableTemplate name="HWCF:FTE-PENDINGCODE">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-PendingCode"
+				type="mbbi">
+				<EPICSField name="DESC" value="Success-error on getting pending FTEs" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-PendingCode" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="ZRVL" value="0" />		
+				<EPICSField name="ONVL" value="1" />		
+				<EPICSField name="FFVL" value="15" />		
+
+				<EPICSField name="ZRST" value="OK" />
+				<EPICSField name="ONST" value="WARNING" />
+				<EPICSField name="FFST" value="ERROR" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+
+
+	<variableTemplate name="HWCF:FTE-PENDINGSTATUS">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-PendingStatus"
+				type="waveform">
+				<EPICSField name="DESC" value="Report on FTE clgetting pending FTEs" />
+				<EPICSField name="DTYP" value="asynInt8ArrayIn" />
+				<EPICSField name="FTVL" value="CHAR" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-PendingStatus" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="NELM" value="255" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+<!--Maximum number of FTEs that can be scheduled -->
+
+<variableTemplate name="HWCF:FTE-MAXIMUM">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-Maximum"
+				type="longin">
+				<EPICSField name="DESC" value="Maximum FTEs" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-Maximum" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+<!--State machine -->
+
+
+
+	
+	<variableTemplate name="HWCF:FTE-STM-GLOBALSTATE">
+		<direction>state</direction>
+		<external>true</external>
+		<raisesAlarm>true</raisesAlarm>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-STM-getGlobalState"
+				type="mbbi">
+				<EPICSField name="DESC" value="GET GLOBAL STATE" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="INP"
+				value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)StateMachine-getGlobalState" />
+				
+				<EPICSField name="ZRVL" value="0" />		
+				<EPICSField name="ONVL" value="1" />		
+				<EPICSField name="TWVL" value="2" />		
+				<EPICSField name="THVL" value="3" />		
+				<EPICSField name="FRVL" value="4" />		
+				<EPICSField name="FVVL" value="5" />		
+				<EPICSField name="SXVL" value="6" />		
+				<EPICSField name="SVVL" value="7" />	
+				<EPICSField name="EIVL" value="8" />		
+
+
+				<EPICSField name="ZRST" value="UNKNOWN" />
+				<EPICSField name="ONST" value="OFF" />
+				<EPICSField name="TWST" value="SWITCHING_OFF" />
+				<EPICSField name="THST" value="INITIALIZING" />
+				<EPICSField name="FRST" value="ON" />
+				<EPICSField name="FVST" value="STOPPING" />
+				<EPICSField name="SXST" value="STARTING" />
+				<EPICSField name="SVST" value="RUNNING" />
+				<EPICSField name="EIST" value="FAULT" />
+				<EPICSField name="SCAN" value="Passive" />
+				<EPICSField name="PINI" value="1" />				
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+	<variableTemplate name="HWCF:FTE-STM-STATE">
+		<direction>state</direction>
+		<external>true</external>
+		<raisesAlarm>true</raisesAlarm>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-STM-getState"
+				type="mbbi">
+				<EPICSField name="DESC" value="Get Local State" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-StateMachine-getState" />
+				<EPICSField name="ZRVL" value="0" />		
+				<EPICSField name="ONVL" value="1" />		
+				<EPICSField name="TWVL" value="2" />		
+				<EPICSField name="THVL" value="3" />		
+				<EPICSField name="FRVL" value="4" />		
+				<EPICSField name="FVVL" value="5" />		
+				<EPICSField name="SXVL" value="6" />		
+				<EPICSField name="SVVL" value="7" />
+				<EPICSField name="EIVL" value="8" />
+				<EPICSField name="ZRST" value="UNKNOWN" />
+				<EPICSField name="ONST" value="OFF" />
+				<EPICSField name="TWST" value="SWITCHING_OFF" />
+				<EPICSField name="THST" value="INITIALIZING" />
+				<EPICSField name="FRST" value="ON" />
+				<EPICSField name="FVST" value="STOPPING" />
+				<EPICSField name="SXST" value="STARTING" />
+				<EPICSField name="SVST" value="RUNNING" />
+				<EPICSField name="EIST" value="FAULT" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="PINI" value="1" />				
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>	
+
+	<variableTemplate name="HWCF:FTE-STM-SETSTATE">
+		<direction>state</direction>
+		<external>true</external>
+		<raisesAlarm>true</raisesAlarm>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FTE_NAME)-STM-setState"
+				type="mbbo">
+				<EPICSField name="DESC" value="Set Local State" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(FTE_NAME)-StateMachine-setState" />
+				<EPICSField name="ZRVL" value="0" />		
+				<EPICSField name="ONVL" value="1" />		
+				<EPICSField name="TWVL" value="2" />		
+				<EPICSField name="THVL" value="3" />		
+				<EPICSField name="FRVL" value="4" />		
+				<EPICSField name="FVVL" value="5" />		
+				<EPICSField name="SXVL" value="6" />		
+				<EPICSField name="SVVL" value="7" />
+				<EPICSField name="EIVL" value="8" />
+
+				<EPICSField name="ZRST" value="UNKNOWN" />
+				<EPICSField name="ONST" value="OFF" />
+				<EPICSField name="TWST" value="SWITCHING_OFF" />
+				<EPICSField name="THST" value="INITIALIZING" />
+				<EPICSField name="FRST" value="ON" />
+				<EPICSField name="FVST" value="STOPPING" />
+				<EPICSField name="SXST" value="STARTING" />
+				<EPICSField name="SVST" value="RUNNING" />
+				<EPICSField name="EIST" value="FAULTS" />
+				<EPICSField name="SCAN" value="Passive" />
+								
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+	<macroGroup ID="USER">
+		 <macro name="BOARDTYPE" description="Board type" value="NI-PXI-6683H-NDS"/>
+     		<macro name="FTE_NAME" description="Future Time Event NDS Node Name" value="FTE"/>
+		
+        </macroGroup>
+	
+</template>

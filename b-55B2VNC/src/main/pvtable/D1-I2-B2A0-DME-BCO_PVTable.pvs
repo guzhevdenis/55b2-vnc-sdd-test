@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+
+ <pvtable version="3.0" >
+     <nbMeasure >1</nbMeasure>
+
+     <pvlist >
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-BCO:BR-FP-ER-0000-ERREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-BCO:BR-FP-ME-0000-MPREPNPWVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-BCO:BR-FP-QT-0000-QTREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-BCO:BR-FP-TS-0000-TMREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-BCO:BR-FR-ER-0000-ERREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-BCO:BR-FR-ME-0000-MPREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-BCO:BR-FR-QT-0000-QTREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-BCO:BR-FR-TS-0000-TMREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-BCO:PR-PD-ER-0000-ERREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-BCO:PR-PD-ME-0000-MPREPNPWBF</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-BCO:PR-PD-QT-0000-QTREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-BCO:PR-PD-TS-0000-TMREPNNPVL</name>
+</pv>
+</pvlist>
+</pvtable>

@@ -1,0 +1,40 @@
+record (ai,"D1-I2-B2A0-DPC-MON:D1-DP-ST-0000-STRWPNNPEN")
+{
+	field(DESC, "Stream state status of diamond detector")
+}
+
+record (ai,"D1-I2-B2A0-DPC-MON:D1-FP-SR-0000-STRWPNNPEN")
+{
+	field(DESC, "Stream state for fission chamber signal")
+}
+
+record (ai,"D1-I2-B2A0-DPC-MON:D2-DP-ST-0000-STRWPNNPEN")
+{
+	field(DESC, "Stream state status of diamond detector")
+}
+
+record (ai,"D1-I2-B2A0-DPC-MON:D2-FP-SR-0000-STRWPNNPEN")
+{
+	field(DESC, "Stream state for fission chamber signal")
+}
+
+record (ai,"D1-I2-B2A0-DPC-MON:D3-DP-ST-0000-STRWPNNPEN")
+{
+	field(DESC, "Stream state status of diamond detector")
+}
+
+record (ai,"D1-I2-B2A0-DPC-MON:D3-FP-SR-0000-STRWPNNPEN")
+{
+	field(DESC, "Stream state for fission chamber signal")
+}
+
+record (ai,"D1-I2-B2A0-DPC-MON:D4-DP-ST-0000-STRWPNNPEN")
+{
+	field(DESC, "Stream state status of diamond detector")
+}
+
+record (ai,"D1-I2-B2A0-DPC-MON:D4-FP-SR-0000-STRWPNNPEN")
+{
+	field(DESC, "Stream state for fission chamber signal")
+}
+

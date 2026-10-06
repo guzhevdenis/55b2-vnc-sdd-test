@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+ <pvtable version="3.0" >
+     <nbMeasure >1</nbMeasure>
+
+     <pvlist >
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-MPC:BR-TF-ER-0000-ERREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-MPC:BR-TF-ME-0000-MPREPNPWVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-MPC:BR-TF-QT-0000-QTREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-MPC:BR-TF-TS-0000-TMREPNNPVL</name>
+</pv>
+</pvlist>
+</pvtable>

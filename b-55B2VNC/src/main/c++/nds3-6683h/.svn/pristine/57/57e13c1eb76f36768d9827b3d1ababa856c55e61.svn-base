@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ $HeadURL: https://svnpub.iter.org/codac/iter/codac/dev/units/m-epics-nisync/trunk/src/main/sdd/EPICSNISync.xml $
+ $Id: EPICSNISync.xml 83098 2018-01-08 13:23:38Z cesnikt $
+
+ Project       : CODAC Data Management
+
+ Description   : EPICS device support for NI timing boards
+		 The information is taken from the following sources:
+		 - NI Sync EPICS Driver User's Guide (33Q5TX v2.2, 07 Dec 2012)
+		 - (for asyn functions) https://svnpub.iter.org/codac/iter/codac/dev/units/m-epics-nisync/branches/codac-core-4.0/src/main/epics/nisyncApp/src/nisync-support.c, r33239
+		 - 2PLQ4P v1.14 (Linux driver)
+
+ Author        : D.Stepanov
+
+ Copyright (c) : 2010-2018 ITER Organization,
+                 CS 90 046
+                 13067 St. Paul-lez-Durance Cedex
+                 France
+
+ This file is part of ITER CODAC software.
+ For the terms and conditions of redistribution or use of this software
+ refer to the file ITER-LICENSE.TXT located in the top level directory
+ of the distribution package.
+-->
+<deviceSupport name="ndsnisync" description="NDS driver for PXI6683H timing board" xmlns="http://www.iter.org/CODAC/EPICS/2015" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.iter.org/CODAC/EPICS/2015 ../xsd/EPICS.xsd">
+	
+	<supportedHardware>NI PXI-6683H-NDS</supportedHardware>
+	<prefix board="NI PXI-6683H-NDS">ni6683h_</prefix>
+	<systemPath>/opt/codac/epics/</systemPath>
+        <DBDName>nds3-epics.dbd</DBDName>
+	<!--<DBDName>nisync-generalTime.dbd</DBDName>-->
+	<libraryName>asyn</libraryName>
+	<libraryName>nds3-epics</libraryName>
+	<!--<libraryName>nisync-epics</libraryName>  Adding this asynDriver support to have access to nisync library indirectly using this EPICS Dev Support -->
+	
+	<LinuxDevPrefix board="NI PXI-6683H-NDS">/dev/pxi6683h.</LinuxDevPrefix>
+	
+	<setting recordType="longin" fieldName="DTYP" userConfigurable="true">
+		<value>asynInt32</value>
+	</setting>
+	<setting recordType="longin" fieldName="INP" userConfigurable="true">
+		<value>@asyn($(PREFIXBOARDTYPE)$(MODULEIDX),0)$(FIRMWARE_NAME)-$(ASYNCOMMAND)</value>
+
+	</setting>
+	
+	<setting recordType="mbbi" fieldName="DTYP" userConfigurable="true">
+		<value>asynInt32</value>
+	</setting>
+	<setting recordType="mbbi" fieldName="INP" userConfigurable="true">
+		<value>@asyn($(PREFIXBOARDTYPE)$(MODULEIDX),0)$(FIRMWARE_NAME)-$(ASYNCOMMAND)</value>
+	
+	</setting>
+	
+	<setting recordType="mbbo" fieldName="DTYP" userConfigurable="true">
+		<value>asynInt32</value>
+	</setting>
+	<setting recordType="mbbo" fieldName="OUT" userConfigurable="true">
+		<value>@asyn($(PREFIXBOARDTYPE)$(MODULEIDX),0)$(FIRMWARE_NAME)-$(ASYNCOMMAND)</value>
+	
+	</setting>
+	
+	<setting recordType="waveform" fieldName="DTYP" userConfigurable="true">
+		<value>asynInt32ArrayIn</value>
+		<value>asynInt32ArrayOut</value>
+		<value>asynInt8ArrayIn</value>
+		<value>asynInt8ArrayOut</value>
+	</setting>
+	<setting recordType="waveform" fieldName="INP" userConfigurable="true">
+		<value>@asyn($(PREFIXBOARDTYPE)$(MODULEIDX),0)$(FIRMWARE_NAME)-$(ASYNCOMMAND)</value>
+	
+	</setting>
+	
+	
+	<asynFunction name="ChassisNumber" description="Chassis Number" direction="read" dataType="asynInt32" parameter="$(ASYNCOMMAND)"/>
+	<asynFunction name="DriverVersion" description="Driver version" direction="read" dataType="asynInt8ArrayIn" parameter="$(ASYNCOMMAND)"/>
+	<asynFunction name="FilePath" description="Path to the firmware to load " direction="read" dataType="asynInt8ArrayOut" parameter="$(ASYNCOMMAND)"/>
+	<asynFunction name="FilePath_RBV" description="Readback PV of the firmware file" direction="read" dataType="asynInt8ArrayIn" parameter="$(ASYNCOMMAND)"/>
+	<asynFunction name="HWRevision" description="Hardware Revision" direction="read" dataType="asynInt8ArrayIn" parameter="$(ASYNCOMMAND)"/>
+	<asynFunction name="Model" description="Device Model" direction="read" dataType="asynInt8ArrayIn" parameter="$(ASYNCOMMAND)"/>
+	<asynFunction name="SlotNumber" description="Slot Number" direction="read" dataType="asynInt8ArrayIn" parameter="$(ASYNCOMMAND)"/>
+	<asynFunction name="StateMachine-getGlobalState" description="StateMachine Global State" direction="read" dataType="asynInt32" parameter="$(ASYNCOMMAND)"/>
+	<asynFunction name="StateMachine-getState" description="StateMachine  Local State" direction="read" dataType="asynInt32" parameter="$(ASYNCOMMAND)"/>
+
+	
+	
+</deviceSupport>

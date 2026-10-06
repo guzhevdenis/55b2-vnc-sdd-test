@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $HeadURL: https://svnpub.iter.org/codac/iter/codac/dev/units/m-epics-nisync/trunk/src/main/sdd/TemplateNISyncDeviceInfo.xml 
+	$ $Id: TemplateNISyncDeviceInfo.xml 75653 2017-02-24 12:58:54Z cesnikt $ Project 
+	: CODAC Core System Description : NI Sync support template: device info Source: 
+	https://svnpub.iter.org/codac/iter/codac/dev/units/m-epics-nisync/branches/codac-core-4.1/src/main/epics/nisyncApp/Db/nisync_device_info.template, 
+	r38522 Author : D.Stepanov Copyright (c) : 2010-2018 ITER Organization, CS 
+	90 046 13067 St. Paul-lez-Durance Cedex France This file is part of ITER 
+	CODAC software. For the terms and conditions of redistribution or use of 
+	this software refer to the file ITER-LICENSE.TXT located in the top level 
+	directory of the distribution package. -->
+<template name="nds-nisync-Device" description="template for Device"
+	version="540" required="true" usesSubstitutionFiles="true"
+	userCanInstanciate="true" xmlns="http://www.iter.org/CODAC/PlantSystemIandC/2014-2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.iter.org/CODAC/PlantSystemIandC/2014-2 ../xsd/PlantSystemIandC.xsd">
+	<applicableToControlUnit>PCF</applicableToControlUnit>
+	<applicableToIOBoard>NI PXI-6683H-NDS</applicableToIOBoard>
+	<location>nisync_Device.template</location>
+	<EPICSDBDName>nds3-epics.dbd</EPICSDBDName>
+	<EPICSLibraryName>nds3-epics</EPICSLibraryName>
+
+<!-- Error PVS-->
+
+<variableTemplate name="HWCF:DEVICE-ERRORSEV">
+		<direction>state</direction>
+		<external>true</external>
+		<raisesAlarm>true</raisesAlarm>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-ErrorSev"
+				type="mbbi">
+				<EPICSField name="DESC" value="NISYNC error severity" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="INP"
+				value="@asyn($(PREFIXBOARDTYPE)$(MODULEIDX),0)ErrorSev" />
+				
+				<EPICSField name="ZRVL" value="0" />		
+				<EPICSField name="ONVL" value="1" />		
+				<EPICSField name="TWVL" value="2" />		
+				<EPICSField name="THVL" value="3" />		
+				
+
+				<EPICSField name="ZRST" value="NO_ALARM" />
+				<EPICSField name="ONST" value="MINOR" />
+				<EPICSField name="TWST" value="MAJOR" />
+				<EPICSField name="THST" value="INVALID" />
+								
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+	<variableTemplate name="HWCF:DEVICE-ErrorSrc">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-ErrorSrc"
+				type="waveform">
+				<EPICSField name="DESC" value="NISYNC error source" />
+				<EPICSField name="DTYP" value="asynInt8ArraIn" />
+				<EPICSField name="FTVL" value="CHAR" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)-ErrorSrc" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="NELM" value="255" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+	<variableTemplate name="HWCF:DEVICE-ErrorMsg">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-ErrorMsg"
+				type="waveform">
+				<EPICSField name="DESC" value="NISYNC error source" />
+				<EPICSField name="DTYP" value="asynInt8ArraIn" />
+				<EPICSField name="FTVL" value="CHAR" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)-ErrorMsg" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="NELM" value="255" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+
+<!--State machine -->
+
+	
+
+	
+	<variableTemplate name="HWCF:DEVICE-STM-GLOBALSTATE">
+		<direction>state</direction>
+		<external>true</external>
+		<raisesAlarm>true</raisesAlarm>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(STATEMACHINE_NAME)-getGlobalState"
+				type="mbbi">
+				<EPICSField name="DESC" value="" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="INP"
+				value="@asyn($(PREFIXBOARDTYPE)$(MODULEIDX),0)StateMachine-getGlobalState" />
+				
+				<EPICSField name="ZRVL" value="0" />		
+				<EPICSField name="ONVL" value="1" />		
+				<EPICSField name="TWVL" value="2" />		
+				<EPICSField name="THVL" value="3" />		
+				<EPICSField name="FRVL" value="4" />		
+				<EPICSField name="FVVL" value="5" />		
+				<EPICSField name="SXVL" value="6" />		
+				<EPICSField name="SVVL" value="7" />		
+				<EPICSField name="EIVL" value="8" />
+
+				<EPICSField name="ZRST" value="UNKNOWN" />
+				<EPICSField name="ONST" value="OFF" />
+				<EPICSField name="TWST" value="SWITCHING_OFF" />
+				<EPICSField name="THST" value="INITIALIZING" />
+				<EPICSField name="FRST" value="ON" />
+				<EPICSField name="FVST" value="STOPPING" />
+				<EPICSField name="SXST" value="STARTING" />
+				<EPICSField name="SVST" value="RUNNING" />
+				<EPICSField name="EIST" value="FAULTS" /> 
+				<EPICSField name="SCAN" value="Passive" />
+				<EPICSField name="PINI" value="1" />				
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+	
+	<variableTemplate name="HWCF:DEVICE-STM-STATE">
+		<direction>state</direction>
+		<external>true</external>
+		<raisesAlarm>true</raisesAlarm>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(STATEMACHINE_NAME)-getState"
+				type="mbbi">
+				<EPICSField name="DESC" value="Get Local State" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="INP"
+					value="@asyn($(PREFIXBOARDTYPE)$(MODULEIDX),0)StateMachine-getState" />
+				<EPICSField name="ZRVL" value="0" />		
+				<EPICSField name="ONVL" value="1" />		
+				<EPICSField name="TWVL" value="2" />		
+				<EPICSField name="THVL" value="3" />		
+				<EPICSField name="FRVL" value="4" />		
+				<EPICSField name="FVVL" value="5" />		
+				<EPICSField name="SXVL" value="6" />		
+				<EPICSField name="SVVL" value="7" />
+				<EPICSField name="EIVL" value="8" />
+				<EPICSField name="ZRST" value="UNKNOWN" />
+				<EPICSField name="ONST" value="OFF" />
+				<EPICSField name="TWST" value="SWITCHING_OFF" />
+				<EPICSField name="THST" value="INITIALIZING" />
+				<EPICSField name="FRST" value="ON" />
+				<EPICSField name="FVST" value="STOPPING" />
+				<EPICSField name="SXST" value="STARTING" />
+				<EPICSField name="SVST" value="RUNNING" />
+				<EPICSField name="EIST" value="FAULT" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="PINI" value="1" />				
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>	
+
+	<variableTemplate name="HWCF:DEVICE-STM-SETSTATE">
+		<direction>state</direction>
+		<external>true</external>
+		<raisesAlarm>true</raisesAlarm>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(STATEMACHINE_NAME)-setState"
+				type="mbbo">
+				<EPICSField name="DESC" value="Set Local State" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(PREFIXBOARDTYPE)$(MODULEIDX),0)StateMachine-setState" />
+				<EPICSField name="ZRVL" value="0" />		
+				<EPICSField name="ONVL" value="1" />		
+				<EPICSField name="TWVL" value="2" />		
+				<EPICSField name="THVL" value="3" />		
+				<EPICSField name="FRVL" value="4" />		
+				<EPICSField name="FVVL" value="5" />		
+				<EPICSField name="SXVL" value="6" />		
+				<EPICSField name="SVVL" value="7" />
+				<EPICSField name="EIVL" value="8" />
+				<EPICSField name="ZRST" value="UNKNOWN" />
+				<EPICSField name="ONST" value="OFF" />
+				<EPICSField name="TWST" value="SWITCHING_OFF" />
+				<EPICSField name="THST" value="INITIALIZING" />
+				<EPICSField name="FRST" value="ON" />
+				<EPICSField name="FVST" value="STOPPING" />
+				<EPICSField name="SXST" value="STARTING" />
+				<EPICSField name="SVST" value="RUNNING" />
+				<EPICSField name="EIST" value="FAULTS" />
+				<EPICSField name="SCAN" value="Passive" />
+								
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+	<macroGroup ID="USER">
+		 <macro name="BOARDTYPE" description="Board type" value="NI-PXI-6683H-NDS"/>
+     		<macro name="STATEMACHINE_NAME" description="Device State Machine name" value="STM"/>
+		
+        </macroGroup>
+	
+</template>

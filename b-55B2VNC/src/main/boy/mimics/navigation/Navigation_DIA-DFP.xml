@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- 
+  BOY Files Navigation
+  CODAC-VERSION: 6.3.1
+  WARNING: This is an SDD generated file. Contact codac-support for any query.
+-->
+
+ <CBS name="DFP" description="DFP" enabled="true" opi_file="./../ITER-DIA-DFP.opi LEVEL=ITER-DIA-DFP" deprecated="false" alarm_root="/CODAC_AlarmHandler/D1" xmlns:xi="http://www.w3.org/2001/XInclude" >
+	<xi:include href="Navigation_DIA-DFP-RC.xml">
+		<xi:fallback></xi:fallback></xi:include>
+	<xi:include href="Navigation_DIA-DFP-VC.xml">
+		<xi:fallback></xi:fallback></xi:include>
+	<xi:include href="Navigation_DIA-DFP-FM.xml">
+		<xi:fallback></xi:fallback></xi:include>
+	<xi:include href="Navigation_DIA-DFP-DM.xml">
+		<xi:fallback></xi:fallback></xi:include>
+	<xi:include href="Navigation_DIA-DFP-AS.xml">
+		<xi:fallback></xi:fallback></xi:include>
+	<xi:include href="Navigation_DIA-DFP-NS.xml">
+		<xi:fallback></xi:fallback>
+	</xi:include>
+	<xi:include href="Navigation_DIA-DFP-GS.xml">
+		<xi:fallback></xi:fallback></xi:include>
+	<xi:include href="Navigation_DIA-DFP-PA.xml">
+		<xi:fallback></xi:fallback></xi:include></CBS>

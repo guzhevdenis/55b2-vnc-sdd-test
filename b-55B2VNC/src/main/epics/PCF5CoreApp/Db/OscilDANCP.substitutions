@@ -1,0 +1,78 @@
+file "nds3_StateMachine.template" {
+pattern
+{
+    BOARDTYPE,
+    BOARDTYPEIDX,
+    CBS1,
+    CBS2,
+    STATEMACHINE_NAME
+}
+{
+    "DAN",
+    "1",
+    "D1",
+    "I2",
+    "StateMachine"
+}		
+}
+file "nds-dan_NDSDANCP.template" {
+pattern
+{
+    BOARDTYPE,
+    BOARDTYPEIDX,
+    CBS1,
+    CBS2,
+    STATEMACHINE_PARENT,
+    STATEMACHINE_NAME,
+    DAN_NAME,
+    DAN_REASON
+}
+{
+    "DAN",
+    "1",
+    "D1",
+    "I2",
+    "",
+    "StateMachine_Ch0",
+    "DAN_Ch0",
+    "DAN_Ch0"
+}
+}
+file "nds-dan_NDSDANCP.template" {
+pattern
+{
+    BOARDTYPE,
+    BOARDTYPEIDX,
+    CBS1,
+    CBS2,
+    STATEMACHINE_PARENT,
+    STATEMACHINE_NAME,
+    DAN_NAME,
+    DAN_REASON
+}
+{
+    "DAN",
+    "1",
+    "D1",
+    "I2",
+    "",
+    "StateMachine_Ch1",
+    "DAN_Ch1",
+    "DAN_Ch1"
+}
+}
+# file "LocalPVs.template" {
+# pattern
+# {
+#     BOARDTYPE,
+#     BOARDTYPEIDX,
+#     CBS1,
+#     CBS2
+# }
+# {
+#     "DAN",
+#     "1",
+#     "D1",
+#     "I2"
+# }
+# }

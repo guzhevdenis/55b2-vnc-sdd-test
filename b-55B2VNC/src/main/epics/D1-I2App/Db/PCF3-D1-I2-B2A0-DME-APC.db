@@ -1,0 +1,41 @@
+record (ai,"D1-I2-B2A0-DME-APC:BR-TI-ER-0000-ERREPNNPVL")
+{
+	field(DESC, "Error of Ion temperature for PON")
+	field(VAL, "4")
+}
+
+record (ai,"D1-I2-B2A0-DME-APC:BR-TI-ME-0000-MPREPNPWBF")
+{
+	field(DESC, "Ion temperature  measurements for PON")
+}
+
+record (ai,"D1-I2-B2A0-DME-APC:BR-TI-QT-0000-QTREPNNPVL")
+{
+	field(DESC, "Quality  tag of Ion temperature for PON")
+}
+
+record (ai,"D1-I2-B2A0-DME-APC:BR-TI-TS-0000-TMREPNNPVL")
+{
+	field(DESC, "Timestamp of Ion temperature  for PON")
+}
+
+record (ai,"D1-I2-B2A0-DME-APC:PR-NP-ER-0000-ERREPNNPVL")
+{
+	field(DESC, "Error of neutron and alpha source profil")
+}
+
+record (ai,"D1-I2-B2A0-DME-APC:PR-NP-ME-0000-MPREPNPWBF")
+{
+	field(DESC, "Neutron and alpha source profile measure")
+}
+
+record (ai,"D1-I2-B2A0-DME-APC:PR-NP-QT-0000-QTREPNNPVL")
+{
+	field(DESC, "Quality  tag of neutron and alpha source")
+}
+
+record (ai,"D1-I2-B2A0-DME-APC:PR-NP-TS-0000-TMREPNNPVL")
+{
+	field(DESC, "Timestamp of neutron and alpha source pr")
+}
+

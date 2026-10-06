@@ -1,0 +1,4 @@
+ [EPICS-separators]
+ separator0=
+ separator1=-
+ separator2=.

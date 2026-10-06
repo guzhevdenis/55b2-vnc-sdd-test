@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<nds-sdn>
+	<topic name="test-topic-nds">
+		<attribute name="int32_att">
+			<nds-pv name="Test-0-int32_PV" type="int32" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="float_att">
+			<nds-pv name="Test-0-float_PV" type="float" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="double_att">
+			<nds-pv name="Test-0-double_PV" type="double" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="string_att">
+			<nds-pv name="Test-0-string_PV" type="char" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="timespec_att">
+			<nds-pv name="Test-0-timespec_PV" type="timespec" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="timestamp_att">
+			<nds-pv name="Test-0-timestamp_PV" type="timestamp" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+	</topic>
+</nds-sdn>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
+  <actions hook="false" hook_all="false" />
+  <auto_scale_widgets>
+    <auto_scale_widgets>false</auto_scale_widgets>
+    <min_width>-1</min_width>
+    <min_height>-1</min_height>
+  </auto_scale_widgets>
+  <auto_zoom_to_fit_all>false</auto_zoom_to_fit_all>
+  <background_color>
+    <color name="IO Background" red="235" green="235" blue="235" />
+  </background_color>
+  <boy_version>5.1.0</boy_version>
+  <foreground_color>
+    <color name="IO Grid" red="215" green="215" blue="215" />
+  </foreground_color>
+  <grid_space>1</grid_space>
+  <height>1040</height>
+  <macros>
+    <include_parent_macros>true</include_parent_macros>
+  </macros>
+  <name>IO BOY Widget Schema</name>
+  <rules />
+  <scripts />
+  <show_close_button>true</show_close_button>
+  <show_edit_range>true</show_edit_range>
+  <show_grid>true</show_grid>
+  <show_ruler>true</show_ruler>
+  <snap_to_geometry>true</snap_to_geometry>
+  <widget_type>Display</widget_type>
+  <width>1915</width>
+  <wuid>-14a921ec:134b2495e46:-7f53</wuid>
+  <x>0</x>
+  <y>0</y>
+  <widget typeId="org.csstudio.opibuilder.widgets.LED" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <alarm_pulsing>false</alarm_pulsing>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color name="IO Background" red="235" green="235" blue="235" />
+    </background_color>
+    <bit>0</bit>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color name="IO Border" red="0" green="0" blue="0" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>2</border_width>
+    <bulb_border>3</bulb_border>
+    <bulb_border_color>
+      <color name="IO Button" red="178" green="178" blue="178" />
+    </bulb_border_color>
+    <data_type>0</data_type>
+    <effect_3d>true</effect_3d>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="DejaVu Sans Mono" height="12" style="0" pixels="false">IO Label</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color name="IO InputPV Fg" red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>231</height>
+    <name>LED Template</name>
+    <off_color>
+      <color name="IO PV OFF" red="149" green="125" blue="71" />
+    </off_color>
+    <off_label>OFF</off_label>
+    <on_color>
+      <color name="IO Normal Level Alarm" red="0" green="255" blue="0" />
+    </on_color>
+    <on_label>ON</on_label>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules>
+      <rule name="Alarm LED ON State Color" prop_id="on_color" out_exp="false">
+        <exp bool_exp="pv0== 0">
+          <value>
+            <color name="IO Normal Level Alarm" red="0" green="255" blue="0" />
+          </value>
+        </exp>
+        <exp bool_exp="pv0== 1">
+          <value>
+            <color name="IO Medium Level Alarm" red="255" green="255" blue="0" />
+          </value>
+        </exp>
+        <exp bool_exp="pv0== 2">
+          <value>
+            <color name="IO High Level Alarm" red="250" green="12" blue="14" />
+          </value>
+        </exp>
+        <exp bool_exp="pv0== 3">
+          <value>
+            <color name="IO Invalid Level Alarm" red="255" green="0" blue="255" />
+          </value>
+        </exp>
+        <pv trig="true">$(pv_name).SEVR</pv>
+      </rule>
+      <rule name="Alarm LED OFF State Color" prop_id="off_color" out_exp="false">
+        <exp bool_exp="pv0== 3">
+          <value>
+            <color name="IO Invalid Level Alarm" red="255" green="0" blue="255" />
+          </value>
+        </exp>
+        <pv trig="true">$(pv_name).SEVR</pv>
+      </rule>
+    </rules>
+    <scale_options>
+      <width_scalable>false</width_scalable>
+      <height_scalable>false</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <show_boolean_label>false</show_boolean_label>
+    <square_led>false</square_led>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>LED</widget_type>
+    <width>231</width>
+    <wuid>1331348f:190c0207008:-6580</wuid>
+    <x>61</x>
+    <y>96</y>
+  </widget>
+</display>

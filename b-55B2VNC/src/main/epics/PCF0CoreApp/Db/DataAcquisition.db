@@ -1,0 +1,193 @@
+
+# Rest of PVs
+record(waveform, "D1-I2-HWCF:B-0-DataAcquisitionNode-Data") {
+    field(DESC, "Acquired data")
+    field(DTYP, "asynInt16ArrayIn")
+    field(FTVL, "DOUBLE")
+    field(NELM, "100000")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-0, 0)DataAcquisitionNode-Data")
+}
+record(ao, "D1-I2-HWCF:B-0-DataAcquisitionNode-Decimation") {
+    field(DESC, "Decimation")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-0, 0)DataAcquisitionNode-Decimation")
+}
+record(ao, "D1-I2-HWCF:B-0-DataAcquisitionNode-DecimationType") {
+    field(DESC, "Decimation")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-0, 0)DataAcquisitionNode-DecimationType")
+}
+record(ao, "D1-I2-HWCF:B-0-DataAcquisitionNode-Gain") {
+    field(DESC, "Gain of the Channel")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-0, 0)DataAcquisitionNode-Gain")
+}
+record(ai, "D1-I2-HWCF:B-0-DataAcquisitionNode-Gain_RBV") {
+    field(DESC, "Gain of the Channel")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-0, 0)DataAcquisitionNode-Gain_RBV")
+}
+record(ao, "D1-I2-HWCF:B-0-DataAcquisitionNode-Offset") {
+    field(DESC, "Offset")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-0, 0)DataAcquisitionNode-Offset")
+}
+record(ai, "D1-I2-HWCF:B-0-DataAcquisitionNode-Offset_RBV") {
+    field(DESC, "Offset ReadBack")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-0, 0)DataAcquisitionNode-Offset_RBV")
+}
+record(ao, "D1-I2-HWCF:B-0-DataAcquisitionNode-BandWidth") {
+    field(DESC, "BandWidth")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-0, 0)DataAcquisitionNode-BandWidth")
+}
+record(ai, "D1-I2-HWCF:B-0-DataAcquisitionNode-BandWidth_RBV") {
+    field(DESC, "BandWidth ReadBack")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-0, 0)DataAcquisitionNode-BandWidth_RBV")
+}
+record(ao, "D1-I2-HWCF:B-0-DataAcquisitionNode-Resolution") {
+    field(DESC, "Number of Bits per Sample")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-0, 0)DataAcquisitionNode-Resolution")
+}
+record(ai, "D1-I2-HWCF:B-0-DataAcquisitionNode-Resolution_RBV") {
+    field(DESC, "Number of Bits per Sample ReadBack")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-0, 0)DataAcquisitionNode-Resolution_RBV")
+}
+record(ao, "D1-I2-HWCF:B-0-DataAcquisitionNode-Impedance") {
+    field(DESC, "Impedance")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-0, 0)DataAcquisitionNode-Impedance")
+}
+record(ai, "D1-I2-HWCF:B-0-DataAcquisitionNode-Impedance_RBV") {
+    field(DESC, "Impedance ReadBack")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-0, 0)DataAcquisitionNode-Impedance_RBV")
+}
+record(bo, "D1-I2-HWCF:B-0-DataAcquisitionNode-Coupling") {
+    field(DESC, "Coupling: AC or DC")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-0, 0)DataAcquisitionNode-Coupling")
+    field(ZNAM, "AC")
+    field(ONAM, "DC")
+}
+record(bi, "D1-I2-HWCF:B-0-DataAcquisitionNode-Coupling_RBV") {
+    field(DESC, "Coupling: AC or DC ReadBack")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-0, 0)DataAcquisitionNode-Coupling_RBV")
+    field(ZNAM, "AC")
+    field(ONAM, "DC")
+}
+record(bo, "D1-I2-HWCF:B-0-DataAcquisitionNode-SignalRefType") {
+    field(DESC, "Differential or Single Ended")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-0, 0)DataAcquisitionNode-SignalRefType")
+    field(ZNAM, "SingleEnded")
+    field(ONAM, "Differential")
+}
+record(bi, "D1-I2-HWCF:B-0-DataAcquisitionNode-SignalRefType_RBV") {
+    field(DESC, "Differential or Single Ended")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-0, 0)DataAcquisitionNode-SignalRefType_RBV")
+    field(ZNAM, "SingleEnded")
+    field(ONAM, "Differential")
+}
+record(bo, "D1-I2-HWCF:B-0-DataAcquisitionNode-Ground") {
+    field(DESC, "Ground State")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-0, 0)DataAcquisitionNode-Ground")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+}
+record(bi, "D1-I2-HWCF:B-0-DataAcquisitionNode-Ground_RBV") {
+    field(DESC, "Ground State ReadBack")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-0, 0)DataAcquisitionNode-Ground_RBV")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+}
+record(ai, "D1-I2-HWCF:B-0-DataAcquisitionNode-NoB") {
+    field(DESC, "Number Of Pushed Data Blocks")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-0, 0)DataAcquisitionNode-NumberOfPushedDataBlocks")
+}
+record(ai, "D1-I2-HWCF:B-0-DataAcquisitionNode-DMABufferSize") {
+    field(DESC, "Number Of Pushed Data Blocks")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-0, 0)DataAcquisitionNode-DMABufferSize")
+}
+record(ao, "D1-I2-HWCF:B-0-DataAcquisitionNode-DMAEnable") {
+    field(DESC, "Number Of Pushed Data Blocks")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-0, 0)DataAcquisitionNode-DMAEnable")
+}
+record(ai, "D1-I2-HWCF:B-0-DataAcquisitionNode-DMAEnable_RBV") {
+    field(DESC, "Number Of Pushed Data Blocks")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-0, 0)DataAcquisitionNode-DMAEnable_RBV")
+}
+record(ai, "D1-I2-HWCF:B-0-DataAcquisitionNode-DMANumChannels") {
+    field(DESC, "Number Of Pushed Data Blocks")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-0, 0)DataAcquisitionNode-DMANumChannels")
+}
+record(ai, "D1-I2-HWCF:B-0-DataAcquisitionNode-DMAFrameType") {
+    field(DESC, "Number Of Pushed Data Blocks")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-0, 0)DataAcquisitionNode-DMAFrameType")
+}
+record(ai, "D1-I2-HWCF:B-0-DataAcquisitionNode-DMASampleSize") {
+    field(DESC, "Number Of Pushed Data Blocks")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-0, 0)DataAcquisitionNode-DMASampleSize")
+}
+record(ao, "D1-I2-HWCF:B-0-DataAcquisitionNode-SamplingRate") {
+    field(DESC, "Number of Bits per Sample")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-0, 0)DataAcquisitionNode-SamplingRate")
+}
+record(ai, "D1-I2-HWCF:B-0-DataAcquisitionNode-SamplingRate_RBV") {
+    field(DESC, "Number of Bits per Sample ReadBack")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-0, 0)DataAcquisitionNode-SamplingRate_RBV")
+}
+record(mbbi, "D1-I2-HWCF:B-0-DataAcquisitionNodeStateMachine-getGlobalState") {
+    field(INP, "@asyn(B-0, 0)DataAcquisitionNode-StateMachine-getGlobalState")
+}
+record(mbbi, "D1-I2-HWCF:B-0-DataAcquisitionNodeStateMachine-getState") {
+    field(INP, "@asyn(B-0, 0)DataAcquisitionNode-StateMachine-getState")
+}
+record(mbbo, "D1-I2-HWCF:B-0-DataAcquisitionNodeStateMachine-setState") {
+    field(OUT, "@asyn(B-0, 0)DataAcquisitionNode-StateMachine-setState")
+}

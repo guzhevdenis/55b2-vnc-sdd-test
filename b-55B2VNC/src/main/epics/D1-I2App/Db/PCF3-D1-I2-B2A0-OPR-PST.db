@@ -1,0 +1,80 @@
+record (ai,"D1-I2-B2A0-OPR-PST:ES-HS-00-0000-STREPNNPEN")
+{
+	field(DESC, "Hard Soft Classification value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-PST:ES-RS-00-0000-STREPNNPEN")
+{
+	field(DESC, "Exception risk status value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-PST:ES-TE-00-0000-STREPNNPEN")
+{
+	field(DESC, "Exception type classification value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-PST:HS-CS-00-0000-STREPNNPEN")
+{
+	field(DESC, "Cubicle staus value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-PST:HS-HS-00-0000-STREPNNPEN")
+{
+	field(DESC, "Hardware status value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-PST:NS-NE-00-0000-STREPNNPEN")
+{
+	field(DESC, "Network error value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-PST:NS-NS-00-0000-STREPNNPEN")
+{
+	field(DESC, "Network status value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-PST:SW-ND-00-0000-STREPNNPEN")
+{
+	field(DESC, "NDS driver status value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-PST:SW-OS-00-0000-STREPNNPEN")
+{
+	field(DESC, "OS status value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-PST:SW-SS-00-0000-STREPNNPEN")
+{
+	field(DESC, "CSSstatus value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-PST:SW-SV-00-0000-STREPNNPEN")
+{
+	field(DESC, "Software version value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-PST:SW-SW-00-0000-STREPNNPEN")
+{
+	field(DESC, "Software summary status value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-PST:SY-PM-00-0000-STREPNNPEN")
+{
+	field(DESC, "Prepared to measurement status value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-PST:SY-PS-00-0000-STREPNNPEN")
+{
+	field(DESC, "Prepared status value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-PST:SY-RS-00-0000-STREPNNPEN")
+{
+	field(DESC, "Ready status value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-PST:SY-SU-00-0000-STREPNNPEN")
+{
+	field(DESC, "System summary status value")
+}
+

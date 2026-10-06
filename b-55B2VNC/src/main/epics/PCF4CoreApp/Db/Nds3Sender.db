@@ -1,0 +1,20 @@
+# Nds3Sender Driver DB file
+# CountRate - read-only PV from NDS3 driver
+
+record(ai, "$(PREFIX)-CountRate") {
+    field(DESC, "Count Rate from Nds3Sender")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(DEVICE),0)CountRate")
+    field(EGU, "cps")
+    field(PREC, "2")
+}
+
+record(bo, "$(PREFIX)-Send") {
+    field(DESC, "Send CountRate once")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(DEVICE),0)Send")
+    field(ZNAM, "IDLE")
+    field(ONAM, "SEND")
+}

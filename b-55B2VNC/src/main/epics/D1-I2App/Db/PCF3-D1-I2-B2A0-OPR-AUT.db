@@ -1,0 +1,120 @@
+record (ai,"D1-I2-B2A0-OPR-AUT:AS-CR-00-0000-CORWPNNPEN")
+{
+	field(DESC, "COS OPREQ")
+}
+
+record (ai,"D1-I2-B2A0-OPR-AUT:AS-CS-00-0000-STREPNNPEN")
+{
+	field(DESC, "COS OPSTATE")
+}
+
+record (ai,"D1-I2-B2A0-OPR-AUT:AS-PR-00-0000-CORWPNNPEN")
+{
+	field(DESC, "PSOS OPREQ")
+}
+
+record (ai,"D1-I2-B2A0-OPR-AUT:CD-CN-CN-0000-CDREPNNPVL")
+{
+	field(DESC, "Communication with network established v")
+}
+
+record (ai,"D1-I2-B2A0-OPR-AUT:CD-CO-AE-0000-CDREPNNPVL")
+{
+	field(DESC, "Abort event appeared variable")
+}
+
+record (ai,"D1-I2-B2A0-OPR-AUT:CD-CO-CA-0000-CDREPNNPVL")
+{
+	field(DESC, "Calibration control and data available v")
+}
+
+record (ai,"D1-I2-B2A0-OPR-AUT:CD-CO-CP-0000-CDREPNNPVL")
+{
+	field(DESC, "Command and information of pulse receive")
+}
+
+record (ai,"D1-I2-B2A0-OPR-AUT:CD-CO-FO-0000-CDREPNNPVL")
+{
+	field(DESC, "Failure or critical error variable")
+}
+
+record (ai,"D1-I2-B2A0-OPR-AUT:CD-CO-GS-0000-CDREPNNPVL")
+{
+	field(DESC, "Global Operation State is Sage?")
+}
+
+record (ai,"D1-I2-B2A0-OPR-AUT:CD-CO-LR-0000-CDREPNNPVL")
+{
+	field(DESC, "Request for local is received variable")
+}
+
+record (ai,"D1-I2-B2A0-OPR-AUT:CD-CO-SC-0000-CDREPNNPVL")
+{
+	field(DESC, "Specific configuration for pulse is done")
+}
+
+record (ai,"D1-I2-B2A0-OPR-AUT:CD-CO-SM-0000-CDREPNNPVL")
+{
+	field(DESC, "Start measurement command received varia")
+}
+
+record (ai,"D1-I2-B2A0-OPR-AUT:CD-CO-TP-0000-CDREPNNPVL")
+{
+	field(DESC, "Termination procedure succeded variable")
+}
+
+record (ai,"D1-I2-B2A0-OPR-AUT:CD-PC-NE-0000-CDREPNNPVL")
+{
+	field(DESC, "55.NE power is available for Plant Syste")
+}
+
+record (ai,"D1-I2-B2A0-OPR-AUT:CD-PS-AA-0000-CDREPNNPVL")
+{
+	field(DESC, "Assemblance and accessibility of 55B2")
+}
+
+record (ai,"D1-I2-B2A0-OPR-AUT:CD-PS-CD-0000-CDREPNNPVL")
+{
+	field(DESC, "Plant system configuration is done")
+}
+
+record (ai,"D1-I2-B2A0-OPR-AUT:CD-PS-ER-0000-CDREPNNPVL")
+{
+	field(DESC, "Plant system equipment is ready")
+}
+
+record (ai,"D1-I2-B2A0-OPR-AUT:CD-PS-IC-0000-CDREPNNPVL")
+{
+	field(DESC, "I&C Status is OK?")
+}
+
+record (ai,"D1-I2-B2A0-OPR-AUT:CD-PS-IR-0000-CDREPNNPVL")
+{
+	field(DESC, "55B2 I&C Ready status")
+}
+
+record (ai,"D1-I2-B2A0-OPR-AUT:CD-PS-PO-0000-CDREPNNPVL")
+{
+	field(DESC, "Plant System is Power Off?")
+}
+
+record (ai,"D1-I2-B2A0-OPR-AUT:CD-PS-PP-0000-CDREPNNPVL")
+{
+	field(DESC, "Plant System Present?")
+}
+
+record (ai,"D1-I2-B2A0-OPR-AUT:CD-PS-SA-0000-CDREPNNPVL")
+{
+	field(DESC, "55B2 is absent?")
+}
+
+record (ai,"D1-I2-B2A0-OPR-AUT:CD-PS-SH-0000-CDREPNNPVL")
+{
+	field(DESC, "System Health is OK?")
+}
+
+record (ai,"D1-I2-B2A0-OPR-AUT:CD-PS-SS-0000-CDREPNNPVL")
+{
+	field(DESC, "System status is OK?")
+}
+

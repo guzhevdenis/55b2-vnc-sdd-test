@@ -1,0 +1,79 @@
+#State Machine for the device 
+file "./nisync_Device.template" {
+pattern
+{
+	BOARDTYPE,
+	BOARDTYPEIDX,
+	CBS1,
+	CBS2
+}
+
+{
+	"B",
+	"1",
+	"D1",
+	"I2"
+}
+
+}
+# Firmware node
+file "./nisync_Firmware.template" {
+pattern
+{
+	BOARDTYPE,
+	BOARDTYPEIDX,
+	CBS1,
+	CBS2,
+	FIRMWARE_NAME,
+}
+
+{
+	"B",
+	"1",
+	"D1",
+	"I2",
+	"Firm",
+}
+
+}
+
+
+file "./nisync_Routing.template" {
+pattern
+{
+	BOARDTYPE,
+	BOARDTYPEIDX,
+	CBS1,
+	CBS2,
+	ROUTING_NAME
+}
+ 	
+{
+	"B",
+	"1",
+	"D1",
+	"I2",
+	"Routing"
+}
+
+}
+file "./nisync_Timing.template" {
+pattern
+{
+	BOARDTYPE,
+	BOARDTYPEIDX,
+	CBS1,
+	CBS2,
+	TIMING_NAME,
+}
+ 	
+{
+	"B",
+	"1",
+	"D1",
+	"I2",
+	"Timing",
+}
+
+}
+

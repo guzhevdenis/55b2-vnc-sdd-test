@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<nds-sdn>
+	<topic name="topic-nds-oscil">
+		<attribute name="NumberOfPushedDataBlocks_Ch0">
+			<nds-pv name="B-7-DataAcquisitionNode_Ch0-NumberOfPushedDataBlocks" type="int32" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="NumberOfPushedDataBlocks_Ch1">
+			<nds-pv name="B-7-DataAcquisitionNode_Ch1-NumberOfPushedDataBlocks" type="int32" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+	</topic>
+</nds-sdn>

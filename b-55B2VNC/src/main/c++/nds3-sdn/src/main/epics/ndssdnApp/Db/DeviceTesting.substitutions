@@ -1,0 +1,15 @@
+file "nds-testing.template" {
+	pattern
+	{	BOARDTYPE,
+		BOARDTYPEIDX,
+		CBS1,
+		CBS2
+	}
+	{
+		"Test",
+		"0",
+		"TEST",
+		"TEST",
+	}
+}
+

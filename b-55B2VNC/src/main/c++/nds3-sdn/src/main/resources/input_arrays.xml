@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<nds-sdn>
+	<topic name="test-topicArrays-nds">
+		<attribute name="int32Array_att">
+			<nds-pv name="Test-0-int32Array_PV" type="int32" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="int64Array_att">
+			<nds-pv name="Test-0-int64Array_PV" type="int64" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="floatArray_att">
+			<nds-pv name="Test-0-floatArray_PV" type="float" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="doubleArray_att">
+			<nds-pv name="Test-0-doubleArray_PV" type="double" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="boolArray_att">
+			<nds-pv name="Test-0-boolArray_PV" type="bool" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="uint8Array_att">
+			<nds-pv name="Test-0-uint8Array_PV" type="uint8" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="uint16Array_att">
+			<nds-pv name="Test-0-uint16Array_PV" type="uint16" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>		
+		<attribute name="uint32Array_att">
+			<nds-pv name="Test-0-uint32Array_PV" type="uint32" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="int8Array_att">
+			<nds-pv name="Test-0-int8Array_PV" type="int8" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="int16Array_att">
+			<nds-pv name="Test-0-int16Array_PV" type="int16" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>		
+		<attribute name="timespecArray_att">
+			<nds-pv name="Test-0-timespecArray_PV" type="timespec" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>		
+		<attribute name="int8Array_to_int16Array_att">
+			<nds-pv name="Test-0-int8Array_PV" type="int8" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="int8Array_to_int32Array_att">
+			<nds-pv name="Test-0-int8Array_PV" type="int8" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="int8Array_to_int64Array_att">
+			<nds-pv name="Test-0-int8Array_PV" type="int8" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>		
+		<attribute name="int16Array_to_int32Array_att">
+			<nds-pv name="Test-0-int16Array_PV" type="int16" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="int16Array_to_int64Array_att">
+			<nds-pv name="Test-0-int16Array_PV" type="int16" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="int32Array_to_int64Array_att">
+			<nds-pv name="Test-0-int32Array_PV" type="int32" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>		
+		<attribute name="uint8Array_to_uint16Array_att">
+			<nds-pv name="Test-0-uint8Array_PV" type="uint8" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="uint8Array_to_uint32Array_att">
+			<nds-pv name="Test-0-uint8Array_PV" type="uint8" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="uint8Array_to_uint64Array_att">
+			<nds-pv name="Test-0-uint8Array_PV" type="uint8" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>		
+		<attribute name="uint16Array_to_uint32Array_att">
+			<nds-pv name="Test-0-uint16Array_PV" type="uint16" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="uint16Array_to_uint64Array_att">
+			<nds-pv name="Test-0-uint16Array_PV" type="uint16" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="uint32Array_to_uint64Array_att">
+			<nds-pv name="Test-0-uint32Array_PV" type="uint32" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+				<attribute name="floatArray_to_doubleArray_att">
+			<nds-pv name="Test-0-floatArray_PV" type="float" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+				<attribute name="doubleArray_to_floatArray_att">
+			<nds-pv name="Test-0-doubleArray_PV" type="double" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>		
+	</topic>
+</nds-sdn>

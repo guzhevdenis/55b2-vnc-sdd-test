@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<pv-config>
+	<pv name="int32Array_PV" datatype="int32Array"/>
+	<pv name="int64Array_PV" datatype="int64Array"/>
+	<pv name="floatArray_PV" datatype="floatArray"/>
+	<pv name="doubleArray_PV" datatype="doubleArray"/>
+	<pv name="boolArray_PV" datatype="boolArray"/>
+	<pv name="uint8Array_PV" datatype="uint8Array"/>
+	<pv name="uint16Array_PV" datatype="uint16Array"/>
+	<pv name="uint32Array_PV" datatype="uint32Array"/>
+	<pv name="int8Array_PV" datatype="int8Array"/>
+	<pv name="int16Array_PV" datatype="int16Array"/>
+	<pv name="timespecArray_PV" datatype="timespecArray"/>
+</pv-config>

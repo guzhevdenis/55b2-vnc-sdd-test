@@ -1,0 +1,60 @@
+record (ai,"D1-I2-B2A0-DME-PHY:BR-FP-ER-0000-ERREPNNPVL")
+{
+	field(DESC, "Error of Fusion power  for PON")
+}
+
+record (ai,"D1-I2-B2A0-DME-PHY:BR-FP-ME-0000-MPREPNPWVL")
+{
+	field(DESC, "Fusion power  measurements for PON")
+}
+
+record (ai,"D1-I2-B2A0-DME-PHY:BR-FP-QT-0000-QTREPNNPVL")
+{
+	field(DESC, "Quality  tag of Fusion power for PON")
+}
+
+record (ai,"D1-I2-B2A0-DME-PHY:BR-FP-TS-0000-TMREPNNPVL")
+{
+	field(DESC, "Timestamp of Fusion power  for PON")
+}
+
+record (ai,"D1-I2-B2A0-DME-PHY:BR-TF-ER-0000-ERREPNNPVL")
+{
+	field(DESC, "Error of Total neutron flux for PON")
+}
+
+record (ai,"D1-I2-B2A0-DME-PHY:BR-TF-ME-0000-MPREPNPWVL")
+{
+	field(DESC, "Total neutron flux  measurements for PON")
+}
+
+record (ai,"D1-I2-B2A0-DME-PHY:BR-TF-QT-0000-QTREPNNPVL")
+{
+	field(DESC, "Quality  tag of Total neutron flux for P")
+}
+
+record (ai,"D1-I2-B2A0-DME-PHY:BR-TF-TS-0000-TMREPNNPVL")
+{
+	field(DESC, "Timestamp of Total neutron flux for PON")
+}
+
+record (ai,"D1-I2-B2A0-DME-PHY:SR-ES-ER-0000-ERREPNNPVL")
+{
+	field(DESC, "Error of p, D, T, He Energy Spectrum for")
+}
+
+record (ai,"D1-I2-B2A0-DME-PHY:SR-ES-ME-0000-MPREPNPWBF")
+{
+	field(DESC, "p, D, T, He Energy Spectrum measurements")
+}
+
+record (ai,"D1-I2-B2A0-DME-PHY:SR-ES-QT-0000-QTREPNNPVL")
+{
+	field(DESC, "Quality  tag of p, D, T, He Energy Spect")
+}
+
+record (ai,"D1-I2-B2A0-DME-PHY:SR-ES-TS-0000-TMREPNNPVL")
+{
+	field(DESC, "Timestamp of p, D, T, He Energy Spectrum")
+}
+

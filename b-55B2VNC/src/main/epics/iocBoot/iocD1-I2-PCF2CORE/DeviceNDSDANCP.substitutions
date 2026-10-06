@@ -1,0 +1,38 @@
+file "nds3_StateMachine.template" {
+pattern
+{	BOARDTYPE,	BOARDTYPEIDX,		CBS1,		CBS2,	STATEMACHINE_NAME	}
+	{			"DAN",					 "0",	"TEST",	"FCT0",		 "StateMachine"	}		
+}
+
+file "nds-dan_NDSDANCP.template" {
+pattern
+{	BOARDTYPE,	BOARDTYPEIDX,		CBS1,		CBS2,	STATEMACHINE_PARENT,	STATEMACHINE_NAME,	DAN_NAME,	DAN_REASON	}
+
+  {		  "DAN",			 "0",	  "TEST",	  "FCT0",		 					 "DAN-", 		 "StateMachine",		 "DAN",		 "DANCP"	}
+}
+
+file "my_nds3_DataAcquisition.template"{
+pattern
+{
+    BOARDTYPE,
+    BOARDTYPEIDX,
+    CBS1,
+    CBS2,
+    STATEMACHINE_PARENT,
+    STATEMACHINE_NAME,
+    DATAACQUISITION_NAME,
+    DATATYPE,
+    NELM
+}
+{
+    "G",
+    "0",
+    "TEST",
+    "FCT0",
+    "DataAcquisitionNode-",
+    "STM",
+    "DataAcquisitionNode",
+    "asynInt16Array",
+    "4096"
+}
+}

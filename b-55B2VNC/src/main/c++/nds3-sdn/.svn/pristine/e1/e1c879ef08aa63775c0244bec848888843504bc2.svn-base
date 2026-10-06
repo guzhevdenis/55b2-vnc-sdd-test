@@ -1,0 +1,14 @@
+/**
+@defgroup Device NDS Device (root Node)
+@brief NDS Nodes Implementation of the NDS-SDN device driver (NDS V3)
+  
+@defgroup Device-MemberVariables nds-sdn Device member variables
+@ingroup Device
+
+@defgroup Device-DelegateFunctions Device delegate functions for all PV datatypes
+@ingroup Device
+
+@defgroup Device-Functions Device auxiliary functions
+@ingroup Device
+
+*/

@@ -1,0 +1,30 @@
+record (ai,"D1-I2-B2A0-OPR-INT:HI-DI-B5-0000-STREPNNPEN")
+{
+	field(DESC, "ADC initialization status")
+}
+
+record (ai,"D1-I2-B2A0-OPR-INT:HI-DI-B6-0000-STREPNNPEN")
+{
+	field(DESC, "ADC initialization status")
+}
+
+record (ai,"D1-I2-B2A0-OPR-INT:HI-FI-B7-0000-STREPNNPEN")
+{
+	field(DESC, "Initialization of FPGA board status")
+}
+
+record (ai,"D1-I2-B2A0-OPR-INT:HI-FI-B8-0000-STREPNNPEN")
+{
+	field(DESC, "Initialization of FPGA board status")
+}
+
+record (ai,"D1-I2-B2A0-OPR-INT:HI-FI-B9-0000-STREPNNPEN")
+{
+	field(DESC, "Initialization of FPGA board status")
+}
+
+record (ai,"D1-I2-B2A0-OPR-INT:HI-PI-P3-0000-STREPNNPEN")
+{
+	field(DESC, "Initialization of PCF status")
+}
+

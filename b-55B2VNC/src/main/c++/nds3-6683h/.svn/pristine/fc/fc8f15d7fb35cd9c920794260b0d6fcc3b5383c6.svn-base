@@ -1,0 +1,74 @@
+/**
+
+@defgroup Device Group of the Device class
+
+
+@defgroup DevicePVs Subgroup to show the PVs inside Device class
+@ingroup Device
+
+
+@defgroup DeviceMemberVariables Group of the Device member variables
+@ingroup Device
+
+
+@defgroup Firmware Group of the Firmware node class
+
+
+@defgroup FirmwareDelegateFunctions Group of the Firmware delegate functions
+@ingroup Firmware
+
+
+@defgroup FirmwareMemberVariables Group of the Firmware member variables
+@ingroup Firmware
+
+
+@defgroup FTE Group of the FTE node class
+
+
+@defgroup FTEDelegateFunctions Group of the FTE delegate functions
+@ingroup FTE
+
+
+@defgroup FTEMemberVariables Group of the FTE member variables
+@ingroup FTE
+
+
+@defgroup Routing Group of the Routing node class
+
+
+@defgroup RoutingDelegateFunctions Group of the Routing delegate functions
+@ingroup Routing
+
+
+@defgroup RoutingMemberVariables Group of the Routing member variables
+@ingroup Routing
+
+
+@defgroup Timestamping Group of the Timestamping node class
+
+
+@defgroup TimestampingPVs Subgroup to show the PVs inside nisyncTimestamping class
+@ingroup Timestamping
+
+
+@defgroup TimestampingDelegateFunctions Group of the Timestamping delegate functions
+@ingroup Timestamping
+
+
+@defgroup TimestampingMemberVariables Group of the Timestamping member variables
+@ingroup Timestamping
+
+
+@defgroup Timing Group of the Timing node class
+
+
+@defgroup TimingDelegateFunctions Group of the Timing delegate functions
+@ingroup Timing
+
+
+@defgroup TimingMemberVariables Group of the Timing member variables
+@ingroup Timing
+
+
+*/
+

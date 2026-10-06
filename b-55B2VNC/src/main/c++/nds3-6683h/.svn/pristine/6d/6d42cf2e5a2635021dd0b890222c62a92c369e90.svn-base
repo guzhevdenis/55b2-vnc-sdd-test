@@ -1,0 +1,433 @@
+#Multiple functionality PVs, search for:
+#STATEMACHINE
+#TIMESTAMPS
+#FTE GENERATION
+
+record(bo, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-TS-DecimationType") {
+    field(DESC, "Set decimation SW or HW")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(TERMINAL_NAME)-TS-DecimationType")
+    field(ZNAM, "SW")
+    field(ONAM, "HW")
+}
+
+#TIMESTAMPS
+
+record(longout, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-TS-Decimation") {
+    field(DESC, "Decimation")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(TERMINAL_NAME)-TS-Decimation")
+}
+
+record(mbbo, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-TS-Edge") {
+    field(DESC, "Set timestamp edge detection")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(TERMINAL_NAME)-TS-Edge")
+    field(ZRVL, 0)
+    field(ZRST, "RISING")
+    field(ONVL, 1)
+    field(ONST, "FALLING")
+    field(TWVL, 2)
+    field(TWST, "ANY")
+    field(PINI, 1)
+}
+
+record(mbbi, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-TS-Edge_RBV") {
+    field(DESC, "Get timestamping edge detection")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(TERMINAL_NAME)-TS-Edge_RBV")
+    field(UNSV, "INVALID")
+    field(ZRVL, 0)
+    field(ZRST, "RISING")
+    field(ONVL, 1)
+    field(ONST, "FALLING")
+    field(TWVL, 2)
+    field(TWST, "ANY")
+    field(PINI, 1)
+}
+
+record(longin, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-TS-MaxTimestamps") {
+    field(DESC, "Maximum number of timestamps (FIFO size)")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(TERMINAL_NAME)-TS-MaxTimestamps")
+}
+
+record(longin, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-TS-Overflow") {
+    field(DESC, "Get timestamps queue overflow status")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(TERMINAL_NAME)-TS-Overflow")
+ 
+}
+
+record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-TS-Timestamps") {
+    field(DESC, "Timestamp (sec,ns), ID, Edge")
+    field(DTYP, "asynInt32ArrayIn")
+    field(FTVL, "LONG")
+    field(NELM, 4)
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(TERMINAL_NAME)-TS-Timestamps")
+    field(TSE, -2)
+}
+
+
+record(subArray, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-TS-TimestampsSec" ) {
+	field(DESC, "Timestamp Seconds")
+	field(FTVL, "LONG")
+	field(INP,  "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-TS-Timestamps CP MS")
+	field(EGU,  "s")
+	field(MALM, "4")
+	field(INDX, "0")
+}
+
+record(subArray, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-TS-TimestampsNano" ) {
+	field(DESC, "Timestamp Nanoseconds")
+	field(FTVL, "LONG")
+	field(INP,  "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-TS-Timestamps CP MS")
+	field(EGU,  "ns")
+	field(MALM, "4")
+	field(INDX, "1")
+}
+
+
+record(subArray, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-TS-TimestampsID" ) {
+	field(DESC, "Timestamp ID")
+	field(FTVL, "LONG")
+	field(INP,  "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-TS-Timestamps CP MS")
+	field(MALM, "4")
+	field(INDX, "2")
+}
+
+record(subArray, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-TS-TimestampsIsRising" ) {
+	field(DESC, "Timestamp Rising")
+	field(FTVL, "LONG")
+	field(INP,  "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-TS-Timestamps CP MS")
+	field(MALM, "4")
+	field(INDX, "3")
+}
+
+#FTE GENERATION
+
+#PVs for Future Time Event generation 
+
+record(bo, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-Enable") {
+    field(DESC, "Enable/Disable FTE. Terminal direction.")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(TERMINAL_NAME)-FTE-Enable")
+    field(ZNAM, "DISABLE")
+    field(ONAM, "ENABLE")
+}
+
+record(bi, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-Enable_RBV") {
+    field(DESC, "FTE status: Enabled/Disabled")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(TERMINAL_NAME)-FTE-Enable_RBV")
+    field(ZNAM, "DISABLE")
+    field(ONAM, "ENABLE")
+}
+
+record(mbbo, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-ModeSet") {
+    field(DESC, "Mode (Single, Pulse, Clk, InmLVL)")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-ModeSet")
+    field(ZRVL, 0)
+    field(ZRST, "SINGLE")
+    field(ONVL, 1)
+    field(ONST, "PULSE")
+    field(TWVL, 2)
+    field(TWST, "CLK")
+    field(THVL, 3)
+    field(THST, "inmLVL")
+}
+
+record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-StartTimeSet") {
+    field(DESC, "Start Time of FTE")
+    field(DTYP, "asynInt32ArrayOut")
+    field(FTVL, "LONG")
+    field(SCAN, "Passive")
+    field(NELM, "2")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-StartTimeSet")      
+}
+
+record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-StopTimeSet") {
+    field(DESC, "Stop Time of FTE")
+    field(DTYP, "asynInt32ArrayOut")
+    field(FTVL, "LONG")
+    field(SCAN, "Passive")
+    field(NELM, "2")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-StopTimeSet")
+}
+
+
+record(bo, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-LevelSet") {
+    field(DESC, "Signal level of FTE")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-LevelSet")
+    field(ZNAM,"LOW")
+    field(ONAM,"HIGH")
+}
+
+record(longout, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-PeriodNsecSet") {
+    field(DESC, "Period in Nanoseconds")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-PeriodNsecSet")
+    field(EGU, "ns")
+}
+
+record(longout, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-DutyCycleSet") {
+    field(DESC, "Duty cycle in ns")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-DutyCycleSet")
+    field(EGU, "ns")
+}
+
+record(bo, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-Set") {
+    field(DESC, "Set FTE")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-Set")
+	field(ZNAM,"OFF")
+    field(ONAM,"ON")    
+}
+
+record(mbbi, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-SetCode") {
+    field(DESC, "success-error setting FTE configuration")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-SetCode")
+    field(ZRVL, 0)
+    field(ZRST, "OK")
+    field(ZRSV, "NO_ALARM")
+    field(ONVL, 1)
+    field(ONST, "WARNING")
+    field(ONSV, "MINOR")
+    field(FFVL, 15)
+    field(FFST, "ERROR")
+    field(FFSV, "MAJOR")
+
+}
+
+record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-SetStatus") {
+    field(DESC, "Report on FTE configuration")
+    field(DTYP, "asynInt8ArrayIn")
+    field(FTVL, "CHAR")
+    field(NELM, "255")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-SetStatus")
+}
+
+#Supressing FTE 
+
+record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-StartTimeSuppress") {
+    field(DESC, "Start Time on FTE suppression")
+    field(DTYP, "asynInt32ArrayOut")
+    field(FTVL, "LONG")
+    field(SCAN, "Passive")
+    field(NELM, "2")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-StartTimeSuppress")
+}
+
+record(bo, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-ModeSuppress") {
+    field(DESC, "Mode of suppress FTE/clock")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-ModeSuppress")
+    field(ZNAM, "FTE")
+    field(ONAM, "CLK")
+}
+
+record(bo, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-AllSuppress") {
+    field(DESC, "Suppress one or Suppress all FTEs")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-AllSuppress")
+    field(ZNAM, "OFF")
+    field(ONAM, "ON")
+}
+
+record(bo, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-Suppress") {
+    field(DESC, "Suppress")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-Suppress")
+    field(ZNAM, "OFF")
+    field(ONAM, "ON")
+}
+
+record(mbbi, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-SuppressCode") {
+    field(DESC, "success-error on FTE suppression")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-SuppressCode")
+    field(ZRVL, 0)
+    field(ZRST, "OK")
+    field(ZRSV, "NO_ALARM")
+    field(ONVL, 1)
+    field(ONST, "WARNING")
+    field(ONSV, "MINOR")
+    field(FFVL, 15)
+    field(FFST, "ERROR")
+    field(FFSV, "MAJOR")
+}
+
+record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-SuppressStatus") {
+    field(DESC, "Report on FTE suppression")
+    field(DTYP, "asynInt8ArrayIn")
+    field(FTVL, "CHAR")
+    field(SCAN, "I/O Intr")
+    field(NELM, "255")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-SuppressStatus")
+}
+
+#Change period of scheduled clock generation
+
+record(longout, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-PeriodChgPeriod") {
+    field(DESC, "Period in nanoseconds to change on FTE")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-PeriodChgPeriod")
+    field(EGU, "ns")    
+}
+
+
+record(bo, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-ChgPeriod") {
+    field(DESC, "ChgPeriod")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-ChgPeriod")
+    field(ZNAM, "OFF")
+    field(ONAM, "ON")
+}
+
+record(mbbi, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-ChgPeriodCode") {
+    field(DESC, "success-error changing clock period")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-ChgPeriodCode")
+    field(ZRVL, 0)
+    field(ZRST, "OK")
+    field(ZRSV, "NO_ALARM")
+    field(ONVL, 1)
+    field(ONST, "WARNING")
+    field(ONSV, "MINOR")
+    field(FFVL, 15)
+    field(FFST, "ERROR")
+    field(FFSV, "MAJOR")
+}
+
+record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-ChgPeriodStatus") {
+    field(DESC, "Report on FTE clock period change")
+    field(DTYP, "asynInt8ArrayIn")
+    field(FTVL, "CHAR")
+    field(NELM, "255")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-ChgPeriodStatus")
+}
+
+
+#Status of pending FTEs
+
+record(bo, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-TerminalPending") {
+    field(DESC, "Terminal Pending FTEs")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-TerminalPending")
+    field(ZNAM, "OFF")
+    field(ONAM, "ON")
+}
+
+record(longin, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-PendingValue") {
+    field(DESC, "Pending FTEs in the terminal")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-PendingValue")
+}
+
+
+record(mbbi, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-PendingCode") {
+    field(DESC, "success-error on getting pending FTEs")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-PendingCode")
+    field(ZRVL, 0)
+    field(ZRST, "OK")
+    field(ZRSV, "NO_ALARM")
+    field(ONVL, 1)
+    field(ONST, "WARNING")
+    field(ONSV, "MINOR")
+    field(FFVL, 15)
+    field(FFST, "ERROR")
+    field(FFSV, "MAJOR")
+}
+
+record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-PendingStatus") {
+    field(DESC, "Report on getting pending FTEs")
+    field(DTYP, "asynInt8ArrayIn")
+    field(FTVL, "CHAR")
+    field(NELM, "255")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-PendingStatus")
+}
+
+#Maximun number of FTEs that can be scheduled
+record(longin, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-FTE-Maximum") {
+    field(DESC, "Maximum FTEs")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-FTE-Maximum")
+}
+
+#STATEMACHINE
+
+record(mbbi, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-STM-getState") {
+    field(DESC, "Get local state")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-StateMachine-getState")
+    field(ZRVL, 0)
+    field(ZRST, "UNKNOWN")
+    field(ZRSV, "MINOR")
+    field(ONVL, 1)
+    field(ONST, "OFF")
+    field(TWVL, 2)
+    field(TWST, "SWITCHING_OFF")
+    field(THVL, 3)
+    field(THST, "INITIALIZING")
+    field(FRVL, 4)
+    field(FRST, "ON")
+    field(FVVL, 5)
+    field(FVST, "STOPPING")
+    field(SXVL, 6)
+    field(SXST, "STARTING")
+    field(SVVL, 7)
+    field(SVST, "RUNNING")
+    field(EIVL, 8)
+    field(EIST, "FAULT")
+    field(EISV, "MAJOR")
+    field(PINI, 1)
+}
+
+record(mbbo, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TERMINAL_NAME)-STM-setState") {
+    field(DESC, "Set local state")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(TERMINAL_NAME)-StateMachine-setState")
+    field(ONVL, 1)
+    field(ONST, "OFF")
+    field(FRVL, 4)
+    field(FRST, "ON")
+    field(SVVL, 7)
+    field(SVST, "RUNNING")
+    field(PINI, 1)
+}

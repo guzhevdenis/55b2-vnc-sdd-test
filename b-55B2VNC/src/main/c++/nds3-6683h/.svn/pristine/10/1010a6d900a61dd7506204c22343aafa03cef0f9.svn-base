@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $HeadURL: https://svnpub.iter.org/codac/iter/codac/dev/units/m-epics-nisync/trunk/src/main/sdd/TemplateNISyncDeviceInfo.xml 
+	$ $Id: TemplateNISyncDeviceInfo.xml 75653 2017-02-24 12:58:54Z cesnikt $ Project 
+	: CODAC Core System Description : NI Sync support template: device info Source: 
+	https://svnpub.iter.org/codac/iter/codac/dev/units/m-epics-nisync/branches/codac-core-4.1/src/main/epics/nisyncApp/Db/nisync_device_info.template, 
+	r38522 Author : D.Stepanov Copyright (c) : 2010-2018 ITER Organization, CS 
+	90 046 13067 St. Paul-lez-Durance Cedex France This file is part of ITER 
+	CODAC software. For the terms and conditions of redistribution or use of 
+	this software refer to the file ITER-LICENSE.TXT located in the top level 
+	directory of the distribution package. -->
+<template name="nds-nisync-Timing" description="template for Timing"
+        version="600" required="true" usesSubstitutionFiles="true"
+	userCanInstanciate="true" xmlns="http://www.iter.org/CODAC/PlantSystemIandC/2014-2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.iter.org/CODAC/PlantSystemIandC/2014-2 ../xsd/PlantSystemIandC.xsd">
+	<applicableToControlUnit>PCF</applicableToControlUnit>
+	<applicableToIOBoard>NI PXI-6683H-NDS</applicableToIOBoard>
+	<location>nisync_Timing.template</location>
+	<EPICSDBDName>nds3-epics.dbd</EPICSDBDName>
+	<EPICSLibraryName>nds3-epics</EPICSLibraryName>
+
+<!-- -->
+
+	<variableTemplate name="HWCF:FW-HTIME">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TIMING_NAME)-HTime"
+				type="waveform">
+				<EPICSField name="DESC" value="Get Time in UTC format" />
+				<EPICSField name="DTYP" value="asynInt8ArrayIn" />
+				<EPICSField name="FTVL" value="CHAR" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="NELM" value="255" />
+				<EPICSField name="INP"	value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(TIMING_NAME)-HTime" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+	<variableTemplate name="HWCF:TIMING-SECLASTSYNC">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TIMING_NAME)-SecsLastSync"
+				type="longin">
+				<EPICSField name="DESC" value="Seconds since last synchronization" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="INP"	value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(TIMING_NAME)-SecsLastSync" />
+				<EPICSField name="EGU"  value="s" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+	<variableTemplate name="HWCF:TIMING-SYNCSTATUS">
+		<direction>state</direction>
+		<external>true</external>
+		<raisesAlarm>true</raisesAlarm>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TIMING_NAME)-SyncStatus"
+				type="mbbi">
+				<EPICSField name="DESC" value="Synchronization status" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="INP"  value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(TIMING_NAME)-SyncStatus" />
+				<EPICSField name="UNSV" value="INVALID" />			
+				<EPICSField name="ZRVL" value="0" />
+				<EPICSField name="ZRST" value="NOT SYNCED" />
+				<EPICSField name="ZRSV" value="MINOR" />		
+				<EPICSField name="ONVL" value="1" />
+				<EPICSField name="ONST" value="SYNCING" />
+				<EPICSField name="ONSV" value="NO_ALARM" />		
+				<EPICSField name="TWVL" value="2" />
+				<EPICSField name="TWST" value="SYNCED" />
+				<EPICSField name="TWSV" value="NO_ALARM" />		
+				<EPICSField name="THVL" value="3" />				
+				<EPICSField name="THST" value="LOST SYNC" />
+				<EPICSField name="THSV" value="MAJOR" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+	
+	<variableTemplate name="HWCF:FW-Time">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TIMING_NAME)-Time"
+				type="waveform">
+				<EPICSField name="DESC" value="Get Time" />
+				<EPICSField name="DTYP" value="asynInt32ArrayIn" />
+				<EPICSField name="FTVL" value="LONG" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="NELM" value="2" />
+				<EPICSField name="INP" 	value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(TIMING_NAME)-Time" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+	<variableTemplate name="HWCF:FW-TimeSEC">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TIMING_NAME)-TimeSec"
+				type="subArray">
+				<EPICSField name="DESC" value="Get Time in Seconds" />		
+				<EPICSField name="FTVL" value="LONG" />
+				<EPICSField name="INP"	value="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TIMING_NAME)-Time CP MS" />
+				<EPICSField name="EGU" value="s" />
+				<EPICSField name="MALM" value="2" />
+				<EPICSField name="INDX" value="0" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+	<variableTemplate name="HWCF:FW-TimeNanoSEC">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TIMING_NAME)-TimeNano"
+				type="subArray">
+				<EPICSField name="DESC" value="Get Time in NanoSeconds" />
+				<EPICSField name="FTVL" value="LONG" />
+				<EPICSField name="INP"  value="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TIMING_NAME)-Time CP MS" />
+				<EPICSField name="EGU"  value="ns" />
+				<EPICSField name="MALM" value="2" />
+				<EPICSField name="INDX" value="1" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+	
+	<!--State machine -->
+	
+	<variableTemplate name="HWCF:TIMING-STM-STATE">
+		<direction>state</direction>
+		<external>true</external>
+		<raisesAlarm>true</raisesAlarm>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TIMING_NAME)-STM-getState"
+				type="mbbi">
+				<EPICSField name="DESC" value="Get Local State" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="INP" 	value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(TIMING_NAME)-StateMachine-getState" />
+				<EPICSField name="ZRVL" value="0" />
+				<EPICSField name="ZRST" value="UNKNOWN" />
+				<EPICSField name="ZRSV" value="MINOR" />		
+				<EPICSField name="ONVL" value="1" />
+				<EPICSField name="ONST" value="OFF" />		
+				<EPICSField name="TWVL" value="2" />
+				<EPICSField name="TWST" value="SWITCHING_OFF" />		
+				<EPICSField name="THVL" value="3" />
+				<EPICSField name="THST" value="INITIALIZING" />		
+				<EPICSField name="FRVL" value="4" />
+				<EPICSField name="FRST" value="ON" />		
+				<EPICSField name="FVVL" value="5" />
+				<EPICSField name="FVST" value="STOPPING" />		
+				<EPICSField name="SXVL" value="6" />
+				<EPICSField name="SXST" value="STARTING" />		
+				<EPICSField name="SVVL" value="7" />
+				<EPICSField name="SVST" value="RUNNING" />
+				<EPICSField name="EIVL" value="8" />				
+				<EPICSField name="EIST" value="FAULT" />
+				<EPICSField name="EISV" value="MAJOR" />
+				<EPICSField name="PINI" value="1" />				
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>	
+
+	<variableTemplate name="HWCF:TIMING-STM-SETSTATE">
+		<direction>state</direction>
+		<external>true</external>
+		<raisesAlarm>true</raisesAlarm>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(TIMING_NAME)-STM-setState"
+				type="mbbo">
+				<EPICSField name="DESC" value="Set Local State" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="SCAN" value="Passive" />
+				<EPICSField name="OUT"	value="@asyn($(BOARDTYPE)-$(BOARDTYPEIDX),0)$(TIMING_NAME)-StateMachine-setState" />
+				<EPICSField name="ONVL" value="1" />
+				<EPICSField name="ONST" value="OFF" />			
+				<EPICSField name="FRVL" value="4" />
+				<EPICSField name="FRST" value="ON" />		
+				<EPICSField name="SVVL" value="7" />				
+				<EPICSField name="SVST" value="RUNNING" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+	<macroGroup ID="USER">
+		<macro name="BOARDTYPE" description="Board type" value="6683H"/>
+   		<macro name="TIMING_NAME" description="Timing NDS Node Name" value="Timing"/>
+	</macroGroup>
+	
+</template>

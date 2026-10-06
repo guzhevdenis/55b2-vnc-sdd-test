@@ -1,0 +1,146 @@
+#INDICATOR
+record(ai, "D1-I2-HWCF:B-7-Status") {
+    field(DESC, "Status")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-7,0)Status")
+    field(VAL, "0")
+}
+#CONTORL
+record(ao, "D1-I2-HWCF:B-7-Reseter") {
+    field(DESC, "Reset")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-7,0)Reseter")
+    field(VAL, "0")
+}
+
+#FPGA VARIABLES
+#INDICATORS
+#Bool Indicators
+record(ai, "D1-I2-HWCF:B-7-DAQ_On") {
+    field(DESC, "Shows if Data Acquisition turned on")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-7,0)DAQ_On")
+}
+record(ai, "D1-I2-HWCF:B-7-IOModuleInitializationDone") {
+    field(DESC, "IOModuleInitializationDone")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-7,0)IOModuleInitializationDone")
+}
+record(ai, "D1-I2-HWCF:B-7-Rec_Ch0") {
+    field(DESC, "FIFO queue for channel 0")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-7,0)Rec_Ch0")
+}
+record(ai, "D1-I2-HWCF:B-7-Rec_Ch1") {
+    field(DESC, "FIFO queue for channel 1")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-7,0)Rec_Ch1")
+}
+#I16 Indicators
+#Channel 0
+record(ai, "D1-I2-HWCF:B-7-Elements_Ch0") {
+    field(DESC, "Last 4 readouts for channel 0")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-7,0)Elements_Ch0")
+}
+record(ai, "D1-I2-HWCF:B-7-SizeElements_Ch0") {
+    field(DESC, "Size of Elements_Ch0")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-7,0)SizeElements_Ch0")
+}
+#Channel 1
+record(ai, "D1-I2-HWCF:B-7-Elements_Ch1") {
+    field(DESC, "Last 4 readouts for channel 1")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-7,0)Elements_Ch1")
+}
+record(ai, "D1-I2-HWCF:B-7-SizeElements_Ch1") {
+    field(DESC, "Size of Elements_Ch1")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-7,0)SizeElements_Ch1")
+}
+
+#CONTROLS
+#Controls for Bool
+record(ao, "D1-I2-HWCF:B-7-DAQ_En") {
+    field(DESC, "On/off Data Acquisition")
+    field(DTYP, "asynInt32") 
+    field(SCAN, "1 second")
+    field(OUT, "@asyn(B-7,0)DAQ_En")
+}
+#Channel 0
+record(ao, "D1-I2-HWCF:B-7-Channel_0") {
+    field(DESC, "On/off channel 0")
+    field(DTYP, "asynInt32") 
+    field(SCAN, "1 second")
+    field(OUT, "@asyn(B-7,0)Channel_0")
+}
+record(ao, "D1-I2-HWCF:B-7-FSA_On_Ch0") {
+    field(DESC, "On/off front search algorithm")
+    field(DTYP, "asynInt32") 
+    field(SCAN, "1 second")
+    field(OUT, "@asyn(B-7,0)FSA_On_Ch0")
+}
+#Channel 1
+record(ao, "D1-I2-HWCF:B-7-Channel_1") {
+    field(DESC, "On/off channel 1")
+    field(DTYP, "asynInt32") 
+    field(SCAN, "1 second")
+    field(OUT, "@asyn(B-7,0)Channel_1")
+}
+record(ao, "D1-I2-HWCF:B-7-FSA_On_Ch1") {
+    field(DESC, "On/off front search algorithm")
+    field(DTYP, "asynInt32") 
+    field(SCAN, "1 second")
+    field(OUT, "@asyn(B-7,0)FSA_On_Ch1")
+}
+
+#I16 Controls
+#Channel 0
+record(ao, "D1-I2-HWCF:B-7-Reference_Ch0") {
+    field(DESC, "Start/end condition for pulse signal")
+    field(DTYP, "asynInt32") 
+    field(SCAN, "1 second")
+    field(OUT, "@asyn(B-7,0)Reference_Ch0")
+}
+record(ao, "D1-I2-HWCF:B-7-Delta_Ch0") {
+    field(DESC, "Min values diff for front confirmation")
+    field(DTYP, "asynInt32") 
+    field(SCAN, "1 second")
+    field(OUT, "@asyn(B-7,0)Delta_Ch0")
+}
+record(ao, "D1-I2-HWCF:B-7-Difference_Ch0") {
+    field(DESC, "Start/end condition for pulse signal")
+    field(DTYP, "asynInt32") 
+    field(SCAN, "1 second")
+    field(OUT, "@asyn(B-7,0)Difference_Ch0")
+}
+#Channel 1
+record(ao, "D1-I2-HWCF:B-7-Reference_Ch1") {
+    field(DESC, "Start/end condition for pulse signal")
+    field(DTYP, "asynInt32") 
+    field(SCAN, "1 second")
+    field(OUT, "@asyn(B-7,0)Reference_Ch1")
+}
+record(ao, "D1-I2-HWCF:B-7-Delta_Ch1") {
+    field(DESC, "Min values diff for front confirmation")
+    field(DTYP, "asynInt32") 
+    field(SCAN, "1 second")
+    field(OUT, "@asyn(B-7,0)Delta_Ch1")
+}
+record(ao, "D1-I2-HWCF:B-7-Difference_Ch1") {
+    field(DESC, "Start/end condition for pulse signal")
+    field(DTYP, "asynInt32") 
+    field(SCAN, "1 second")
+    field(OUT, "@asyn(B-7,0)Difference_Ch1")
+}

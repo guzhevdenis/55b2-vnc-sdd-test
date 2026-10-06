@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+
+ <pvtable version="3.0" >
+     <nbMeasure >1</nbMeasure>
+
+     <pvlist >
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-PST:ES-HS-00-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-PST:ES-RS-00-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-PST:ES-TE-00-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-PST:HS-CS-00-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-PST:HS-HS-00-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-PST:NS-NE-00-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-PST:NS-NS-00-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-PST:SW-ND-00-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-PST:SW-OS-00-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-PST:SW-SS-00-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-PST:SW-SV-00-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-PST:SW-SW-00-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-PST:SY-PM-00-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-PST:SY-PS-00-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-PST:SY-RS-00-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-PST:SY-SU-00-0000-STREPNNPEN</name>
+</pv>
+</pvlist>
+</pvtable>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!-- Implicit size -->
+<topic name="topic-nds-oscil" version="1.0">
+  <attribute rank="0" name="NumberOfPushedDataBlocks_Ch0" dataType="int32"/>
+  <attribute rank="1" name="NumberOfPushedDataBlocks_Ch1" dataType="int32"/>
+</topic>
+

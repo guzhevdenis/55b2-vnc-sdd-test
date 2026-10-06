@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!-- Implicit size -->
+<topic name="test-topicArrays-nds" version="1.0">
+  <attribute rank="0" name="int8Array_att" dataType="int8" multiplicity="512"/>
+  <attribute rank="1" name="int16Array_att" dataType="int16" multiplicity="512"/>
+  <attribute rank="2" name="int32Array_att" dataType="int32" multiplicity="512"/>
+  <attribute rank="3" name="int64Array_att" dataType="int64" multiplicity="512"/>
+  <attribute rank="4" name="floatArray_att" dataType="float" multiplicity="512"/>
+  <attribute rank="5" name="doubleArray_att" dataType="double" multiplicity="512"/>
+  <attribute rank="6" name="boolArray_att" dataType="bool" multiplicity="512"/>
+  <attribute rank="7" name="uint8Array_att" dataType="uint8" multiplicity="512"/>
+  <attribute rank="8" name="uint16Array_att" dataType="uint16" multiplicity="512"/>
+  <attribute rank="9" name="uint32Array_att" dataType="uint32" multiplicity="512"/>
+  <attribute rank="10" name="timespecArray_att" dataType="uint64" multiplicity="512"/> <!-- 512/2 =256 -->
+  <attribute rank="11" name="int8Array_to_int16Array_att" dataType="int16" multiplicity="512"/>
+  <attribute rank="12" name="int8Array_to_int32Array_att" dataType="int32" multiplicity="512"/>
+  <attribute rank="13" name="int8Array_to_int64Array_att" dataType="int64" multiplicity="512"/>  
+  <attribute rank="14" name="int16Array_to_int32Array_att" dataType="int32" multiplicity="512"/>
+  <attribute rank="15" name="int16Array_to_int64Array_att" dataType="int64" multiplicity="512"/>  
+  <attribute rank="16" name="int32Array_to_int64Array_att" dataType="int64" multiplicity="512"/>  
+  <attribute rank="17" name="uint8Array_to_uint16Array_att" dataType="uint16" multiplicity="512"/>
+  <attribute rank="18" name="uint8Array_to_uint32Array_att" dataType="uint32" multiplicity="512"/>
+  <attribute rank="19" name="uint8Array_to_uint64Array_att" dataType="uint64" multiplicity="512"/>  
+  <attribute rank="20" name="uint16Array_to_uint32Array_att" dataType="uint32" multiplicity="512"/>
+  <attribute rank="21" name="uint16Array_to_uint64Array_att" dataType="uint64" multiplicity="512"/>
+  <attribute rank="22" name="uint32Array_to_uint64Array_att" dataType="uint64" multiplicity="512"/>  
+  <attribute rank="23" name="floatArray_to_doubleArray_att" dataType="double" multiplicity="512"/>
+  <attribute rank="24" name="doubleArray_to_floatArray_att" dataType="float" multiplicity="512"/>
+</topic>
+

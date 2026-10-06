@@ -1,0 +1,40 @@
+record (ai,"D1-I2-B2B0-DPC-CFG:D1-DD-CC-0000-CGRWPNNPVL")
+{
+	field(DESC, "Configuration coefficient of diamond det")
+}
+
+record (ai,"D1-I2-B2B0-DPC-CFG:D1-FC-CC-0000-CGRWPNNPVL")
+{
+	field(DESC, "Configuration coefficient of fission cha")
+}
+
+record (ai,"D1-I2-B2B0-DPC-CFG:D2-DD-CC-0000-CGRWPNNPVL")
+{
+	field(DESC, "Configuration coefficient of diamond det")
+}
+
+record (ai,"D1-I2-B2B0-DPC-CFG:D2-FC-CC-0000-CGRWPNNPVL")
+{
+	field(DESC, "Configuration coefficient of fission cha")
+}
+
+record (ai,"D1-I2-B2B0-DPC-CFG:D3-DD-CC-0000-CGRWPNNPVL")
+{
+	field(DESC, "Configuration coefficient of diamond det")
+}
+
+record (ai,"D1-I2-B2B0-DPC-CFG:D3-FC-CC-0000-CGRWPNNPVL")
+{
+	field(DESC, "Configuration coefficient of fission cha")
+}
+
+record (ai,"D1-I2-B2B0-DPC-CFG:D4-DD-CC-0000-CGRWPNNPVL")
+{
+	field(DESC, "Configuration coefficient of diamond det")
+}
+
+record (ai,"D1-I2-B2B0-DPC-CFG:D4-FC-CC-0000-CGRWPNNPVL")
+{
+	field(DESC, "Configuration coefficient of fission cha")
+}
+

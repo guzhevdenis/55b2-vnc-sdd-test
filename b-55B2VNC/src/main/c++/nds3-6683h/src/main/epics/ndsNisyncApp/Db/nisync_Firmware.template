@@ -1,0 +1,180 @@
+#record(longin, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-ChassisNumber") {
+#    field(DESC, "Chassis Number")
+#    field(DTYP, "asynInt32")
+#    field(SCAN, "I/O Intr")
+#    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(FIRMWARE_NAME)-ChassisNumber")
+#}
+#
+record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-DriverVersion") {
+    field(DESC, "Driver Version")
+    field(DTYP, "asynInt8ArrayIn")
+    field(FTVL, "CHAR")
+    field(SCAN, "I/O Intr")
+    field(NELM, "255")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(FIRMWARE_NAME)-DriverVersion")
+}
+#
+#record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-FilePath") {
+#    field(DESC, "Path to the firmware file to load")
+#    field(DTYP, "asynInt8ArrayOut")
+#    field(FTVL, "CHAR")
+#    field(NELM,"255")	
+#    field(SCAN, "Passive")
+#    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(FIRMWARE_NAME)-FilePath")
+#}
+#
+#record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-FilePath_RBV") {
+#    field(DESC, "Readback PV of the firmware file")
+#    field(DTYP, "asynInt8ArrayIn")
+#    field(FTVL, "CHAR")
+#    field(NELM,"255")
+#    field(SCAN, "I/O Intr")
+#    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(FIRMWARE_NAME)-FilePath_RBV")
+#}
+#
+record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-HWRevision") {
+    field(DESC, "Hardware revision")
+    field(DTYP, "asynInt8ArrayIn")
+    field(FTVL, "CHAR")
+    field(NELM,"255")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(FIRMWARE_NAME)-HWRevision")
+}
+
+record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-SerialNumber") {
+    field(DESC, "Serial number")
+    field(DTYP, "asynInt8ArrayIn")
+    field(FTVL, "CHAR")
+    field(NELM,"255")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(FIRMWARE_NAME)-SerialNumber")
+}
+
+record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-Model") {
+    field(DESC, "Device model")
+    field(DTYP, "asynInt8ArrayIn")
+    field(FTVL, "CHAR")
+    field(NELM,"255")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(FIRMWARE_NAME)-Model")
+}
+
+
+
+record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-Type") {
+    field(DESC, "Device type")
+    field(DTYP, "asynInt8ArrayIn")
+    field(FTVL, "CHAR")
+    field(NELM,"255")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(FIRMWARE_NAME)-Type")
+}
+#
+#record(longin, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-SlotNumber") {
+#    field(DESC, "Slot Number")
+#    field(DTYP, "asynInt32")
+#    field(SCAN, "I/O Intr")
+#    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(FIRMWARE_NAME)-SlotNumber")
+#}
+#
+
+record(mbbi, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-Status") {
+    field(DESC, "$(FIRMWARE_NAME)ware status")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(FIRMWARE_NAME)-Status")
+    field(ZRVL, 0)
+    field(ZRST, "OK")
+    field(ZRSV, "NO_ALARM")
+    field(ONVL, 1)
+    field(ONST, "INITIALIZING")
+    field(TWVL, 2)
+    field(TWST, "RESETTING")
+    field(THVL, 3)
+    field(THST, "HW_ERROR")
+    field(THSV, "MAJOR")
+    field(FRVL, 4)
+    field(FRST, "UNAVAILABLE")
+    field(FRSV, "MAJOR")
+    field(FVVL, 5)
+    field(FVST, "STATIC_CONF_ERROR")
+    field(FVSV, "MAJOR")
+    field(SXVL, 6)
+    field(SXST, "DYNAMIC_CONF_ERROR")
+    field(SXSV, "MAJOR")
+    field(SVVL, 7)
+    field(SVST, "RESERVED")
+    field(EIVL, 8)
+    field(EIST, "HW_FIFO_OVERFLOW")
+    field(EISV, "MINOR")
+    field(NIVL, 9)
+    field(NIST, "HW_FPGA_NOT_READY")
+    field(NISV, "MINOR")
+    field(TEVL, 10)
+    field(TEST, "HW_CLK_NOT_LOCKED")
+    field(TESV, "MINOR")
+    field(ELVL, 11)
+    field(ELST, "DRV_BUFFER_OVERFLOW")
+    field(ELSV, "MAJOR")
+}
+
+
+#record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-Version") {
+#    field(DESC, "$(FIRMWARE_NAME)ware version")
+#    field(DTYP, "asynInt8ArrayIn")
+#    field(FTVL, "CHAR")
+#    field(NELM,"255")
+#    field(SCAN, "I/O Intr")
+#    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(FIRMWARE_NAME)-Version")
+#}
+
+#record(longout, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-setCurrentTime") {
+#    field(DESC, "Set timestamp (in secodns)")
+#    field(DTYP, "asynInt32")
+#    field(SCAN, "Passive")
+#    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)setCurrentTime")
+#}
+
+#STATEMACHINE
+
+record(mbbi, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-STM-getState") {
+    field(DESC, "Get local state")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(FIRMWARE_NAME)-StateMachine-getState")
+    field(ZRVL, 0)
+    field(ZRST, "UNKNOWN")
+    field(ZRSV, "MINOR")
+    field(ONVL, 1)
+    field(ONST, "OFF")
+    field(TWVL, 2)
+    field(TWST, "SWITCHING_OFF")
+    field(THVL, 3)
+    field(THST, "INITIALIZING")
+    field(FRVL, 4)
+    field(FRST, "ON")
+    field(FVVL, 5)
+    field(FVST, "STOPPING")
+    field(SXVL, 6)
+    field(SXST, "STARTING")
+    field(SVVL, 7)
+    field(SVST, "RUNNING")
+    field(EIVL, 8)
+    field(EIST, "FAULT")
+    field(EISV, "MAJOR")
+    field(PINI, 1)
+}
+
+record(mbbo, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(FIRMWARE_NAME)-STM-setState") {
+    field(DESC, "Set local state")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(FIRMWARE_NAME)-StateMachine-setState")
+    field(ONVL, 1)
+    field(ONST, "OFF")
+    field(FRVL, 4)
+    field(FRST, "ON")
+    field(SVVL, 7)
+    field(SVST, "RUNNING")
+    field(PINI, 1)
+}

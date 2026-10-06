@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<nds-sdn>
+	<topic>
+		<attribute>
+			<NDS-PV>SDN-0-testingPV</NDS-PV>
+			<SDN-AT>test-1</SDN-AT>
+			<TYPE>int32</TYPE>
+			<NELM>1</NELM>
+			<TRIGGER_PUB>no</TRIGGER_PUB>
+		</attribute>
+		<attribute>
+			<NDS-PV>SDN-0-testingPV</NDS-PV>
+			<SDN-AT>test-2</SDN-AT>
+			<TYPE>int32</TYPE>
+			<NELM>1</NELM>
+			<TRIGGER_PUB>yes</TRIGGER_PUB>
+		</attribute>
+		<!-- 
+		<attribute> 
+			<pvName>volt</pvName>
+			<pvType>int32_t</pvType>
+			<pvSource>/SourceOfVolt</pvSource>
+		</attribute>
+		<attribute> 
+			<pvName>data</pvName>
+			<pvType>int32_t</pvType>
+			<pvSource>/SourceOfData</pvSource>
+			<nelm>20</nelm>
+		</attribute>
+		 -->
+	</topic>
+</nds-sdn>

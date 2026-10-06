@@ -1,0 +1,80 @@
+record (ai,"D1-I2-B2A0-OPR-CFG:AR-CP-00-0000-CORWPNNPEN")
+{
+	field(DESC, "Commit arhiving parameters value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-CFG:AR-CS-00-0000-CORWPNNPEN")
+{
+	field(DESC, "Archiving parameters commit state value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-CFG:DM-CP-00-0000-CORWPNNPEN")
+{
+	field(DESC, "Commit system default measurement parame")
+}
+
+record (ai,"D1-I2-B2A0-OPR-CFG:DM-CS-00-0000-CORWPNNPEN")
+{
+	field(DESC, "System default measurement parameters co")
+}
+
+record (ai,"D1-I2-B2A0-OPR-CFG:DP-CP-00-0000-CORWPNNPEN")
+{
+	field(DESC, "Commit data processing parameters value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-CFG:DP-CS-00-0000-CORWPNNPEN")
+{
+	field(DESC, "Data processing parameters commit state")
+}
+
+record (ai,"D1-I2-B2A0-OPR-CFG:DQ-CP-00-0000-CORWPNNPEN")
+{
+	field(DESC, "Commit DAQ parameters value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-CFG:DQ-CS-00-0000-CORWPNNPEN")
+{
+	field(DESC, "DAQ parameters commit state value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-CFG:HM-CP-00-0000-CORWPNNPEN")
+{
+	field(DESC, "Commit HMI parameters value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-CFG:HM-CS-00-0000-CORWPNNPEN")
+{
+	field(DESC, "HMI parameters commit state value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-CFG:NP-CP-00-0000-COREPNNPEN")
+{
+	field(DESC, "Commit network parameters value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-CFG:NP-CS-00-0000-STRWPNNPEN")
+{
+	field(DESC, "Network parameters commit state value")
+}
+
+record (ai,"D1-I2-B2A0-OPR-CFG:SC-CP-00-0000-STREPNNPEN")
+{
+	field(DESC, "Commit signal conditioning parameters va")
+}
+
+record (ai,"D1-I2-B2A0-OPR-CFG:SC-CS-00-0000-CORWPNNPEN")
+{
+	field(DESC, "Signal conditioning parameters commit st")
+}
+
+record (ai,"D1-I2-B2A0-OPR-CFG:SM-CP-00-0000-STREPNNPEN")
+{
+	field(DESC, "Commit system management parameters valu")
+}
+
+record (ai,"D1-I2-B2A0-OPR-CFG:SM-CS-00-0000-CORWPNNPEN")
+{
+	field(DESC, "System management parameters commit stat")
+}
+

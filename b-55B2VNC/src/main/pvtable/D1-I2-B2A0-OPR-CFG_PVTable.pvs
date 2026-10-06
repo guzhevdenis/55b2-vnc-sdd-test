@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+
+ <pvtable version="3.0" >
+     <nbMeasure >1</nbMeasure>
+
+     <pvlist >
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-CFG:AR-CP-00-0000-CORWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-CFG:AR-CS-00-0000-CORWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-CFG:DM-CP-00-0000-CORWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-CFG:DM-CS-00-0000-CORWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-CFG:DP-CP-00-0000-CORWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-CFG:DP-CS-00-0000-CORWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-CFG:DQ-CP-00-0000-CORWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-CFG:DQ-CS-00-0000-CORWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-CFG:HM-CP-00-0000-CORWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-CFG:HM-CS-00-0000-CORWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-CFG:NP-CP-00-0000-COREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-CFG:NP-CS-00-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-CFG:SC-CP-00-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-CFG:SC-CS-00-0000-CORWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-CFG:SM-CP-00-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-CFG:SM-CS-00-0000-CORWPNNPEN</name>
+</pv>
+</pvlist>
+</pvtable>

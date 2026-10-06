@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $HeadURL: https://svnpub.iter.org/codac/iter/codac/dev/units/m-epics-nisync/trunk/src/main/sdd/TemplateNISyncDeviceInfo.xml 
+	$ $Id: TemplateNISyncDeviceInfo.xml 75653 2017-02-24 12:58:54Z cesnikt $ Project 
+	: CODAC Core System Description : NI Sync support template: device info Source: 
+	https://svnpub.iter.org/codac/iter/codac/dev/units/m-epics-nisync/branches/codac-core-4.1/src/main/epics/nisyncApp/Db/nisync_device_info.template, 
+	r38522 Author : D.Stepanov Copyright (c) : 2010-2018 ITER Organization, CS 
+	90 046 13067 St. Paul-lez-Durance Cedex France This file is part of ITER 
+	CODAC software. For the terms and conditions of redistribution or use of 
+	this software refer to the file ITER-LICENSE.TXT located in the top level 
+	directory of the distribution package. -->
+<template name="nds-nisync-Routing" description="template for Routing"
+	version="540" required="true" usesSubstitutionFiles="true"
+	userCanInstanciate="true" xmlns="http://www.iter.org/CODAC/PlantSystemIandC/2014-2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.iter.org/CODAC/PlantSystemIandC/2014-2 ../xsd/PlantSystemIandC.xsd">
+	<applicableToControlUnit>PCF</applicableToControlUnit>
+	<applicableToIOBoard>NI PXI-6683H-NDS</applicableToIOBoard>
+	<location>nds3_Routing.template</location>
+	<EPICSDBDName>nds3-epics.dbd</EPICSDBDName>
+	<EPICSLibraryName>nds3-epics</EPICSLibraryName>
+
+<!--Route Clicks -->
+
+	<variableTemplate name="HWCF:ROUTING-CLKSRC">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-ClkSrc"
+				type="longout">
+				<EPICSField name="DESC" value="Clock Source" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)$(ROUTING_NAME)-ClkSrc" />
+				<EPICSField name="SCAN" value="Passive" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+	
+	<variableTemplate name="HWCF:ROUTING-CLKDST">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-ClkDst"
+				type="longout">
+				<EPICSField name="DESC" value="Clock Destination" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)$(ROUTING_NAME)-ClkDst" />
+				<EPICSField name="SCAN" value="Passive" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+
+
+	<variableTemplate name="HWCF:ROUTING-CLKSET">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-ClkSet"
+				type="bo">
+				<EPICSField name="DESC" value="Clock Routing Set" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)$(ROUTING_NAME)-ClkSet" />
+				<EPICSField name="SCAN" value="Passive" />
+				<EPICSField name="ZNAM" value="LOW" />		
+				<EPICSField name="ONAM" value="HIGH" />
+
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+
+	<variableTemplate name="HWCF:ROUTING-CLKSETCODE">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-ClkSetCode"
+				type="longin">
+				<EPICSField name="DESC" value="Clock routing status code" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)$(ROUTING_NAME)-ClkSetCode" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+
+
+	<variableTemplate name="HWCF:ROUTING-CLKSETSTATUS">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-ClkSetStatus"
+				type="waveform">
+				<EPICSField name="DESC" value="Clock Routing set status message" />
+				<EPICSField name="DTYP" value="asynInt8ArraIn" />
+				<EPICSField name="FTVL" value="CHAR" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)$(ROUTING_NAME)-ClkSetStatus" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="NELM" value="255" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+
+<!--Clock Route Status -->
+
+<variableTemplate name="HWCF:ROUTING-CLKDSTREAD">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-ClkDstRead"
+				type="longout">
+				<EPICSField name="DESC" value="Clock Destination connection config read" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)$(ROUTING_NAME)-ClkDstRead" />
+				<EPICSField name="SCAN" value="Passive" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+	
+	<variableTemplate name="HWCF:ROUTING-CLKSRCREAD">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-ClkSrcRead"
+				type="longin">
+				<EPICSField name="DESC" value="Selected clock destination source" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)$(ROUTING_NAME)-ClkSrcRead" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+
+<!--Route Terminals -->
+
+
+	<variableTemplate name="HWCF:ROUTING-TERMSRC">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-TermSrc"
+				type="longout">
+				<EPICSField name="DESC" value="Terminal Source" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)$(ROUTING_NAME)-TermSrc" />
+				<EPICSField name="SCAN" value="Passive" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+	
+	<variableTemplate name="HWCF:ROUTING-TERMDST">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-TermDst"
+				type="longout">
+				<EPICSField name="DESC" value="Terminal Destination" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)$(ROUTING_NAME)-TermDst" />
+				<EPICSField name="SCAN" value="Passive" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+
+	<variableTemplate name="HWCF:ROUTING-TermSyncSet">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-TermSyncSet"
+				type="bo">
+				<EPICSField name="DESC" value="Terminal sync mode set" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)$(ROUTING_NAME)-TermSyncSet" />
+				<EPICSField name="SCAN" value="Passive" />
+				<EPICSField name="ZNAM" value="OFF" />		
+				<EPICSField name="ONAM" value="ON" />
+
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+
+	<variableTemplate name="HWCF:ROUTING-TermInvertSet">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-TermInvertSet"
+				type="bo">
+				<EPICSField name="DESC" value="Terminal inversion mode set" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)$(ROUTING_NAME)-TermInvertSet" />
+				<EPICSField name="SCAN" value="Passive" />
+				<EPICSField name="ZNAM" value="OFF" />		
+				<EPICSField name="ONAM" value="ON" />
+
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+	<variableTemplate name="HWCF:ROUTING-TermSet">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-TermSet"
+				type="bo">
+				<EPICSField name="DESC" value="Terminal Routing set" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)$(ROUTING_NAME)-TermSet" />
+				<EPICSField name="SCAN" value="Passive" />
+				<EPICSField name="ZNAM" value="OFF" />		
+				<EPICSField name="ONAM" value="ON" />
+
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+	
+	<variableTemplate name="HWCF:ROUTING-TERMSETCODE">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-TermSetCode"
+				type="longin">
+				<EPICSField name="DESC" value="Terminal Routing Set Status Code" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)$(ROUTING_NAME)-TermSetCode" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+
+
+	<variableTemplate name="HWCF:ROUTING-TERMSETSTATUS">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-TermSetStatus"
+				type="waveform">
+				<EPICSField name="DESC" value="Terminal Routing set status message" />
+				<EPICSField name="DTYP" value="asynInt8ArraIn" />
+				<EPICSField name="FTVL" value="CHAR" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)$(ROUTING_NAME)-ChgPeriodStatus" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="NELM" value="255" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+<!--Read Routing Configuration -->
+
+
+<variableTemplate name="HWCF:ROUTING-TERMDSTREAD">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-TermDstRead"
+				type="longout">
+				<EPICSField name="DESC" value="Terminal dst coonection config read" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)$(ROUTING_NAME)-TermDstRead" />
+				<EPICSField name="SCAN" value="Passive" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+	
+	<variableTemplate name="HWCF:ROUTING-TERMSRCREAD">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-TermSrcRead"
+				type="longin">
+				<EPICSField name="DESC" value="Selected terminal destination source" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)$(ROUTING_NAME)-TermSrcRead" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+	<variableTemplate name="HWCF:ROUTING-TermInvertRead">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-TermInvertRead"
+				type="bi">
+				<EPICSField name="DESC" value="Selected terminal inverted mode" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)$(ROUTING_NAME)-TermInvertRead" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="ZNAM" value="OFF" />		
+				<EPICSField name="ONAM" value="ON" />
+
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+	
+
+	<variableTemplate name="HWCF:ROUTING-TermSyncRead">
+		<direction>state</direction>
+		<external>true</external>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-TermSyncRead"
+				type="bi">
+				<EPICSField name="DESC" value="Selected terminal destination sync" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="INP"
+					value="@asyn($(BOARDTYPE)$(BOARDTYPEIDX),0)$(ROUTING_NAME)-TermSyncRead" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="ZNAM" value="OFF" />		
+				<EPICSField name="ONAM" value="ON" />
+
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+
+<!--State machine -->
+
+	
+
+	
+	<variableTemplate name="HWCF:ROUTING-STM-GLOBALSTATE">
+		<direction>state</direction>
+		<external>true</external>
+		<raisesAlarm>true</raisesAlarm>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-STM-getGlobalState"
+				type="mbbi">
+				<EPICSField name="DESC" value="" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="INP"
+				value="@asyn($(PREFIXBOARDTYPE)$(MODULEIDX),0)$(ROUTING_NAME)-StateMachine-getGlobalState" />
+				
+				<EPICSField name="ZRVL" value="0" />		
+				<EPICSField name="ONVL" value="1" />		
+				<EPICSField name="TWVL" value="2" />		
+				<EPICSField name="THVL" value="3" />		
+				<EPICSField name="FRVL" value="4" />		
+				<EPICSField name="FVVL" value="5" />		
+				<EPICSField name="SXVL" value="6" />		
+				<EPICSField name="SVVL" value="7" />		
+				<EPICSField name="EIVL" value="8" />
+
+				<EPICSField name="ZRST" value="UNKNOWN" />
+				<EPICSField name="ONST" value="OFF" />
+				<EPICSField name="TWST" value="SWITCHING_OFF" />
+				<EPICSField name="THST" value="INITIALIZING" />
+				<EPICSField name="FRST" value="ON" />
+				<EPICSField name="FVST" value="STOPPING" />
+				<EPICSField name="SXST" value="STARTING" />
+				<EPICSField name="SVST" value="RUNNING" />
+				<EPICSField name="EIST" value="FAULTS" />
+				<EPICSField name="SCAN" value="Passive" />
+				<EPICSField name="PINI" value="1" />				
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+	
+	<variableTemplate name="HWCF:ROUTING-STM-STATE">
+		<direction>state</direction>
+		<external>true</external>
+		<raisesAlarm>true</raisesAlarm>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-STM-getState"
+				type="mbbi">
+				<EPICSField name="DESC" value="Get Local State" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="INP"
+					value="@asyn($(PREFIXBOARDTYPE)$(MODULEIDX),0)$(ROUTING_NAME)-StateMachine-getState" />
+				<EPICSField name="ZRVL" value="0" />		
+				<EPICSField name="ONVL" value="1" />		
+				<EPICSField name="TWVL" value="2" />		
+				<EPICSField name="THVL" value="3" />		
+				<EPICSField name="FRVL" value="4" />		
+				<EPICSField name="FVVL" value="5" />		
+				<EPICSField name="SXVL" value="6" />		
+				<EPICSField name="SVVL" value="7" />
+				<EPICSField name="EIVL" value="8" />
+				<EPICSField name="ZRST" value="UNKNOWN" />
+				<EPICSField name="ONST" value="OFF" />
+				<EPICSField name="TWST" value="SWITCHING_OFF" />
+				<EPICSField name="THST" value="INITIALIZING" />
+				<EPICSField name="FRST" value="ON" />
+				<EPICSField name="FVST" value="STOPPING" />
+				<EPICSField name="SXST" value="STARTING" />
+				<EPICSField name="SVST" value="RUNNING" />
+				<EPICSField name="EIST" value="FAULTS" />
+				<EPICSField name="SCAN" value="I/O Intr" />
+				<EPICSField name="PINI" value="1" />				
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>	
+
+	<variableTemplate name="HWCF:ROUTING-STM-SETSTATE">
+		<direction>state</direction>
+		<external>true</external>
+		<raisesAlarm>true</raisesAlarm>
+		<presentOnScreens>true</presentOnScreens>
+		<EPICSAttributes>
+			<EPICSRecord
+				name="$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-STM-setState"
+				type="mbbo">
+				<EPICSField name="DESC" value="Set Local State" />
+				<EPICSField name="DTYP" value="asynInt32" />
+				<EPICSField name="OUT"
+					value="@asyn($(PREFIXBOARDTYPE)$(MODULEIDX),0)$(ROUTING_NAME)-StateMachine-setState" />
+				<EPICSField name="ZRVL" value="0" />		
+				<EPICSField name="ONVL" value="1" />		
+				<EPICSField name="TWVL" value="2" />		
+				<EPICSField name="THVL" value="3" />		
+				<EPICSField name="FRVL" value="4" />		
+				<EPICSField name="FVVL" value="5" />		
+				<EPICSField name="SXVL" value="6" />		
+				<EPICSField name="SVVL" value="7" />
+				<EPICSField name="EIVL" value="8" />
+				<EPICSField name="ZRST" value="UNKNOWN" />
+				<EPICSField name="ONST" value="OFF" />
+				<EPICSField name="TWST" value="SWITCHING_OFF" />
+				<EPICSField name="THST" value="INITIALIZING" />
+				<EPICSField name="FRST" value="ON" />
+				<EPICSField name="FVST" value="STOPPING" />
+				<EPICSField name="SXST" value="STARTING" />
+				<EPICSField name="SVST" value="RUNNING" />
+				<EPICSField name="EIST" value="FAULTS" />
+				<EPICSField name="SCAN" value="Passive" />
+								
+			</EPICSRecord>
+		</EPICSAttributes>
+	</variableTemplate>
+
+	<macroGroup ID="USER">
+		 <macro name="BOARDTYPE" description="Board type" value="NI-PXI-6683H-NDS"/>
+     		<macro name="ROUTING_NAME" description="Routing NDS Node Name" value="ROUTE"/>
+		
+        </macroGroup>
+	
+</template>

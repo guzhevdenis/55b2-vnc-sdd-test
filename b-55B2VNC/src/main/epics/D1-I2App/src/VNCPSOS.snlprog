@@ -1,0 +1,4 @@
+VNCPSOS_SNCFLAGS += +r -c +d
+D1-I2_DBD += VNCPSOS.dbd
+D1-I2_SRCS += VNCPSOS.st
+D1-I2_LIBS += seq pv

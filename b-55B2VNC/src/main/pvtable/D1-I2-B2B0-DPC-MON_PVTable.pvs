@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+
+ <pvtable version="3.0" >
+     <nbMeasure >1</nbMeasure>
+
+     <pvlist >
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:D1-DP-ST-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:D1-FP-SR-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:D2-DP-ST-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:D2-FP-SR-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:D3-DP-ST-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:D3-FP-SR-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:D4-DP-ST-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:D4-FP-SR-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:D5-DP-ST-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:D5-FP-SR-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:D6-DP-ST-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:D6-FP-SR-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:D7-DP-ST-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:D7-FP-SR-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:D8-DP-ST-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:D8-FP-SR-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:D9-DP-ST-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:D9-FP-SR-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:DA-DP-ST-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:DA-FP-SR-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:DB-DP-ST-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:DB-FP-SR-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:DC-DP-ST-0000-STRWPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DPC-MON:DC-FP-SR-0000-STRWPNNPEN</name>
+</pv>
+</pvlist>
+</pvtable>

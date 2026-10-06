@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- 
+  BOY Files Navigation
+  CODAC-VERSION: 6.3.1
+  WARNING: This is an SDD generated file. Contact codac-support for any query.
+-->
+
+ <CBS name="DVX" description="DVX" enabled="true" opi_file="./../ITER-DIA-DVX.opi LEVEL=ITER-DIA-DVX" deprecated="false" alarm_root="/CODAC_AlarmHandler/D1" xmlns:xi="http://www.w3.org/2001/XInclude" ></CBS>

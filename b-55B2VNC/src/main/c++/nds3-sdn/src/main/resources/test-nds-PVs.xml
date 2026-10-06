@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<pv-config>
+	<pv name="int32_PV" datatype="int32"/>
+	<pv name="int64_PV" datatype="int64"/>
+	<pv name="float_PV" datatype="float"/>
+	<pv name="double_PV" datatype="double"/>
+	<pv name="timespec_PV" datatype="timespec"/>
+	<pv name="timestamp_PV" datatype="timestamp"/>
+	<pv name="string_PV" datatype="string"/>
+</pv-config>

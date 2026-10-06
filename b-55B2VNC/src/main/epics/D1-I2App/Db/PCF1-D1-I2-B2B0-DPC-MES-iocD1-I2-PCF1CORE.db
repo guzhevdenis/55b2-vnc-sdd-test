@@ -1,0 +1,320 @@
+record (ai,"D1-I2-B2B0-DPC-MES:C9-SM-CS-0000-MCREPNNPBF")
+{
+	field(DESC, "Charge Spectrum Data for diamond detecto")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:C9-SM-RE-0000-MCREPNNPVL")
+{
+	field(DESC, "Charge spectrum resolution for diamond d")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:CA-SM-CS-0000-MCREPNNPBF")
+{
+	field(DESC, "Charge Spectrum Data for diamond detecto")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:CA-SM-RE-0000-MCREPNNPVL")
+{
+	field(DESC, "Charge spectrum resolution for diamond d")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:CB-SM-CS-0000-MCREPNNPBF")
+{
+	field(DESC, "Charge Spectrum Data for diamond detecto")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:CB-SM-RE-0000-MCREPNNPVL")
+{
+	field(DESC, "Charge spectrum resolution for diamond d")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:CC-SM-CS-0000-MCREPNNPBF")
+{
+	field(DESC, "Charge Spectrum Data for diamond detecto")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:CC-SM-RE-0000-MCREPNNPVL")
+{
+	field(DESC, "Charge spectrum resolution for diamond d")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:CD-SM-CS-0000-MCREPNNPBF")
+{
+	field(DESC, "Charge Spectrum Data for diamond detecto")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:CD-SM-RE-0000-MCREPNNPVL")
+{
+	field(DESC, "Charge spectrum resolution for diamond d")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:CE-SM-CS-0000-MCREPNNPBF")
+{
+	field(DESC, "Charge Spectrum Data for diamond detecto")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:CE-SM-RE-0000-MCREPNNPVL")
+{
+	field(DESC, "Charge spectrum resolution for diamond d")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:CF-SM-CS-0000-MCREPNNPBF")
+{
+	field(DESC, "Charge Spectrum Data for diamond detecto")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:CF-SM-RE-0000-MCREPNNPVL")
+{
+	field(DESC, "Charge spectrum resolution for diamond d")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:CG-SM-CS-0000-MCREPNNPBF")
+{
+	field(DESC, "Charge Spectrum Data for diamond detecto")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:CG-SM-RE-0000-MCREPNNPVL")
+{
+	field(DESC, "Charge spectrum resolution for diamond d")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D5-DP-AS-0000-MCREPNNPBF")
+{
+	field(DESC, "Amplitude  Spectrum Data for diamond det")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D5-DP-CR-0000-MCREPNNPVL")
+{
+	field(DESC, "Normalized Count Rate Value for diamond")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D5-DP-ER-0000-ERGEPNNPEI")
+{
+	field(DESC, "Measurement Error Value for count rate c")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D5-DP-PN-0000-MCREPNNPVL")
+{
+	field(DESC, "Number of pulses value for diamond detec")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D5-DP-SR-0000-MCREPNNPVL")
+{
+	field(DESC, "Amplitude Spectrum Resolution Value for")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D5-FF-CR-0000-MCREPNNPVL")
+{
+	field(DESC, "Normalized Count Rate Value for fission")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D5-FF-ER-0000-ERGEPNNPEI")
+{
+	field(DESC, "Measurement Error Value for count rate c")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D5-FP-AS-0000-MCREPNNPBF")
+{
+	field(DESC, "Amplitude Spectrum Data for fission cham")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D5-FP-ER-0000-ERGEPNNPEI")
+{
+	field(DESC, "Measurement Error Value for count rate c")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D5-FP-NR-0000-MCREPNNPVL")
+{
+	field(DESC, "Normalized Count Rate Value for fission")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D5-FP-PN-0000-MCREPNNPVL")
+{
+	field(DESC, "Number of pulses value for fission chamb")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D5-FP-SR-0000-MCREPNNPVL")
+{
+	field(DESC, "Amplitude  Spectrum Resolution Value for")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D6-DP-AS-0000-MCREPNNPBF")
+{
+	field(DESC, "Amplitude  Spectrum Data for diamond det")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D6-DP-CR-0000-MCREPNNPVL")
+{
+	field(DESC, "Normalized Count Rate Value for diamond")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D6-DP-ER-0000-ERGEPNNPEI")
+{
+	field(DESC, "Measurement Error Value for count rate c")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D6-DP-PN-0000-MCREPNNPVL")
+{
+	field(DESC, "Number of pulses value for diamond detec")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D6-DP-SR-0000-MCREPNNPVL")
+{
+	field(DESC, "Amplitude Spectrum Resolution Value for")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D6-FF-CR-0000-MCREPNNPVL")
+{
+	field(DESC, "Normalized Count Rate Value for fission")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D6-FF-ER-0000-ERGEPNNPEI")
+{
+	field(DESC, "Measurement Error Value for count rate c")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D6-FP-AS-0000-MCREPNNPBF")
+{
+	field(DESC, "Amplitude Spectrum Data for fission cham")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D6-FP-ER-0000-ERGEPNNPEI")
+{
+	field(DESC, "Measurement Error Value for count rate c")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D6-FP-NR-0000-MCREPNNPVL")
+{
+	field(DESC, "Normalized Count Rate Value for fission")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D6-FP-PN-0000-MCREPNNPVL")
+{
+	field(DESC, "Number of pulses value for fission chamb")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D6-FP-SR-0000-MCREPNNPVL")
+{
+	field(DESC, "Amplitude  Spectrum Resolution Value for")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D7-DP-AS-0000-MCREPNNPBF")
+{
+	field(DESC, "Amplitude  Spectrum Data for diamond det")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D7-DP-CR-0000-MCREPNNPVL")
+{
+	field(DESC, "Normalized Count Rate Value for diamond")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D7-DP-ER-0000-ERGEPNNPEI")
+{
+	field(DESC, "Measurement Error Value for count rate c")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D7-DP-PN-0000-MCREPNNPVL")
+{
+	field(DESC, "Number of pulses value for diamond detec")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D7-DP-SR-0000-MCREPNNPVL")
+{
+	field(DESC, "Amplitude Spectrum Resolution Value for")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D7-FF-CR-0000-MCREPNNPVL")
+{
+	field(DESC, "Normalized Count Rate Value for fission")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D7-FF-ER-0000-ERGEPNNPEI")
+{
+	field(DESC, "Measurement Error Value for count rate c")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D7-FP-AS-0000-MCREPNNPBF")
+{
+	field(DESC, "Amplitude Spectrum Data for fission cham")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D7-FP-ER-0000-ERGEPNNPEI")
+{
+	field(DESC, "Measurement Error Value for count rate c")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D7-FP-NR-0000-MCREPNNPVL")
+{
+	field(DESC, "Normalized Count Rate Value for fission")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D7-FP-PN-0000-MCREPNNPVL")
+{
+	field(DESC, "Number of pulses value for fission chamb")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D7-FP-SR-0000-MCREPNNPVL")
+{
+	field(DESC, "Amplitude  Spectrum Resolution Value for")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D8-DP-AS-0000-MCREPNNPBF")
+{
+	field(DESC, "Amplitude  Spectrum Data for diamond det")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D8-DP-CR-0000-MCREPNNPVL")
+{
+	field(DESC, "Normalized Count Rate Value for diamond")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D8-DP-ER-0000-ERGEPNNPEI")
+{
+	field(DESC, "Measurement Error Value for count rate c")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D8-DP-PN-0000-MCREPNNPVL")
+{
+	field(DESC, "Number of pulses value for diamond detec")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D8-DP-SR-0000-MCREPNNPVL")
+{
+	field(DESC, "Amplitude Spectrum Resolution Value for")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D8-FF-CR-0000-MCREPNNPVL")
+{
+	field(DESC, "Normalized Count Rate Value for fission")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D8-FF-ER-0000-ERGEPNNPEI")
+{
+	field(DESC, "Measurement Error Value for count rate c")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D8-FP-AS-0000-MCREPNNPBF")
+{
+	field(DESC, "Amplitude Spectrum Data for fission cham")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D8-FP-ER-0000-ERGEPNNPEI")
+{
+	field(DESC, "Measurement Error Value for count rate c")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D8-FP-NR-0000-MCREPNNPVL")
+{
+	field(DESC, "Normalized Count Rate Value for fission")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D8-FP-PN-0000-MCREPNNPVL")
+{
+	field(DESC, "Number of pulses value for fission chamb")
+}
+
+record (ai,"D1-I2-B2B0-DPC-MES:D8-FP-SR-0000-MCREPNNPVL")
+{
+	field(DESC, "Amplitude  Spectrum Resolution Value for")
+}
+

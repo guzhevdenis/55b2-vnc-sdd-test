@@ -1,0 +1,268 @@
+#File must be renamed
+#Variables description required
+
+#INDICATORS
+record(ai, "D1-I2-HWCF:B-8-Status") {
+    field(DESC, "Status")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-8,0)Status")
+    field(VAL, "0")
+}
+record(ai, "D1-I2-HWCF:B-8-DAQ_On") {
+    field(DESC, "Shows if Data Acquisition turned on")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-8,0)DAQ_On")
+}
+record(ai, "D1-I2-HWCF:B-8-Input_Valid") {
+    field(DESC, "Validness of data input")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-8,0)Input_Valid")
+}
+record(ai, "D1-I2-HWCF:B-8-ReadyForInput") {
+    field(DESC, "Shows if data is ready for input")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-8,0)ReadyForInput")
+}
+record(ai, "D1-I2-HWCF:B-8-EEPROMPowerEnabled") {
+    field(DESC, "Shows EEPROM state")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-8,0)EEPROMPowerEnabled")
+}
+record(ai, "D1-I2-HWCF:B-8-Expected_ID") {
+    field(DESC, "Expected I/O module ID")
+    field(DTYP, "asynInt64")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-8,0)Expected_ID")
+}
+record(ai, "D1-I2-HWCF:B-8-Inserted_ID") {
+    field(DESC, "Actual I/O module ID")
+    field(DTYP, "asynInt64")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-8,0)Inserted_ID")
+}
+record(ai, "D1-I2-HWCF:B-8-IOEnabled") {
+    field(DESC, "I/O module enabled")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-8,0)IOEnabled")
+}
+record(ai, "D1-I2-HWCF:B-8-PowerEnabled") {
+    field(DESC, "I/O module power enabled")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-8,0)PowerEnabled")
+}
+record(ai, "D1-I2-HWCF:B-8-PowerGood") {
+    field(DESC, "I/O module power good")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-8,0)PowerGood")
+}
+record(ai, "D1-I2-HWCF:B-8-Present") {
+    field(DESC, "I/O module present")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-8,0)Present")
+}
+record(ai, "D1-I2-HWCF:B-8-InitializationDone") {
+    field(DESC, "I/O module init done")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-8,0)InitializationDone")
+}
+record(ai, "D1-I2-HWCF:B-8-Clk100PLL_Unlocked") {
+    field(DESC, "Lock loss on PLL frequency of 100 MHz")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-8,0)Clk100PLL_Unlocked")
+}
+record(ai, "D1-I2-HWCF:B-8-Power3_3V") {
+    field(DESC, "Device power in 3.3V line")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-8,0)Power3_3V")
+}
+record(ai, "D1-I2-HWCF:B-8-Power12V") {
+    field(DESC, "Device power in 12V line")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-8,0)Power12V")
+}
+record(ai, "D1-I2-HWCF:B-8-Temperature_degC") {
+    field(DESC, "Device temperature")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-8,0)Temperature_degC")
+}
+
+record(ai, "D1-I2-HWCF:B-8-RawDataFIFO_Depth") {
+    field(DESC, "Actual depth of Raw data FIFO")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-8,0)RawDataFIFO_Depth")
+}
+record(ai, "D1-I2-HWCF:B-8-FluctCountRate_Hz_FIFO_Depth") {
+    field(DESC, "Actual depth of FluctCountRate_Hz FIFO")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-8,0)FluctCountRate_Hz_FIFO_Depth")
+}
+record(ai, "D1-I2-HWCF:B-8-PulseChainFIFO_Depth") {
+    field(DESC, "Actual depth of PulseChain FIFO")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-8,0)PulseChainFIFO_Depth")
+}
+
+
+#CONFIGURE FIFO DEPTH
+record(ao, "D1-I2-HWCF:B-8-ConfigFIFO_Depth") {
+    field(DESC, "Set FIFO depth")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)ConfigFIFO_Depth")
+    field(PINI, "YES")
+}
+
+#CONTROLS
+record(ao, "D1-I2-HWCF:B-8-Reseter") {
+    field(DESC, "Reset")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)Reseter")
+    field(VAL, "0")
+}
+record(ao, "D1-I2-HWCF:B-8-EnableDAQ") {
+    field(DESC, "On/off Data Acquisition")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)EnableDAQ")
+    field(PINI, "YES")
+}
+record(ao, "D1-I2-HWCF:B-8-FirstExpCoeff") {
+    field(DESC, "Set 1st exponential filter coefficient")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)FirstExpCoeff")
+    field(PINI, "YES")
+}
+record(ao, "D1-I2-HWCF:B-8-SecondExpCoeff") {
+    field(DESC, "Set 2nd exponential filter coefficient")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)SecondExpCoeff")
+    field(PINI, "YES")
+}
+record(mbbo, "D1-I2-HWCF:B-8-Type") {
+    field(DESC, "Set type of filtration")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)Type")
+    field(ZRVL, 0)
+    field(ZRST, "Exponential")
+    field(ONVL, 1)
+    field(ONST, "Median window 15 points")
+    field(TWVL, 2)
+    field(TWST, "Median window 21 points")
+    field(THVL, 3)
+    field(THST, "Median window 27 points")
+    field(VAL, "0")
+    field(IVOA, "Set output to IVOV")
+    field(IVOV, "0")
+    field(PINI, "YES")
+}
+record(ao, "D1-I2-HWCF:B-8-CalibrationCoefficient") {
+    field(DESC, "Set calibration coefficient")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)CalibrationCoefficient")
+    field(PINI, "YES")
+}
+record(ao, "D1-I2-HWCF:B-8-Threshold") {
+    field(DESC, "Set threshold")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)Threshold")
+    field(PINI, "YES")
+}
+record(ao, "D1-I2-HWCF:B-8-SinglePulseMax") {
+    field(DESC, "Set maximum single pulses")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)SinglePulseMax")
+    field(PINI, "YES")
+}
+record(ao, "D1-I2-HWCF:B-8-SinglePulseMin") {
+    field(DESC, "Set minimum single pulses")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)SinglePulseMin")
+    field(PINI, "YES")
+}
+record(ao, "D1-I2-HWCF:B-8-TotalPulseMin") {
+    field(DESC, "Set minimum total pulses")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)TotalPulseMin")
+    field(PINI, "YES")
+}
+
+#FIFO PVs
+record(ai, "D1-I2-HWCF:B-8-FluctCountRate_Hz") {
+    field(DESC, "Fluctuation count rate")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-8,0)FluctCountRate_Hz")
+    field(PINI, "YES")
+}
+record(ai, "D1-I2-HWCF:B-8-SinglePules") {
+    field(DESC, "Single pulses")
+    field(DTYP, "asynInt64")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-8,0)SinglePules")
+    field(PINI, "YES")
+}
+record(ai, "D1-I2-HWCF:B-8-SingleRate") {
+    field(DESC, "Single rate")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-8,0)SingleRate")
+    field(PINI, "YES")
+}
+record(ai, "D1-I2-HWCF:B-8-TotalPulses") {
+    field(DESC, "Total pulses")
+    field(DTYP, "asynInt64")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-8,0)TotalPulses")
+    field(PINI, "YES")
+}
+record(ai, "D1-I2-HWCF:B-8-TotalRate") {
+    field(DESC, "Total rate")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-8,0)TotalRate")
+    field(PINI, "YES")
+}
+record(waveform, "D1-I2-HWCF:B-8-SingleRateData") {
+    field(DESC, "Single rate PV for display on graph")
+    field(DTYP, "asynFloat64ArrayIn")
+    field(FTVL, "DOUBLE")
+    field(NELM, "320")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-8,0)SingleRateData")
+    field(PINI, "YES")
+}
+record(waveform, "D1-I2-HWCF:B-8-TotalRateData") {
+    field(DESC, "Total rate PV for display on graph")
+    field(DTYP, "asynFloat64ArrayIn")
+    field(FTVL, "DOUBLE")
+    field(NELM, "320")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-8,0)TotalRateData")
+    field(PINI, "YES")
+}

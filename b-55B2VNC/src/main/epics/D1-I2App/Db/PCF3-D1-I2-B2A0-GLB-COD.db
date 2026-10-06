@@ -1,0 +1,10 @@
+record (ai,"D1-I2-B2A0-GLB-COD:AV-ST-00-0000-STREPNNPEN")
+{
+	field(DESC, "Status of avaliability of CODAC services")
+}
+
+record (ai,"D1-I2-B2A0-GLB-COD:CN-ST-00-0000-STREPNNPEN")
+{
+	field(DESC, "Connection status with PBS 45 (CODAC)")
+}
+

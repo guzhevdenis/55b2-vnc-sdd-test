@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+
+ <pvtable version="3.0" >
+     <nbMeasure >1</nbMeasure>
+
+     <pvlist >
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-INT:HI-DI-B1-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-INT:HI-DI-B2-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-INT:HI-DI-B3-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-INT:HI-DI-B4-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-INT:HI-DI-B5-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-INT:HI-DI-B6-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-INT:HI-FI-B1-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-INT:HI-FI-B2-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-INT:HI-FI-B3-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-INT:HI-FI-B4-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-INT:HI-FI-B5-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-INT:HI-FI-B6-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-INT:HI-FI-B7-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-INT:HI-FI-B8-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-INT:HI-FI-B9-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-INT:HI-PI-P1-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-INT:HI-PI-P2-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-INT:HI-PI-P3-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-INT:SI-MI-00-0000-STREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-OPR-INT:SI-RS-00-0000-STREPNNPEN</name>
+</pv>
+</pvlist>
+</pvtable>

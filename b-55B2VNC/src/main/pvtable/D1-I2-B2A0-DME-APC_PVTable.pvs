@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+
+ <pvtable version="3.0" >
+     <nbMeasure >1</nbMeasure>
+
+     <pvlist >
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-APC:BR-TI-ER-0000-ERREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-APC:BR-TI-ME-0000-MPREPNPWBF</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-APC:BR-TI-QT-0000-QTREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-APC:BR-TI-TS-0000-TMREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-APC:PR-NP-ER-0000-ERREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-APC:PR-NP-ME-0000-MPREPNPWBF</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-APC:PR-NP-QT-0000-QTREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DME-APC:PR-NP-TS-0000-TMREPNNPVL</name>
+</pv>
+</pvlist>
+</pvtable>

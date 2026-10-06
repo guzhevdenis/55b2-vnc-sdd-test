@@ -1,0 +1,16 @@
+#TERMINAL 0-18
+file "nisync_Terminal.template" {
+pattern {BOARDTYPE,	BOARDTYPEIDX,	CBS1,	CBS2,	TERMINAL_NAME}
+		{"B",		"0",			"TEST",	"FCT0",	"TR0" }
+		{"B",		"0",			"TEST",	"FCT0",	"TR1" }
+		{"B",		"0",			"TEST",	"FCT0",	"TR2" }
+		{"B",		"0",			"TEST",	"FCT0",	"TR11"}
+		{"B",		"0",			"TEST",	"FCT0",	"TR12"}
+		{"B",		"0",			"TEST",	"FCT0",	"TR13"}
+		{"B",		"0",			"TEST",	"FCT0",	"TR14"}
+		{"B",		"0",			"TEST",	"FCT0",	"TR15"}
+		{"B",		"0",			"TEST",	"FCT0",	"TR16"}
+		{"B",		"0",			"TEST",	"FCT0",	"TR17"}
+		{"B",		"0",			"TEST",	"FCT0",	"TR18"}
+
+}

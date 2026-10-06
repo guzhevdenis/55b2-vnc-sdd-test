@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+
+ <pvtable version="3.0" >
+     <nbMeasure >1</nbMeasure>
+
+     <pvlist >
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:D1-DP-PT-0000-CGSEPNVOSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:D1-FP-PT-0000-CGSEPNVOSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:D2-DP-PT-0000-CGSEPNVOSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:D2-FP-PT-0000-CGSEPNVOSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:D3-DP-PT-0000-CGSEPNVOSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:D3-FP-PT-0000-CGSEPNVOSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:D4-DP-PT-0000-CGSEPNVOSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:D4-FP-PT-0000-CGSEPNVOSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:D5-DP-PT-0000-CGSEPNVOSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:D5-FP-PT-0000-CGSEPNVOSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:D6-DP-PT-0000-CGSEPNVOSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:D6-FP-PT-0000-CGSEPNVOSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:D7-DP-PT-0000-CGSEPNVOSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:D7-FP-PT-0000-CGSEPNVOSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:D8-DP-PT-0000-CGSEPNVOSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:D8-FP-PT-0000-CGSEPNVOSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:D9-DP-PT-0000-CGSEPNVOSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:D9-FP-PT-0000-CGSEPNVOSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:DA-DP-PT-0000-CGSEPNVOSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:DA-FP-PT-0000-CGSEPNVOSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:DB-DP-PT-0000-CGSEPNVOSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:DB-FP-PT-0000-CGSEPNVOSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:DC-DP-PT-0000-CGSEPNVOSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2B0-DAQ-PPC:DC-FP-PT-0000-CGSEPNVOSP</name>
+</pv>
+</pvlist>
+</pvtable>

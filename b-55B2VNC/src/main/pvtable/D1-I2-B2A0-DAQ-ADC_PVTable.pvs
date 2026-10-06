@@ -1,0 +1,1147 @@
+<?xml version="1.0"?>
+
+ <pvtable version="3.0" >
+     <nbMeasure >1</nbMeasure>
+
+     <pvlist >
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C1-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C1-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C1-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C2-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C2-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C2-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C3-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C3-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C3-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C4-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C4-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C4-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C5-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C5-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C5-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C6-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C6-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C6-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C7-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C7-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C7-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C8-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C8-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C8-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C9-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C9-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:C9-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CA-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CA-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CA-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CB-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CB-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CB-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CC-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CC-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CC-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CD-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CD-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CD-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CE-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CE-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CE-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CF-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CF-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CF-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CG-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CG-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CG-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CH-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CH-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CH-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CI-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CI-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CI-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CJ-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CJ-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CJ-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CK-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CK-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CK-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CL-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CL-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CL-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CM-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CM-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CM-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CN-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CN-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CN-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CO-OM-OC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CO-SM-CB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:CO-SM-EB-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D1-DP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D1-DP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D1-DP-RD-0000-MUREDNNPRB</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D1-FP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D1-FP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D1-FP-RD-0000-MUREDNNPRB</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D2-DP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D2-DP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D2-DP-RD-0000-MUREDNNPRB</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D2-FP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D2-FP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D2-FP-RD-0000-MUREDNNPRB</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D3-DP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D3-DP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D3-DP-RD-0000-MUREDNNPRB</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D3-FP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D3-FP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D3-FP-RD-0000-MUREDNNPRB</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D4-DP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D4-DP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D4-DP-RD-0000-MUREDNNPRB</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D4-FP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D4-FP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D4-FP-RD-0000-MUREDNNPRB</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D5-DP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D5-DP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D5-DP-RD-0000-MUREDNNPRB</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D5-FP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D5-FP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D5-FP-RD-0000-MUREDNNPRB</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D6-DP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D6-DP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D6-DP-RD-0000-MUREDNNPRB</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D6-FP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D6-FP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D6-FP-RD-0000-MUREDNNPRB</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D7-DP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D7-DP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D7-DP-RD-0000-MUREDNNPRB</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D7-FP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D7-FP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D7-FP-RD-0000-MUREDNNPRB</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D8-DP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D8-DP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D8-DP-RD-0000-MUREDNNPRB</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D8-FP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D8-FP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D8-FP-RD-0000-MUREDNNPRB</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D9-DP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D9-DP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D9-DP-RD-0000-MUREDNNPRB</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D9-FP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D9-FP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:D9-FP-RD-0000-MUREDNNPRB</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:DA-DP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:DA-DP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:DA-DP-RD-0000-MUREDNNPRB</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:DA-FP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:DA-FP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:DA-FP-RD-0000-MUREDNNPRB</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:DB-DP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:DB-DP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:DB-DP-RD-0000-MUREDNNPRB</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:DB-FP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:DB-FP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:DC-DP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:DC-DP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:DC-DP-RD-0000-MUREDNNPRB</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:DC-FP-EF-0000-ERREPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-ADC:DC-FP-FC-0000-CGRWPNNPSP</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D1-DP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D1-DP-MX-0000-CGSEPNNPMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D1-FP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D1-FP-MX-0000-CGSEPNNPMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D2-DP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D2-DP-MX-0000-CGSEPNNPMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D2-FP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D2-FP-MX-0000-CGSEPNNPMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D3-DP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D3-DP-MX-0000-CGSEPNNPMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D3-FP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D3-FP-MX-0000-CGSEPNNPMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D4-DP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D4-DP-MX-0000-CGSEPNNPMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D4-FP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D4-FP-MX-0000-CGSEPNNPMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D5-DP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D5-DP-MX-0000-CGSEPNNPMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D5-FP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D5-FP-MX-0000-CGSEPNNPMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D6-DP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D6-DP-MX-0000-CGSEPNNPMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D6-FP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D6-FP-MX-0000-CGSEPNNPMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D7-DP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D7-DP-MX-0000-CGSEPNNPMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D7-FP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D7-FP-MX-0000-CGSEPNNPMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D8-DP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D8-DP-MX-0000-CGSEPNNPMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D8-FP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D8-FP-MX-0000-CGSEPNNPMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D9-DP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D9-DP-MX-0000-CGSEPNNPMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D9-FP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:D9-FP-MX-0000-CGSEPNNPMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:DA-DP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:DA-DP-MX-0000-CGSEPNNPMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:DA-FP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:DA-FP-MX-0000-CGSEPNNPMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:DB-DP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:DB-DP-MX-0000-CGSEPNNPMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:DB-FP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:DB-FP-MX-0000-CGSEPNNPMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:DC-DP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:DC-DP-MX-0000-CGSEPNNPMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:DC-FP-MN-0000-CGSEPNNPMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DAQ-PPC:DC-FP-MX-0000-CGSEPNNPMX</name>
+</pv>
+</pvlist>
+</pvtable>

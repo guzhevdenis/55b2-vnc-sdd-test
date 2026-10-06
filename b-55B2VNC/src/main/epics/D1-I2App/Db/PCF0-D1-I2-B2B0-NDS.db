@@ -1,0 +1,338 @@
+
+#include "nds3_StateMachine.template"
+#include "nds3_DataAcquisition.template"
+
+#Debug and not FPGA variables
+
+#INDICATORS
+record(ai, "D1-I2-HWCF:B-0-Status") {
+    field(DESC, "Status")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-0,0)Status")
+    field(VAL, "0")
+}
+
+#CONTORLS
+record(ao, "D1-I2-HWCF:B-0-Reseter") {
+    field(DESC, "Reset")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-0,0)Reseter")
+    field(VAL, "0")
+}
+
+record (ai, "D1-I2-HWCF:B-0-CountRateAverage")
+{
+	field (DESC, "CountRateAverage")
+	field (DTYP, "asynFloat64")
+	field (SCAN, ".1 second")
+	field (INP, "@asyn(B-0,0)CountRateAverage")
+}
+
+record (ai, "D1-I2-HWCF:B-0-MSV")
+{
+	field (DESC, "MSV")
+	field (DTYP, "asynFloat64")
+	field (SCAN, ".1 second")
+	field (INP, "@asyn(B-0,0)MSV")
+}
+# record (int64in, "D1-I2-HWCF:B-0-CountRateFluctuationAverage")
+# {
+# 	field (DESC, "CountRateFluctuationAverage")
+# 	field (DTYP, "asynInt64")
+# 	field (SCAN, "1 second")
+# 	field (INP, "@asyn(B-0,0)CountRateFluctuationAverage")
+# }
+# record (ai, "D1-I2-HWCF:B-0-MSVValue")
+# {
+# 	field (DESC, "MSVValue")
+# 	field (DTYP, "asynInt64")
+# 	field (SCAN, "1 second")
+# 	field (INP, "@asyn(B-0,0)MSVValue")
+# }
+# record (histogram, "D1-I2-Histogram")
+# {
+#     field (SVL, "D1-I2-HWCF:B-0-Amplitudes")
+# 	field (SCAN, "0.1 second")
+# 	field (NELM, "10000000")
+# }
+#test of histogram record 
+
+record(ao, "Step") {
+    field(DESC, "Bin width of histogram")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-0, 0)Step")
+}
+
+record (ai, "MaximumAmplitude")
+{
+	field (DESC, "MaximumAmplitude")
+	field (DTYP, "asynFloat64")
+	field (SCAN, "1 second")
+	field (INP, "@asyn(B-0,0)MaximumAmplitude")
+}
+
+# record (waveform, "D1-I2-HWCF:B-0-RawData")
+# {
+# 	field (DESC, "Raw Data")
+# 	field (DTYP, "asynInt32ArrayIn")
+# 	field (SCAN, "1 second")
+# 	#field (FTVL, "DOUBLE")
+# 	field (NELM, "10000000")
+# 	field (INP, "@asyn(B-0,0)RawData")
+# }
+# record (waveform, "D1-I2-HWCF:B-0-CountRateFluctuation")
+# {
+# 	field (DESC, "CountRateFluctuation")
+# 	field (DTYP, "asynInt64ArrayIn")
+# 	field (SCAN, "1 second")
+# 	#field (FTVL, "DOUBLE")
+# 	field (NELM, "10000000")
+# 	field (INP, "@asyn(B-0,0)CountRateFluctuation")
+# }
+#FPGA VARIABLES
+#INDICATORS
+
+#Bool Fpga Indicators
+record(ai, "D1-I2-HWCF:B-0-IndicatorBoolKey") {
+    field(DESC, "Software or hardware trigger is ON")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-0,0)IndicatorBoolKey")
+}
+record(ai, "D1-I2-HWCF:B-0-Clock100PLLUnlocked") {
+    field(DESC, "Clock100PLLUnlocked")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-0,0)Clock100PLLUnlocked")
+}
+record(ai, "D1-I2-HWCF:B-0-EEPROMPowerEnabled") {
+    field(DESC, "EEPROMPowerEnabled")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-0,0)EEPROMPowerEnabled")
+}
+record(ai, "D1-I2-HWCF:B-0-IOModuleIOEnabled") {
+    field(DESC, "IOModuleIOEnabled")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-0,0)IOModuleIOEnabled")
+}
+record(ai, "D1-I2-HWCF:B-0-IOModuleInitializationDone") {
+    field(DESC, "IOModuleInitializationDone")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-0,0)IOModuleInitializationDone")
+}
+record(ai, "D1-I2-HWCF:B-0-IOModulePowerEnabled") {
+    field(DESC, "IOModulePowerEnabled")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-0,0)IOModulePowerEnabled")
+}
+record(ai, "D1-I2-HWCF:B-0-IOModulePresent") {
+    field(DESC, "IOModulePresent")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-0,0)IOModulePresent")
+}
+
+#I8 Fpga Indicators
+record(ai, "D1-I2-HWCF:B-0-DeviceTemperature") {
+    field(DESC, "DeviceTemperature")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-0,0)DeviceTemperature")
+}
+
+#I16 Fpga Indicators
+record(ai, "D1-I2-HWCF:B-0-ResultAfterSub") {
+    field(DESC, "Show that streaming is data is valid")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-0,0)ResultAfterSub")
+}
+
+#I32 Fpga Indicators
+record(ai, "D1-I2-HWCF:B-0-Counter1") {
+    field(DESC, "Inside Cycle 1 is ON")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-0,0)Counter1")
+}
+record(ai, "D1-I2-HWCF:B-0-Counter2") {
+    field(DESC, "Inside Cycle 2 is ON")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-0,0)Counter2")
+}
+record(ai, "D1-I2-HWCF:B-0-Counter3") {
+    field(DESC, "Inside Cycle 3 is ON")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-0,0)Counter3")
+}
+record(ai, "D1-I2-HWCF:B-0-CounterTemp") {
+    field(DESC, "Inside Cycle is ON")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-0,0)CounterTemp")
+}
+
+record(ai, "D1-I2-HWCF:B-0-SinglePulsesCountRate") {
+    field(DESC, "SinglePulsesCountRate")
+    field(DTYP, "asynInt32")
+    field(SCAN, ".1 second")
+    field(INP, "@asyn(B-0,0)SinglePulsesCountRate")
+
+}
+record(longin, "D1-I2-HWCF:B-0-SinglePulsesRegistered") {
+    field(DESC, "SinglePulsesRegistered")
+    field(DTYP, "asynInt32")
+    field(SCAN, ".1 second")
+    field(INP, "@asyn(B-0,0)SinglePulsesRegistered")
+}
+
+record(ai, "D1-I2-HWCF:B-0-TotalCountRate") {
+    field(DESC, "TotalCountRate")
+    field(DTYP, "asynInt32")
+    field(SCAN, ".1 second")
+    field(INP, "@asyn(B-0,0)TotalCountRate")
+
+}
+record(longin, "D1-I2-HWCF:B-0-TotalPulsesRegistered") {
+    field(DESC, "TotalPulsesRegistered")
+    field(DTYP, "asynInt32")
+    field(SCAN, ".1 second")
+    field(INP, "@asyn(B-0,0)TotalPulsesRegistered")
+}
+
+
+#Bool Fpga Controls
+record(ao, "D1-I2-HWCF:B-0-ThresholdValid") {
+    field(DESC, "Activate Threshold")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(OUT, "@asyn(B-0,0)ThresholdValid")
+    field(VAL, "1")
+}
+record(ao, "D1-I2-HWCF:B-0-ControlKey") {
+    field(DESC, "Software Trigger to start DAQ")
+    field(DTYP, "asynInt32")
+    field(SCAN, "1 second")
+    field(OUT, "@asyn(B-0,0)ControlKey")
+    field(VAL, "1")
+}
+
+#I16 Fpga Controls
+record(ao, "D1-I2-HWCF:B-0-Alpha16BitFirst") {
+    field(DESC, "Aplha16BitFirst")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-0,0)Alpha16BitFirst")
+    field(VAL, "16000")
+}
+record(ao, "D1-I2-HWCF:B-0-Alpha16BitSecond") {
+    field(DESC, "Aplha16BitSecond")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-0,0)Alpha16BitSecond")
+    field(VAL, "16000")
+}
+record(ao, "D1-I2-HWCF:B-0-Threshold") {
+    field(DESC, "Threshold")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-0,0)Threshold")
+    field(VAL, "300")
+}
+
+#U16 Fpga Controls
+record(ao, "D1-I2-HWCF:B-0-FilterType") {
+    field(DESC, "FilterType")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-0,0)FilterType")
+}
+
+#I64 Fpga Controls
+record(ao, "D1-I2-HWCF:B-0-CalibrationCoefficient") {
+    field(DESC, "CalibrationCoefficient")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "1 second")
+    field(OUT, "@asyn(B-0,0)CalibrationCoefficient")
+}
+
+#U32 Fpga Controls 
+record(ao, "D1-I2-HWCF:B-0-MaxTicksPerPulse") {
+    field(DESC, "MaxTicksPerPulse")
+    field(DTYP, "asynInt64")
+    field(SCAN, "1 second")
+    field(OUT, "@asyn(B-0,0)MaxTicksPerPulse")
+    field(VAL, "30")
+}
+record(ao, "D1-I2-HWCF:B-0-MinTicksPerPulse") {
+    field(DESC, "MinTicksPerPulse")
+    field(DTYP, "asynInt64")
+    field(SCAN, "1 second")
+    field(OUT, "@asyn(B-0,0)MinTicksPerPulse")
+    field(VAL, "5")
+}
+record(ao, "D1-I2-HWCF:B-0-MinTicksPerPulse2") {
+    field(DESC, "MinTicksPerPulse2")
+    field(DTYP, "asynInt64")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-0,0)MinTicksPerPulse2")
+    field(VAL, "5")
+}
+
+#I16 TargetToHost FIFO
+
+
+#PROXY MP
+record(waveform, "D1-I2-HWCF:B-0-NeutronProfile") {
+    field(DTYP, "asynInt32ArrayIn")
+    field(FTVL, "LONG")
+    field(SCAN, "1 second")
+    field(INP, "@asyn(B-0,0)NeutronProfile")
+    field(NELM, "100")
+}
+
+record(calcout, "TEST:RandomAI") {
+    field(DESC, "Random number from 100000 to 102000")
+    field(CALC, "100000 + RNDM * 2000")
+    field(SCAN, "1 second")
+    field(OUT,  "TEST:DiamondCountRate")
+}
+
+record(ai, "TEST:DiamondCountRate") {
+    field(DESC, "Random analog countrate")
+    field(PREC, "2")
+    field(SCAN, "1 second")
+}
+
+record(calcout, "TEST:RandomAI_2") {
+    field(DESC, "Random number from 100000 to 102000")
+    field(CALC, "100000 + RNDM * 2000")
+    field(SCAN, "1 second")
+    field(OUT,  "TEST:FissionCountRate")
+}
+
+record(ai, "TEST:FissionCountRate") {
+    field(DESC, "Random analog countrate")
+    field(PREC, "2")
+    field(SCAN, "1 second")
+}
+
+
+
+
+
+
+
+
+
+
+

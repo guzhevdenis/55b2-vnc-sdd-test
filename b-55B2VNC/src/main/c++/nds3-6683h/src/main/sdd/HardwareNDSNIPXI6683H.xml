@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ $HeadURL: https://svnpub.iter.org/codac/iter/codac/dev/units/m-epics-nisync/trunk/src/main/sdd/HardwareNIPXI6683H.xml $
+ $Id: HardwareNIPXI6683H.xml 83098 2018-01-08 13:23:38Z cesnikt $
+
+ Project       : CODAC Data Management
+
+ Description   : NI PXI-6683H board description
+		 Information captured from the following sources:
+		 - 345X28 v2.3 (catalogue of fast controllers)
+		 - http://sine.ni.com/nips/cds/view/p/lang/en/nid/211064 (commercial info)
+		 - http://sine.ni.com/ds/app/doc/p/id/ds-471/lang/en (data sheet, revision 22 Oct 2013)
+		 - http://www.ni.com/pdf/manuals/373656a.pdf (user manual, revision July 2013)
+
+ Author        : D.Stepanov
+
+ Copyright (c) : 2010-2018 ITER Organization,
+                 CS 90 046
+                 13067 St. Paul-lez-Durance Cedex
+                 France
+
+ This file is part of ITER CODAC software.
+ For the terms and conditions of redistribution or use of this software
+ refer to the file ITER-LICENSE.TXT located in the top level directory
+ of the distribution package.
+-->
+<IOBoard name="NI PXI-6683H-NDS" shortName="PXI-6683-NDS" xmlns="http://www.iter.org/CODAC/Hardware/2013" xmlns:cat="http://www.iter.org/CODAC/Catalog/2010" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.iter.org/CODAC/Hardware/2013 ../xsd/Hardware.xsd">
+	<catalogReference>
+		<cat:reference>782110-01</cat:reference>
+		<cat:manufacturer>National Instruments</cat:manufacturer>
+		<cat:commercialName>NI PXI-6683H</cat:commercialName>
+		<cat:description>GPS, IRIG-B, IEEE 1588, or PPS Timing and Synchronization for PXIe</cat:description>
+		<cat:datasheetRef>http://sine.ni.com/ds/app/doc/p/id/ds-471/lang/en</cat:datasheetRef>
+		<cat:conformsToStandard>IEC 61010-1 / EN 61010-1 / UL 61010-1 / CSA 61010-1</cat:conformsToStandard>
+		<cat:conformsToStandard>EC-60068-2-1 / IEC-60068-2-2 / IEC-60068-2-56 / IEC-60068-2-27 / IEC-60068-2-64 / MIL-PRF-28800F</cat:conformsToStandard>
+		<cat:conformsToStandard>IEEE 1588</cat:conformsToStandard>
+		<cat:conformsToStandard>IRIG-B</cat:conformsToStandard>
+		<cat:conformsToStandard>EN 61326 (IEC 61326): Class A emissions; Basic immunity</cat:conformsToStandard>
+		<cat:conformsToStandard>EN 55011 (CISPR 11): Group 1, Class A emissions</cat:conformsToStandard>
+		<cat:conformsToStandard>AS/NZS CISPR 11: Group 1, Class A emissions</cat:conformsToStandard>
+		<cat:conformsToStandard>FCC 47 CFR Part 15B: Class A emissions</cat:conformsToStandard>
+		<cat:conformsToStandard>ICES-001: Class A emissions</cat:conformsToStandard>
+		<cat:conformsToStandard>2006/95/EC; Low-Voltage Directive (safety)</cat:conformsToStandard>
+		<cat:conformsToStandard>2004/108/EC; Electromagnetic Compatibility Directive (EMC)</cat:conformsToStandard>
+		<cat:conformsToStandard>ITER CODAC</cat:conformsToStandard>
+		<cat:class>HPN NETWORKS INTERFACE BOARDS</cat:class>
+		<cat:subClass>Timing, synchronization and triggering solutions</cat:subClass>
+	</catalogReference>
+	<technicalData>
+		<busType>PXI express</busType>
+		<timingResolution>0.0000001</timingResolution>
+		<channels>
+			<channel number="0">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<!-- Shorten this name "PFI0/IRIG-B IN" for EPICS/SDD. TODO: introduce EPICS-specific aliases -->
+				<name>PFI0</name>
+				<PFI/>
+				<pin connectorNumber="0" number="2" type="signal"/>
+				<pin connectorNumber="0" number="1" type="ground"/>
+			</channel>
+			<channel number="1">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>PFI1</name>
+				<PFI/>
+				<pin connectorNumber="1" number="2" type="signal"/>
+				<pin connectorNumber="1" number="1" type="ground"/>
+			</channel>
+			<channel number="2">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>PFI2</name>
+				<PFI/>
+				<pin connectorNumber="2" number="2" type="signal"/>
+				<pin connectorNumber="2" number="1" type="ground"/>
+			</channel>
+						
+			
+			<channel number="11">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>PXI_TRIG0</name>
+			</channel>
+			<channel number="12">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>PXI_TRIG1</name>
+			</channel>
+			<channel number="13">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>PXI_TRIG2</name>
+			</channel>
+			<channel number="14">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>PXI_TRIG3</name>
+			</channel>
+			<channel number="15">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>PXI_TRIG4</name>
+			</channel>
+			<channel number="16">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>PXI_TRIG5</name>
+			</channel>
+			<channel number="17">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>PXI_TRIG6</name>
+			</channel>
+			<channel number="18">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>PXI_TRIG7</name>
+			</channel>
+			<channel number="36">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>TCXO</name>
+			</channel>
+			<channel number="37">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<!-- The NI user manual does not mention it in the table 3-5, but this is a valid terminal for routing -->
+				<name>GND</name>
+			</channel>
+			<channel number="38">
+				<type>digital</type>
+				<direction>input</direction>
+				<name>PXI_CLK10</name>
+			</channel>
+			<channel number="39">
+				<type>digital</type>
+				<direction>output</direction>
+				<name>PXI_CLK10_IN</name>
+			</channel>
+			<channel number="40">
+				<!-- Virtual terminal for software-based triggers -->
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>SW</name>
+			</channel>
+			<channel number="41">
+				<!-- Virtual terminal for network-based events -->
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>ETHIN</name>
+			</channel>
+			<channel number="42">
+				<!-- Virtual terminal for network-based events -->
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>ETHOUT</name>
+			</channel>
+			<channel number="44">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>CLKOUT</name>
+				<pin connectorNumber="3" number="2" type="signal"/>
+				<pin connectorNumber="3" number="1" type="ground"/>
+			</channel>
+			<channel number="45">
+				<!-- Virtual terminal allowing disconnecting other terminals -->
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>NONE</name>
+			</channel>
+		</channels>
+		<!-- TODO: define clocks -->
+		<pinouts>
+			<connector type="SMB male" numPins="2" ID="PFI0/IRIG-B IN">
+				<pin name="GND"/>
+				<pin name="SIGNAL"/>
+			</connector>
+			<connector type="SMB male" numPins="2" ID="PFI1">
+				<pin name="GND"/>
+				<pin name="SIGNAL"/>
+			</connector>
+			<connector type="SMB male" numPins="2" ID="PFI2">
+				<pin name="GND"/>
+				<pin name="SIGNAL"/>
+			</connector>
+			<connector type="SMB male" numPins="2" ID="CLK OUT">
+				<pin name="GND"/>
+				<pin name="SIGNAL"/>
+			</connector>
+			<connector type="SMB male" numPins="2" ID="GPS ANT">
+				<pin name="GND"/>
+				<pin name="SIGNAL"/>
+			</connector>
+			<!-- 10/100 Base-T -->
+			<connector type="RJ-45" numPins="8" ID="ETH">
+				<pin name="TX+" description="Transmit Data+"/>
+				<pin name="TX-" description="Transmit Data-"/>
+				<pin name="RX+" description="Receive Data+"/>
+				<pin connected="false"/>
+				<pin connected="false"/>
+				<pin name="RX-" description="Receive Data-"/>
+				<pin connected="false"/>
+				<pin connected="false"/>
+			</connector>
+		</pinouts>
+		<!-- Size is expressed in terms of PXI units -->
+		<chassisType>PXI</chassisType>
+		<USize>3</USize>
+		<weight>0.172</weight>
+		<minOperatingTemperature>0</minOperatingTemperature>
+		<maxOperatingTemperature>55</maxOperatingTemperature>
+		<minOperatingHumidity>10</minOperatingHumidity>
+		<maxOperatingHumidity>90</maxOperatingHumidity>
+		<powerBus voltage="3.3" current="0.74"/>
+		<powerBus voltage="5" current="0.335"/>
+		<powerBus voltage="12" current="0.54"/>
+		<powerBus voltage="-12" current="0.24"/>
+	</technicalData>
+	<controllerType>PCF</controllerType>
+	<TTTCode>TNI</TTTCode>
+</IOBoard>

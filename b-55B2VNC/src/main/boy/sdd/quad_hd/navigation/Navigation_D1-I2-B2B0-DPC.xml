@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- 
+  BOY Files Navigation
+  CODAC-VERSION: 7.2.1
+  WARNING: This is an SDD generated file. Contact codac-support for any query.
+-->
+
+ <CBS name="DPC" description="" enabled="true" opi_file="./mimics/D1-I2-B2B0-DPC_Mimic.opi LEVEL=ITER-D1-I2-B2B0-DPC" deprecated="false" alarm_root="/CODAC_AlarmHandler/D1/D1-I2/D1-I2-B2B0/D1-I2-B2B0-DPC" xmlns:xi="http://www.w3.org/2001/XInclude" >
+     <xi:include href="Navigation_D1-I2-B2B0-DPC-ANA.xml" >
+         <xi:fallback ></xi:fallback>
+</xi:include>
+
+     <xi:include href="Navigation_D1-I2-B2B0-DPC-CAL.xml" >
+         <xi:fallback ></xi:fallback>
+</xi:include>
+
+     <xi:include href="Navigation_D1-I2-B2B0-DPC-CFG.xml" >
+         <xi:fallback ></xi:fallback>
+</xi:include>
+
+     <xi:include href="Navigation_D1-I2-B2B0-DPC-MES.xml" >
+         <xi:fallback ></xi:fallback>
+</xi:include>
+
+     <xi:include href="Navigation_D1-I2-B2B0-DPC-MON.xml" >
+         <xi:fallback ></xi:fallback>
+</xi:include>
+</CBS>

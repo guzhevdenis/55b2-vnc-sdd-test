@@ -1,0 +1,123 @@
+/**
+ * @file DeviceTesting.h
+ * 
+ * @author Mariano Ruiz (UPM
+ * @date 10 May 2019
+ */
+
+
+ //It sends all type of data to the nds-sdn driver
+#ifndef NDS_SDN_EXAMPLES_INCLUDE_DeviceTesting_H_
+#define NDS_SDN_EXAMPLES_INCLUDE_DeviceTesting_H_
+
+#include <mutex>
+#include <atomic>
+#include <nds3/nds.h>
+
+struct xmlPV_t
+{
+	std::string pvName;
+	std::string pvType;
+	std::size_t nelm=0;
+
+};
+
+typedef std::map<std::string,xmlPV_t> xmlPVConfig;
+
+typedef std::map<std::string,nds::PVVariableIn<std::int32_t>> int32_PVs;
+typedef std::map<std::string,nds::PVVariableIn<std::int64_t>> int64_PVs;
+typedef std::map<std::string,nds::PVVariableIn<float>> float_PVs;
+typedef std::map<std::string,nds::PVVariableIn<double>> double_PVs;
+typedef std::map<std::string,nds::PVVariableIn<std::vector<bool>>> boolArray_PVs;
+typedef std::map<std::string,nds::PVVariableIn<std::vector<std::uint8_t>>> uint8Array_PVs;
+typedef std::map<std::string,nds::PVVariableIn<std::vector<std::uint16_t>>> uint16Array_PVs;
+typedef std::map<std::string,nds::PVVariableIn<std::vector<std::uint32_t>>> uint32Array_PVs;
+typedef std::map<std::string,nds::PVVariableIn<std::vector<std::int8_t>>> int8Array_PVs;
+typedef std::map<std::string,nds::PVVariableIn<std::vector<std::int16_t>>> int16Array_PVs;
+typedef std::map<std::string,nds::PVVariableIn<std::vector<std::int32_t>>> int32Array_PVs;
+typedef std::map<std::string,nds::PVVariableIn<std::vector<std::int64_t>>> int64Array_PVs;
+typedef std::map<std::string,nds::PVVariableIn<std::vector<float>>> floatArray_PVs;
+typedef std::map<std::string,nds::PVVariableIn<std::vector<double>>> doubleArray_PVs;
+typedef std::map<std::string,nds::PVVariableIn<std::string>>string_PVs;
+typedef std::map<std::string,nds::PVVariableIn<timespec>> timespec_PVs;
+typedef std::map<std::string,nds::PVVariableIn<std::vector<timespec>>> timespecArray_PVs;
+typedef std::map<std::string,nds::PVVariableIn<nds::timestamp_t>> timestamp_PVs;
+
+class DeviceTesting
+{
+
+public:
+
+  DeviceTesting(nds::Factory& factory, const std::string& deviceName, const nds::namedParameters_t& namedParameters);
+
+  ~DeviceTesting();
+
+//#ifndef EPICS
+
+  static void* allocateDevice(nds::Factory& factory, const std::string& deviceName, const nds::namedParameters_t& namedParameters);
+
+  static void deallocateDevice(void* deviceName);
+
+//#endif
+
+  void stm_SwitchOn(void);
+  void stm_SwitchOff(void);
+  void stm_Start (void);
+  void stm_Stop(void);
+  void stm_recover(void);
+  bool stm_allowChange(const nds::state_t currentState, const nds::state_t currentGlobalState, const nds::state_t desiredState);
+
+  void publishingThread(void);
+
+private:
+
+  std::string m_deviceName;
+  std::atomic<bool> m_stopPUB;
+
+  nds::Port rootNode;
+
+  nds::StateMachine m_stateMachine;
+  nds::Thread m_threadPUB;
+
+  xmlPVConfig m_xmlPVConfig;
+
+  void initializePVs(void);
+
+  int32_PVs m_int32_PVs;
+  int64_PVs m_int64_PVs;
+  float_PVs m_float_PVs;
+  double_PVs m_double_PVs;
+  boolArray_PVs m_boolArray_PVs;
+  uint8Array_PVs m_uint8Array_PVs;
+  uint16Array_PVs m_uint16Array_PVs;
+  uint32Array_PVs m_uint32Array_PVs;
+  int8Array_PVs m_int8Array_PVs;
+  int16Array_PVs m_int16Array_PVs;
+  int32Array_PVs m_int32Array_PVs;
+  int64Array_PVs m_int64Array_PVs;
+  floatArray_PVs m_floatArray_PVs;
+  doubleArray_PVs m_doubleArray_PVs;
+  string_PVs m_string_PVs;
+  timespec_PVs m_timespec_PVs;
+  timespecArray_PVs m_timespecArray_PVs;
+  timestamp_PVs m_timestamp_PVs;
+
+  nds::PVVariableOut<std::int32_t> m_publishingRate_PV;
+  nds::PVVariableIn<std::int32_t> m_errStatus_PV;
+  nds::PVVariableIn<std::string> m_errMsg_PV;
+
+  ///////////////////////////////////////////////////////////////////////////////////
+  ////////// Auxiliary functions
+  ///////////////////////////////////////////////////////////////////////////////////
+
+  /**
+   *@brief Auxiliary function used for parsing all input parameters
+   */
+  bool typeTodataType(std::string& typeStr,nds::dataType_t& ans);
+  bool createPVs(xmlPVConfig& inAtt );
+  xmlPVConfig parseXMLFile(const std::string &filename);
+
+
+};
+
+#endif /* NDS_SDN_EXAMPLES_INCLUDE_DeviceTesting_H_ */

@@ -1,0 +1,31 @@
+##using the state machine in the device
+#file "nds3_StateMachine.template" {
+#	pattern
+#	{	BOARDTYPE,	
+#		BOARDTYPEIDX,
+#		CBS1,
+#		CBS2,
+#		STATEMACHINE_NAME	
+#	}
+#	{	"SDN",
+#		"0",
+#		"TEST",	
+#		"FCT0",
+#		"StateMachine"	
+#	}		
+#}
+
+file "nds-sdn_pub.template" {
+	pattern
+	{	BOARDTYPE,
+		BOARDTYPEIDX,
+		CBS1,
+		CBS2
+	}
+	{
+		"SDN",
+		"0",
+		"TEST",
+		"TEST",
+	}
+}

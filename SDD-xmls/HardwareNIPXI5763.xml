@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ $HeadURL: TBD.
+ $Id: TBD.
+ 
+ Project       : CODAC Data Management
+
+ Description   : NI5763 FlexRIO Digitizer
+		 		 The information is taken from the following sources:
+		 		 -https://www.ni.com/ru-ru/shop/model/pxie-5763.html
+
+ Author        : D. Avdyushkin
+
+ Copyright (c) : 2010-2024 ITER Organization,
+                 CS 90 046
+                 13067 St. Paul-lez-Durance Cedex
+                 France
+
+ This file is part of ITER CODAC software.
+ For the terms and conditions of redistribution or use of this software
+ refer to the file ITER-LICENSE.TXT located in the top level directory
+ of the distribution package.
+-->
+<IOBoard name="NI PXI-5763" shortName="PXI-5763" xmlns="http://www.iter.org/CODAC/Hardware/2013" xmlns:cat="http://www.iter.org/CODAC/Catalog/2010">
+	<catalogReference>
+		<cat:reference>NI5763</cat:reference>
+		<cat:manufacturer>National Instruments</cat:manufacturer>
+		<cat:commercialName>PXIe-5761 FlexRIO-Digitizer </cat:commercialName>
+		<cat:description>16-Bit, 500 MS/s FlexRIO Digitizer </cat:description>
+		<cat:datasheetRef>https://www.ni.com/docs/en-US/bundle/pxie-5763-specs/page/specs.html</cat:datasheetRef>
+		<cat:class>FlexRIO-Digitizer</cat:class>
+	</catalogReference>
+	<technicalData>
+		<busType>PXI</busType>
+		<channels>
+		<!-- Digital channels -->
+			<!-- Digital channels in Micro–D connector-->
+			<channel number="0">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>DIO0</name>
+				<pin connectorNumber="0" number="12" type="signal"/>
+				<pin connectorNumber="0" number="14" type="ground"/>
+			</channel>
+			<channel number="1">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>DIO1</name>
+				<pin connectorNumber="0" number="13" type="signal"/>
+				<pin connectorNumber="0" number="14" type="ground"/>
+			</channel>
+			<channel number="2">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>DIO2</name>
+				<pin connectorNumber="0" number="33" type="signal"/>
+				<pin connectorNumber="0" number="35" type="ground"/>
+			</channel>
+			<channel number="3">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>DIO3</name>
+				<pin connectorNumber="0" number="34" type="signal"/>
+				<pin connectorNumber="0" number="35" type="ground"/>
+			</channel>
+			<channel number="4">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>DIO4</name>
+				<pin connectorNumber="0" number="9" type="signal"/>
+				<pin connectorNumber="0" number="8" type="ground"/>
+			</channel>
+			<channel number="5">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>DIO5</name>
+				<pin connectorNumber="0" number="10" type="signal"/>
+				<pin connectorNumber="0" number="8" type="ground"/>
+			</channel>
+			<channel number="6">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>DIO6</name>
+				<pin connectorNumber="0" number="30" type="signal"/>
+				<pin connectorNumber="0" number="29" type="ground"/>
+			</channel>
+			<channel number="7">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>DIO7</name>
+				<pin connectorNumber="0" number="31" type="signal"/>
+				<pin connectorNumber="0" number="29" type="ground"/>
+			</channel>
+			<channel number="8">
+				<type>digital</type>
+				<direction>input</direction>
+				<name>MGT Rx+ 0</name>
+				<pin connectorNumber="0" number="3" type="signal"/>
+				<pin connectorNumber="0" number="2" type="ground"/>
+			</channel>
+			<channel number="9">
+				<type>digital</type>
+				<direction>output</direction>
+				<name>MCT Tx+ 0</name>
+				<pin connectorNumber="0" number="24" type="signal"/>
+				<pin connectorNumber="0" number="23" type="ground"/>
+			</channel>
+			<channel number="10">
+				<type>digital</type>
+				<direction>input</direction>
+				<name>MGT Rx- 0</name>
+				<pin connectorNumber="0" number="4" type="signal"/>
+				<pin connectorNumber="0" number="2" type="ground"/>
+			</channel>
+			<channel number="11">
+				<type>digital</type>
+				<direction>output</direction>
+				<name>MCT Tx- 0</name>
+				<pin connectorNumber="0" number="25" type="signal"/>
+				<pin connectorNumber="0" number="23" type="ground"/>
+			</channel>
+			<channel number="12">
+				<type>digital</type>
+				<direction>input</direction>
+				<name>MGT Rx+ 1</name>
+				<pin connectorNumber="0" number="6" type="signal"/>
+				<pin connectorNumber="0" number="5" type="ground"/>
+			</channel>
+			<channel number="13">
+				<type>digital</type>
+				<direction>output</direction>
+				<name>MCT Tx+ 1</name>
+				<pin connectorNumber="0" number="27" type="signal"/>
+				<pin connectorNumber="0" number="26" type="ground"/>
+			</channel>
+			<channel number="14">
+				<type>digital</type>
+				<direction>input</direction>
+				<name>MGT Rx- 1</name>
+				<pin connectorNumber="0" number="7" type="signal"/>
+				<pin connectorNumber="0" number="5" type="ground"/>
+			</channel>
+			<channel number="15">
+				<type>digital</type>
+				<direction>output</direction>
+				<name>MCT Tx- 1</name>
+				<pin connectorNumber="0" number="28" type="signal"/>
+				<pin connectorNumber="0" number="26" type="ground"/>
+			</channel>
+			<channel number="16">
+				<type>digital</type>
+				<direction>input</direction>
+				<name>MGT Rx+ 2</name>
+				<pin connectorNumber="0" number="15" type="signal"/>
+				<pin connectorNumber="0" number="14" type="ground"/>
+			</channel>
+			<channel number="17">
+				<type>digital</type>
+				<direction>output</direction>
+				<name>MCT Tx+ 2</name>
+				<pin connectorNumber="0" number="36" type="signal"/>
+				<pin connectorNumber="0" number="35" type="ground"/>
+			</channel>
+			<channel number="18">
+				<type>digital</type>
+				<direction>input</direction>
+				<name>MGT Rx- 2</name>
+				<pin connectorNumber="0" number="16" type="signal"/>
+				<pin connectorNumber="0" number="14" type="ground"/>
+			</channel>
+			<channel number="19">
+				<type>digital</type>
+				<direction>output</direction>
+				<name>MCT Tx- 2</name>
+				<pin connectorNumber="0" number="37" type="signal"/>
+				<pin connectorNumber="0" number="35" type="ground"/>
+			</channel>
+			<channel number="20">
+				<type>digital</type>
+				<direction>input</direction>
+				<name>MGT Rx+ 3</name>
+				<pin connectorNumber="0" number="18" type="signal"/>
+				<pin connectorNumber="0" number="20" type="ground"/>
+			</channel>
+			<channel number="21">
+				<type>digital</type>
+				<direction>output</direction>
+				<name>MCT Tx+ 3</name>
+				<pin connectorNumber="0" number="39" type="signal"/>
+				<pin connectorNumber="0" number="41" type="ground"/>
+			</channel>
+			<channel number="22">
+				<type>digital</type>
+				<direction>input</direction>
+				<name>MGT Rx- 3</name>
+				<pin connectorNumber="0" number="19" type="signal"/>
+				<pin connectorNumber="0" number="20" type="ground"/>
+			</channel>
+			<channel number="23">
+				<type>digital</type>
+				<direction>output</direction>
+				<name>MCT Tx- 3</name>
+				<pin connectorNumber="0" number="40" type="signal"/>
+				<pin connectorNumber="0" number="41" type="ground"/>
+			</channel>
+		<!-- Analog channels -->
+			<!-- Analog channels in SMA connector-->
+			<channel number="0">
+				<type>analog</type>
+				<direction>input</direction>
+				<name>AI0</name>
+				<pin connectorNumber="1" number="1" type="signal"/>
+			</channel>
+			<channel number="1">
+				<type>analog</type>
+				<direction>input</direction>
+				<name>AI1</name>
+				<pin connectorNumber="2" number="1" type="signal"/>
+			</channel>
+			<channel number="2">
+				<type>analog</type>
+				<direction>input</direction>
+				<name>AI2</name>
+				<pin connectorNumber="3" number="1" type="signal"/>
+			</channel>
+			<channel number="3">
+				<type>analog</type>
+				<direction>input</direction>
+				<name>AI3</name>
+				<pin connectorNumber="4" number="1" type="signal"/>
+			</channel>
+		<!--Ref/Clk in, in SMA connector-->
+			<channel number="0">
+				<type>analog</type>
+				<direction>input</direction>
+				<name>REF/CLKIN</name>
+				<pin connectorNumber="5" number="1" type="signal"/>
+			</channel>
+		</channels>
+		<pinouts>
+			<connector type="Micro–D" numPins="15" ID="0">
+				<pin name="AUXIO0"/>
+				<pin name="AUXIO1"/>
+				<pin name="AUXIO2"/>
+				<pin name="AUXIO3"/>
+				<pin name="AUXIO4"/>
+				<pin name="AUXIO5"/>
+				<pin name="AUXIO6"/>
+				<pin name="AUXIO7"/>
+				<pin name="AUXIO8"/>
+				<pin name="GND" shared="true"/>
+				<pin name="GND" shared="true"/>
+				<pin name="GND" shared="true"/>
+				<pin name="GND" shared="true"/>
+				<pin name="GND" shared="true"/>
+				<pin name="GND" shared="true"/>
+				<pin name="GND" shared="true"/>
+			</connector>
+			<connector type="SMA" numPins="1" ID="1">
+				<pin name="AI1"/>
+			</connector>
+			<connector type="SMA" numPins="1" ID="2">
+				<pin name="AI2"/>
+			</connector>
+			<connector type="SMA" numPins="1" ID="3">
+				<pin name="AI3"/>
+			</connector>
+			<connector type="SMA" numPins="1" ID="4">
+				<pin name="AI4"/>
+			</connector>
+			<connector type="SMA" numPins="1" ID="5">
+				<pin name="REF/CLKIN"/>
+			</connector>
+		</pinouts>
+		<size>
+			<length>0.13</length>
+			<width>0.02</width>
+			<height>0.216</height>
+		</size>
+		<chassisType>PXI</chassisType>
+		<USize>1</USize>
+		<weight>0.5</weight>
+		<minOperatingTemperature>0</minOperatingTemperature>
+		<maxOperatingTemperature>55</maxOperatingTemperature>
+		<minOperatingHumidity>10</minOperatingHumidity>
+		<maxOperatingHumidity>90</maxOperatingHumidity>
+	</technicalData>
+	<controllerType>PCF</controllerType>
+	<TTTCode>IOB</TTTCode>
+</IOBoard>

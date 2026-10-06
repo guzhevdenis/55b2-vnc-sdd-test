@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+
+ <pvtable version="3.0" >
+     <nbMeasure >1</nbMeasure>
+
+     <pvlist >
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CAL:D1-FF-NC-0000-CLRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CAL:D2-FF-NC-0000-CLRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CAL:D3-FF-NC-0000-CLRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CAL:D4-FF-NC-0000-CLRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CAL:D5-FF-NC-0000-CLRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CAL:D6-FF-NC-0000-CLRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CAL:D7-FF-NC-0000-CLRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CAL:D8-FF-NC-0000-CLRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CAL:D9-FF-NC-0000-CLRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CAL:DA-FF-NC-0000-CLRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CAL:DB-FF-NC-0000-CLRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CAL:DC-FF-NC-0000-CLRWPNNPVL</name>
+</pv>
+</pvlist>
+</pvtable>

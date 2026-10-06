@@ -1,0 +1,40 @@
+record (ai,"D1-I2-B2B0-DAQ-PPC:D1-DP-PT-0000-CGSEPNVOSP")
+{
+	field(DESC, "Threshold for diamond detector signal")
+}
+
+record (ai,"D1-I2-B2B0-DAQ-PPC:D1-FP-PT-0000-CGSEPNVOSP")
+{
+	field(DESC, "Threshold for diamond detector signal")
+}
+
+record (ai,"D1-I2-B2B0-DAQ-PPC:D2-DP-PT-0000-CGSEPNVOSP")
+{
+	field(DESC, "Threshold for diamond detector signal")
+}
+
+record (ai,"D1-I2-B2B0-DAQ-PPC:D2-FP-PT-0000-CGSEPNVOSP")
+{
+	field(DESC, "Threshold for diamond detector signal")
+}
+
+record (ai,"D1-I2-B2B0-DAQ-PPC:D3-DP-PT-0000-CGSEPNVOSP")
+{
+	field(DESC, "Threshold for diamond detector signal")
+}
+
+record (ai,"D1-I2-B2B0-DAQ-PPC:D3-FP-PT-0000-CGSEPNVOSP")
+{
+	field(DESC, "Threshold for diamond detector signal")
+}
+
+record (ai,"D1-I2-B2B0-DAQ-PPC:D4-DP-PT-0000-CGSEPNVOSP")
+{
+	field(DESC, "Threshold for diamond detector signal")
+}
+
+record (ai,"D1-I2-B2B0-DAQ-PPC:D4-FP-PT-0000-CGSEPNVOSP")
+{
+	field(DESC, "Threshold for diamond detector signal")
+}
+

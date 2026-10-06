@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+
+ <pvtable version="3.0" >
+     <nbMeasure >1</nbMeasure>
+
+     <pvlist >
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-C1-FT-0000-STSEPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-C2-FT-0000-STSEPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-C3-FT-0000-STSEPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-C4-FT-0000-STSEPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-C5-FT-0000-STSEPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-C6-FT-0000-STSEPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-C7-FT-0000-STSEPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-C8-FT-0000-STSEPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-C9-FT-0000-STSEPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-CA-FT-0000-STSEPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-CB-FT-0000-STSEPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-CC-FT-0000-STSEPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-CD-FT-0000-STSEPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-CE-FT-0000-STSEPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-CF-FT-0000-STSEPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-CG-FT-0000-STSEPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-CH-FT-0000-STSEPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-CI-FT-0000-STSEPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-CJ-FT-0000-STSEPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-CK-FT-0000-STSEPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-CL-FT-0000-STSEPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-CM-FT-0000-STSEPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-CN-FT-0000-STSEPNNPEN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-SGC-DSP:FL-CO-FT-0000-STSEPNNPEN</name>
+</pv>
+</pvlist>
+</pvtable>

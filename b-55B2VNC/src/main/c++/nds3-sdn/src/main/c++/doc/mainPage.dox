@@ -1,0 +1,241 @@
+/**
+@mainpage NDS-SDN Plugin
+
+NDS-SDN (Nominal Device Support) v3 is a device support library for the use of Synchronous Data Bus Network (SDN), based on NDS (Nominal Device Support) and using SDN API Tools.
+
+Summary of Features
+===================
+The NDS-SDN plugin is implemented using the NDS-CORE and the SDN library. It provides the following features:
+ - The NDS device driver needs as input parameters, the network interface to use and the path to an XML configuration file.
+ - The NDS device driver creates the necessary NDS-PVs in runtime to obtain the data from other NDS-Device PVs using the subscription functionality implemented by the NDS-CORE layer.
+ - The <i>Source</i> PV names, their data types and the name of the attribute of the SDN topic to map to are provided in an XML configuration file. If a data type conversion is needed between the source data type (NDS-PV) and the destination attribute datatype, the NDS-SDN module performs it. More details of this are detailed later. Every time that a source NDS-PV is updated, its subscribed NDS-PV is updated too.
+ - The NDS device driver publishes the topic in SDN in two modes.
+ 	+ Periodically: The SDN topic is built and published through SDN API with a specific period configured in the NDS-PV publishRate (in microseconds). This mode only works if all the NDS PVs specified in the XML configuration file have their <i>trigger</i> field set to <b>no</b>.
+ 	+ By Trigger: The Topic is published to SDN each time any NDS-PV, defined in the XML configuration file with the field <i>trigger</i> set to <b>yes</b>, is updated.
+ - The user can instantiate as many NDS-SDN instances as needed for their applications. One instance publishes only one SDN topic.
+ 
+ 	    
+Software layers used by the NDS-SDN Plugin
+==========================================
+The figure below represents the different software involved in applications using the NDS-SDN module. User can develop two types of applications:
+
+ - EPICS IOCs: In this case, the user only need to configure the EPICS IOC with the templates and substitutions files. Some templates are provided as examples. The EPICS IOC manages with the help of asynDriver the functionalities implemented in the NDS Device Driver (nds3-sdn-publisher), the nds-epics and nds-core libraries.
+ - C++ applications: They can call the NDS-SDN Device Driver (nds3-sdn-publisher) directly, but they need to implement the NDS interface through an NDS factory. The implementation of this application requires a good knowledge of how NDS v3 works. Check the NDS user manual.
+
+@image html ndssdnlibreofficedraw.svg
+@image latex ndssdnlibreofficedraw.png Software organization of NDS-SDN
+
+Instantiation of the NDS-SDN Device Driver
+==========================================
+The instantiation of the NDS-SDN Device Driver from an user application requires using a specific Test Control System Interface (see NDS v3 Core Library User Manual). Once the Test Control System is created, the user has to create an instantiation of the NDS Device Driver providing the following parameters:
+ - driverName: is mandatory to pass here the value *DeviceNDSSDNPUB* 
+ - deviceName: name defined by the user (i.e. B-0)
+ - parameters: a C++ std::map with the different parameters and their values. The data type needed is a typedef std::map<std::string, std::string> namedParameters_t. The user has to provide the pair <b>INTERFACE</b> and a string containing the Network interface name where the SDN data is published. In addition, the user has to provide the pair <b>PVS_CONFIG_PATH</b> and a string containing the path to the input XML file with the configuration of the source PVs. This file has to be formatted as it is described later in this document. 
+
+An excerpt with the code needed to create this application in C++ using the NDS test control system is this:\n 
+
+
+\code{.cpp}
+#include <nds3/nds.h>
+#include <nds3/ndsTestFactory.h>
+
+...
+
+nds::Factory testControlSystem(std::shared_ptr<nds::FactoryBaseImpl>(new nds::tests::TestControlSystemFacoryImpl()));
+nds::FactoryBaseImpl::loadDriver("../../../lib/libnds3-sdn-publisher.so");
+
+...
+//load others NDS device drivers i.e.
+...
+
+nds::FactoryBaseImpl::loadDriver("../../../lib/libnds3-DeviceTesting.so");
+nds::Factory::registerControlSystem(testControlSystem);
+nds::Factory factory("test"); 
+
+...
+//create other NDS device drivers
+...
+
+factory.createDevice("DeviceNDSSDNPUB", "SDN-0", ndssdParams);
+nds::tests::TestControlSystemInterfaceImpl*
+
+	m_pInterfaceSDN = nds::tests::TestControlSystemInterfaceImpl::getInstance("SDN-0");
+
+...
+//Driver operation: i.e 
+...
+
+m_pInterfaceSDN->writeCSValue("SDN-0-StateMachine.setState", m_timestamp, (std::int32_t)nds::state_t::on);
+
+...
+
+factory.destroyDevice("SDN-0");
+\endcode
+
+Input XML configuration file
+============================
+The configuration of an specific instance of the NDS-SDN Plugin requires a XML file. Using the content file the NDS-SDN driver creates all the necessary PVs (according to hte types specified in the XML file) and subscribe these PVs to other NDS-Device Driver's PVs created by other NDS device drivers. The subscription is perform in the OFF to ON state transition of the device driver. On the contrary the subscription is removed on the ON to OFF transition.
+
+The input configuration file must have the following structure:\n
+
+ \code{.xml}
+ <nds-sdn>
+	<topic name="topic_name">
+		<attribute name="att_name">
+			<nds-pv name="sourcePV_name" type="sourcePVdatatype_name" />
+			<trigger_pub>yes/no</trigger_pub>
+		</attribute>
+	</topic>
+</nds-sdn>
+ \endcode
+ 
+ The field "topic_name" is the file's name with th SDN topic that the user has to create using the syntax described in the SDN documentation.
+
+Location of the XML SDN Topic File
+==================================
+The "input" XML configuration file for a specific instantiation of the NDS-SDN module contains a field with the topic name. The NDS-SDN driver searches the topic definition file in the following folders:\n
+
+\code
+${SDN_TOPIC_PATH}
+${CODAC_CONF}/sdn 
+${CODAC_CONF}/default 
+/tmp 	
+./target/main/resources 
+./target/test/resources 
+../../../main/resources 
+../../resources 
+../resources 
+\endcode
+
+Using NDS-SDN Device Driver in an EPICS IOC
+===========================================
+The use of the NDS-SDN EPICS Device Driver in an EPICS IOC requires to do some configurations in the EPICS IOC. This configuration must be done in the different configuration files. The first step is loading the shared library containing the NDS SDN EPICS device support and the instantiation/creation of the NDS device.\n
+
+\code
+ndsLoadDriver("../../lib/libnds3-sdn-publisher.so")
+ndsCreateDevice(DeviceNDSSDNPUB, "SDN-0","INTERFACE=lo","PVS_CONFIG_PATH=../resources/input.xml")
+\endcode
+
+The second step is the creation of the PVs, instantiating the corresponding templates with the records.\n
+
+\code
+## Load record instances
+dbLoadTemplate("db/DeviceNDSSDNPUB.substitutions")
+\endcode
+ 
+ NDS-SDN XML file: Configuration Example
+========================================
+ The following example depicts how The NDS-SDN module can be configured using the input XML file. Firstly, we have got an NDS Driver publishing data through three NDS PVs with different datatypes:
+ 
+<table>
+<tr><th colspan="2">Source Driver
+<tr><th>Input PV name <th> Datatype 
+<tr><td>Test-0-int32_PV	<td> int32
+<tr><td>Test-0-float_PV	<td> float
+<tr><td>Test-0-double_PV<td> double
+</table>
+
+Secondly, we have an SDN Topic with three attributes with this XML description:\n
+
+\code{.xml}
+<?xml version="1.0"?>
+<!-- Implicit size -->
+<topic name="test-topic-nds" version="1.0">
+  <attribute rank="0" name="int32_att" dataType="int32"/>
+  <attribute rank="1" name="float_att" dataType="float"/>
+  <attribute rank="2" name="double_att" dataType="double"/>
+</topic>
+\endcode
+
+<table>
+<tr><th colspan="2"> SDN Topic
+<tr><th>Attribute name <th> Attribute Datatype 
+<tr><td>int32_att	<td> int32
+<tr><td>float_att	<td> float
+<tr><td>double_att <td> double
+</table>
+ 
+The driver has to fill these attributes with data pushed by the NDS Device PV and publish the topic in SDN. The user has to define the mode to publish the topic selecting in the trigger_pub field the values yes or no. If all attributes use no in hte trigger_pub, the NDS-driver will publish the data periodically (with the period configured in the NDS_PVs variable). An example of the configuration file is one:\n
+ 
+ \code{.xml}
+<?xml version="1.0"?>
+<nds-sdn>
+	<topic name="test-topic-nds">
+		<attribute name="int32_att">
+			<nds-pv name="Test-0-int32_PV" type="int32" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="float_att">
+			<nds-pv name="Test-0-float_PV" type="float" />
+			<trigger_pub>no</trigger_pub>
+		</attribute>
+		<attribute name="double_att">
+			<nds-pv name="Test-0-double_PV" type="double" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+	</topic>
+</nds-sdn>
+\endcode
+
+Datatype conversion support
+===========================
+The following table defines all the data types conversions implemented by the NDS-SDN to accommodate NDS datatypes and SDN datatypes. Special attention requires the cases when the "Destination Attribute Datatype" is smaller than the "NDS-PV source Datatype."
+
+|NDS-PV Type					|NDS-SDN Source Datatype 	|Destination SDN Attribute	|						|Notes																|Examples																								|
+|-------------------------------|---------------------------|---------------------------|-----------------------|-------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+|								|							|<b>Datatype</b>			|<b>Multiplicity</b>	|																	|																										|
+|std::int32_t					|int32						|int8						|1 (Default)			|																	|\<attribute rank=" " name="int32_to_int8_att" datatype="int8"/\>										|
+|^								|^							|int16						|1 (Default)			|																	|\<attribute rank=" " name="int32_to_int16_att" datatype="int16"/\>										|
+|^								|^							|int32						|1 (Default)			|																	|\<attribute rank=" " name="int32_att" datatype="int32"/\>												|
+|^								|^							|int64						|1 (Default)			|																	|\<attribute rank=" " name="int32_to_int64_att" datatype="int64"/\>										|
+|std::int32_t					|int64						|int8						|1 (Default)			|																	|\<attribute rank=" " name="int64_to_int8_att" datatype="int8"/\>										|
+|^								|^							|int16						|1 (Default)			|																	|\<attribute rank=" " name="int64_to_int16_att" datatype="int16"/\>										|
+|^								|^							|int32						|1 (Default)			|																	|\<attribute rank=" " name="int64_to_int32_att" datatype="int32"/\>										|
+|^								|^							|int64						|1 (Default)			|																	|\<attribute rank=" " name="int64_att" datatype="int64"/\>												|
+|float							|float						|float						|1 (Default)			|																	|\<attribute rank=" " name="float_att" datatype="float"/\>												|
+|^								|^							|double						|1 (Default)			|																	|\<attribute rank=" " name="float_to_double_att" datatype="double"/\>									|
+|double							|float						|float						|1 (Default)			|																	|\<attribute rank=" " name="double_att" datatype="double"/\>											|
+|^								|^							|double						|1 (Default)			|																	|\<attribute rank=" " name="double_to_float_att" datatype="float"/\>									|
+|std::string					|string						|string						|1 (Default)			|																	|\<attribute rank=" " name="string_att" datatype="string"/\>											|
+|timespec						|timespec					|							|						|Datatype and multiplicity must match timespec size.				|\<attribute rank=" " name="timespec_att" datatype="int64" multiplicity="2"/\>							|
+|nds::timestamp_t				|timestamp					|							|						|Datatype and multiplicity must match nds::timestamp_t size.		|\<attribute rank=" " name="timestamp_att" datatype="int8" multiplicity="24"/\>							|
+|std::vector\<bool\>			|bool						|bool						|\>1 					|																	|\<attribute rank=" " name="boolArray_att" datatype="bool" multiplicity="512"/\>						|
+|std::vector\<std::int8_t\>		|int8						|int8						|\>1 					|																	|\<attribute rank=" " name="int8Array_att" datatype="int8" multiplicity="512"/\>						|
+|^								|^							|int16						|\>1 					|																	|\<attribute rank=" " name="int8Array_to_int16Array_att" datatype="int16" multiplicity="512"/\>			|
+|^								|^							|int32						|\>1 					|																	|\<attribute rank=" " name="int8Array_to_int32Array_att" datatype="int32" multiplicity="512"/\>			|
+|^								|^							|int64						|\>1 					|																	|\<attribute rank=" " name="int8Array_to_int64Array_att" datatype="int64" multiplicity="512"/\>			|
+|std::vector\<std::int16_t\>	|int16						|int16						|\>1 					|																	|\<attribute rank=" " name="int16Array_att" datatype="int16" multiplicity="512"/\>						|
+|^								|^							|int32						|\>1 					|																	|\<attribute rank=" " name="int16Array_to_int32Array_att" datatype="int32" multiplicity="512"/\>		|
+|^								|^							|int64						|\>1 					|																	|\<attribute rank=" " name="int16Array_to_int64Array_att" datatype="int64" multiplicity="512"/\>		|
+|std::vector\<std::int32_t\>	|int32						|int32						|\>1 					|																	|\<attribute rank=" " name="int32Array_att" datatype="int32" multiplicity="512"/\>						|
+|^								|^							|int64						|\>1 					|																	|\<attribute rank=" " name="int32Array_to_int64Array_att" datatype="int64" multiplicity="512"/\>		|
+|std::vector\<std::int64_t\>	|int64						|int64						|\>1 					|																	|\<attribute rank=" " name="int64Array_att" datatype="int64" multiplicity="512"/\>						|
+|std::vector\<std::uint8_t\>	|uint8						|uint8						|\>1 					|																	|\<attribute rank=" " name="uint8Array_att" datatype="uint8" multiplicity="512"/\>						|
+|^								|^							|uint16						|\>1 					|																	|\<attribute rank=" " name="uint8Array_to_uint16Array_att" datatype="uint16" multiplicity="512"/\>		|
+|^								|^							|uint32						|\>1 					|																	|\<attribute rank=" " name="uint8Array_to_uint32Array_att" datatype="uint32" multiplicity="512"/\>		|
+|^								|^							|uint64						|\>1 					|																	|\<attribute rank=" " name="uint8Array_to_uint64Array_att" datatype="uint64" multiplicity="512"/\>		|
+|std::vector\<std::uint16_t\>	|uint16						|uint16						|\>1 					|																	|\<attribute rank=" " name="uint16Array_att" datatype="uint16" multiplicity="512"/\>					|
+|^								|^							|uint32						|\>1 					|																	|\<attribute rank=" " name="uint16Array_to_uint32Array_att" datatype="uint32" multiplicity="512"/\>		|
+|^								|^							|uint64						|\>1 					|																	|\<attribute rank=" " name="uint16Array_to_uint64Array_att" datatype="uint64" multiplicity="512"/\>		|
+|std::vector\<std::uint32_t\>	|uint32						|uint32						|\>1 					|																	|\<attribute rank=" " name="uint32Array_att" datatype="uint32" multiplicity="512"/\>					|
+|^								|^							|uint64						|\>1 					|																	|\<attribute rank=" " name="uint32Array_to_uint64Array_att" datatype="uint64" multiplicity="512"/\>		|
+|std::vector\<float\>			|float						|float						|\>1 					|																	|\<attribute rank=" " name="floatArray_att" datatype="float" multiplicity="512"/\>						|
+|^								|^							|double						|\>1 					|																	|\<attribute rank=" " name="floatArray_to_doubleArray_att" datatype="double" multiplicity="512"/\>		|
+|std::vector\<std::uint32_t\>	|double						|float						|\>1 					|																	|\<attribute rank=" " name="doubleArray_att" datatype="double" multiplicity="512"/\>					|
+|^								|^							|double						|\>1 					|																	|\<attribute rank=" " name="doubleArray_to_floatArray_att" datatype="float" multiplicity="512"/\>		|
+|std::vector\<timespec\>		|timespec					|							|						|Datatype and multiplicity must match timespec size.				|\<attribute rank=" " name="timespecArray_att" datatype="int64" multiplicity="512"/\>					|
+
+Wireshark Configuration
+=======================
+A simple form to see the data published by NDS-SDN in the network interface is using the Wireshark application. In order for you to use it, it is necessary that you set a configuration to see the specific data packages. The configuration is the following:
+
+ - Set the network interface (i.e. <b><i>"lo"</i></b>).
+ - Set the Wireshark Filter Settings: <b><i>ip.dst==224.0.0.0/4 and udp</i></b>
+ - View the data packages in the selected network interface.
+
+
+NDS-SDN Device driver operation. State machine
+==============================================
+
+The NDS-SDN device driver has only one state machine, the device's STM. The user has to change the device state to perform the different driver's operations. When the driver is instantiated, it creates all the basic infrastructure, parses the XML file and creates all the NDS PVs. The name and datatype depend on the specific content of the input XML. If these operations are completed, the driver is set to OFF state. In the OFF state, the user can change the state machine to the ON state. In the transition, the NDS PVs are subscribed to the source PVs. If all of them are subscribed correctly, the driver will transit to the ON state. In this state, the user can configure the PV with the period publishing rate. When the device driver is set to RUNNING state, the topic is published through the SDN API with two different modes: periodically (the driver creates a thread to support this) or every time a PV is updated. This mode depends on the information provided in the XML file with the trigger field. In the transition from RUNNING to ON, the publication thread is stopped if the driver is working in the periodic mode. In the transition from ON to OFF, the NDS-PVs are unsubscribed. Finally, in the destruction of the driver, the resources are freed.
+*/

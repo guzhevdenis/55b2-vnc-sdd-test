@@ -1,0 +1,66 @@
+/**
+
+@mainpage
+
+Version: 2.2.0
+Overview
+==========================
+The NDS-Nisync module, on top of the NDS-EPICS module and NDS-Core library, is a device support library for the NI PXI-6683H timing board, based on NDS(Nominal Device Support) and using NI Sync Linux Device Driver.  
+
+Features
+==========================
+NDS-Nisync implements NDS Device Drivers to manage timing card functionalities related to timestamping, FTE generation and signal routing.
+
+It also provides the following features through NDS using PVs:
+	- Board status information.
+	- Schedule and suppressing of FTE events (single FTEs, pulses, clocks or immediate levels). 
+	- Routing management for the PXI-6683H board.
+	- Timestamps recording for the different events in the board. 
+	- Get time from the board and it status of the synchronization of the board with the PTP 
+	- The time units managed by the driver are in UTC format. The conversion between the UTC time and TAI time is implemented by the driver 
+	  with the CODAC Core System helpers. 
+ 	    
+Software layers used in NDS-NISYNC
+================================
+The figure below represents the different software involved in applications developed using NDS-NISYNC module.
+
+Users can develop two types of applications:
+-EPICS IOCs. The user only needs to configure the IOC with the help of the templates and substitutions files provided (of course the user needs to link with the cited libraries). The EPICS IOC manages with the help of asynDriver the functionalities implemented in nds3-dev-nisync, nds-epics and nds libraries.
+-Other applications calling directly the NDS-NISYNC Device Driver (nds3-dev-nisync). The implementation of this application requires a good knowledge of how NDS v3 works. Check the user manuals.
+@image html ndsnisynclibreofficedraw.svg
+@image latex ndsnisynclibreofficedraw.png
+
+
+Instantiation of the NDS-NISYNC Device Driver
+===========================================
+The instantiation of the NDS-NISYNC Device Driver from an user application requires to use an specific Control System Interface (see NDS V3 Core Library User Manual).
+Once the Control System is created the user has to create an instantiation of the NDS Device Driver providing the following parameters:
+- driverName -> is mandatory to pass here the value *nisyncDevice* 
+- deviceName -> [name defined by the user, i.e. B-0]
+- parameters -> The data type needed is a *typedef std::map<std::string, std::string> namedParameters_t;*. 
+
+The user has to provided the pair BOARD_NUM and a string containing the number of the board in the system.\n
+The user has to provided the pair TERMINALS and a string with all the terminals the user wants to use. Use . to separate individual channels and - for a range of channels\n
+The user has to provided the pair AUTOENABLE and a string containing the level of autoEnable for the children state machines (none,off,on or running).\n
+The user has to provided the optional pair RESET and a string containing YES or NO. The default value for this parameter is NO. This means that this DNS device driver does not reset the PXI6683H
+      
+
+Using NDS-NISYNC Device Driver
+==========================
+The use of the NDS-NISYNC EPICS Device Driver requires to do some configurations in the EPICS IOC. 
+The first step is loading the shared library containing the NDS NISYNC EPICS device support and the instantation/creation of the NDS device.
+\code
+
+ndsLoadDriver("../../lib/libnds3-dev-nisync.so")
+ndsCreateDevice(nisyncDevice, "B-0","BOARD_NUM=0","TERMINALS=0.2.15-17", "AUTOENABLE=on")
+
+\endcode
+The second step is the creation of the PVs instantiating the corresponding templates with the records.
+\code
+## Load record instances
+dbLoadTemplate("db/nisyncDevice6683H-basic.substitutions")
+dbLoadTemplate("db/nisyncDevice6683H-terminal.substitutions")
+\endcode
+
+*/
+

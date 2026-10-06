@@ -1,0 +1,89 @@
+record(ai, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-int32_PV") {
+    field(DESC, "Testing PV publishing integers")
+    field(DTYP, "asynInt32")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)int32_PV")    
+}
+
+record(ai, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-float_PV") {
+    field(DESC, "Testing PV publishing floats")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)float_PV")    
+}
+
+record(ai, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-double_PV") {
+    field(DESC, "Testing PV publishing doubles")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)double_PV")    
+}
+
+
+record(mbbi, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-StateMachine-getGlobalState") {
+    field(DESC, "")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(PINI, 1)
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)StateMachine-getGlobalState")
+    field(ZRVL, 0)
+    field(ZRST, "UNKNOWN")
+    field(ONVL, 1)
+    field(ONST, "OFF")
+    field(TWVL, 2)
+    field(TWST, "SWITCHING_OFF")
+    field(THVL, 3)
+    field(THST, "INITIALIZING")
+    field(FRVL, 4)
+    field(FRST, "ON")
+    field(FVVL, 5)
+    field(FVST, "STOPPING")
+    field(SXVL, 6)
+    field(SXST, "STARTING")
+    field(SVVL, 7)
+    field(SVST, "RUNNING")
+    field(EIVL, 8)
+    field(EIST, "FAULT")
+}
+
+record(mbbi, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-StateMachine-getState") {
+    field(DESC, "Get local state")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(PINI, 1)
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)StateMachine-getState")
+    field(ZRVL, 0)
+    field(ZRST, "UNKNOWN")
+    field(ONVL, 1)
+    field(ONST, "OFF")
+    field(TWVL, 2)
+    field(TWST, "SWITCHING_OFF")
+    field(THVL, 3)
+    field(THST, "INITIALIZING")
+    field(FRVL, 4)
+    field(FRST, "ON")
+    field(FVVL, 5)
+    field(FVST, "STOPPING")
+    field(SXVL, 6)
+    field(SXST, "STARTING")
+    field(SVVL, 7)
+    field(SVST, "RUNNING")
+    field(EIVL, 8)
+    field(EIST, "FAULT")
+}
+
+record(mbbo, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-StateMachine-setState") {
+    field(DESC, "Set local state")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(PINI, 1)
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)StateMachine-setState")
+    field(ONVL, 1)
+    field(ONST, "OFF")
+    field(FRVL, 4)
+    field(FRST, "ON")
+    field(SVVL, 7)
+    field(SVST, "RUNNING")
+}
+
+
+
+
+

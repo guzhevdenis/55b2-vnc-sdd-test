@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- 
+  BOY Files Navigation
+  CODAC-VERSION: 6.3.1
+  WARNING: This is an SDD generated file. Contact codac-support for any query.
+-->
+
+ <CBS name="Measurements" description="Measurements" enabled="true" opi_file="./../ITER-DIA-DFP-VC-Measurements.opi LEVEL=ITER-DIA-DFP-VC-Measurements" deprecated="false" alarm_root="/CODAC_AlarmHandler/D1" xmlns:xi="http://www.w3.org/2001/XInclude" >
+	<xi:include href="Navigation_DIA-DFP-VC-Measurements-MeasurementParameters.xml">
+		<xi:fallback></xi:fallback></xi:include>
+	<xi:include href="Navigation_DIA-DFP-VC-Measurements-SignalChain.xml">
+		<xi:fallback></xi:fallback></xi:include></CBS>
+		

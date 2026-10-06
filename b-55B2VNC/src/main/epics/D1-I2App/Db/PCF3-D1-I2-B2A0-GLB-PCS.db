@@ -1,0 +1,5 @@
+record (ai,"D1-I2-B2A0-GLB-PCS:CO-ST-00-0000-STREPNNPEN")
+{
+	field(DESC, "Connection status with Plasma Control Sy")
+}
+

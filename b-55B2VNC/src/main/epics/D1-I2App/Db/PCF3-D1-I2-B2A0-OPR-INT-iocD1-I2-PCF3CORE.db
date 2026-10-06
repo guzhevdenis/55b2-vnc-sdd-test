@@ -1,0 +1,40 @@
+record (ai,"D1-I2-B2A0-OPR-INT:HI-DI-B1-0000-STREPNNPEN")
+{
+	field(DESC, "ADC initialization status")
+}
+
+record (ai,"D1-I2-B2A0-OPR-INT:HI-DI-B2-0000-STREPNNPEN")
+{
+	field(DESC, "ADC initialization status")
+}
+
+record (ai,"D1-I2-B2A0-OPR-INT:HI-FI-B1-0000-STREPNNPEN")
+{
+	field(DESC, "Initialization of FPGA board status")
+}
+
+record (ai,"D1-I2-B2A0-OPR-INT:HI-FI-B2-0000-STREPNNPEN")
+{
+	field(DESC, "Initialization of FPGA board status")
+}
+
+record (ai,"D1-I2-B2A0-OPR-INT:HI-FI-B3-0000-STREPNNPEN")
+{
+	field(DESC, "Initialization of FPGA board status")
+}
+
+record (ai,"D1-I2-B2A0-OPR-INT:HI-PI-P1-0000-STREPNNPEN")
+{
+	field(DESC, "Initialization of PCF status")
+}
+
+record (ai,"D1-I2-B2A0-OPR-INT:SI-MI-00-0000-STREPNNPEN")
+{
+	field(DESC, "Status of MiniCODAC initialization")
+}
+
+record (ai,"D1-I2-B2A0-OPR-INT:SI-RS-00-0000-STREPNNPEN")
+{
+	field(DESC, "Remote station network status")
+}
+

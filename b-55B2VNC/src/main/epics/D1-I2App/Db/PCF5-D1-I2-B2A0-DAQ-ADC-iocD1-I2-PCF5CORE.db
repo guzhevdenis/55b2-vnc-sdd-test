@@ -1,0 +1,310 @@
+record (ai,"D1-I2-B2A0-DAQ-ADC:CH-OM-OC-0000-CGRWPNNPSP")
+{
+	field(DESC, "Configuration of oscillograph data buffe")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:CH-SM-CB-0000-CGRWPNNPSP")
+{
+	field(DESC, "Charge Spectrum Buffer Size")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:CH-SM-EB-0000-CGRWPNNPSP")
+{
+	field(DESC, "Energy Spectrum Buffer Size")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:CI-OM-OC-0000-CGRWPNNPSP")
+{
+	field(DESC, "Configuration of oscillograph data buffe")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:CI-SM-CB-0000-CGRWPNNPSP")
+{
+	field(DESC, "Charge Spectrum Buffer Size")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:CI-SM-EB-0000-CGRWPNNPSP")
+{
+	field(DESC, "Energy Spectrum Buffer Size")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:CJ-OM-OC-0000-CGRWPNNPSP")
+{
+	field(DESC, "Configuration of oscillograph data buffe")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:CJ-SM-CB-0000-CGRWPNNPSP")
+{
+	field(DESC, "Charge Spectrum Buffer Size")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:CJ-SM-EB-0000-CGRWPNNPSP")
+{
+	field(DESC, "Energy Spectrum Buffer Size")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:CK-OM-OC-0000-CGRWPNNPSP")
+{
+	field(DESC, "Configuration of oscillograph data buffe")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:CK-SM-CB-0000-CGRWPNNPSP")
+{
+	field(DESC, "Charge Spectrum Buffer Size")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:CK-SM-EB-0000-CGRWPNNPSP")
+{
+	field(DESC, "Energy Spectrum Buffer Size")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:CL-OM-OC-0000-CGRWPNNPSP")
+{
+	field(DESC, "Configuration of oscillograph data buffe")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:CL-SM-CB-0000-CGRWPNNPSP")
+{
+	field(DESC, "Charge Spectrum Buffer Size")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:CL-SM-EB-0000-CGRWPNNPSP")
+{
+	field(DESC, "Energy Spectrum Buffer Size")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:CM-OM-OC-0000-CGRWPNNPSP")
+{
+	field(DESC, "Configuration of oscillograph data buffe")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:CM-SM-CB-0000-CGRWPNNPSP")
+{
+	field(DESC, "Charge Spectrum Buffer Size")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:CM-SM-EB-0000-CGRWPNNPSP")
+{
+	field(DESC, "Energy Spectrum Buffer Size")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:CN-OM-OC-0000-CGRWPNNPSP")
+{
+	field(DESC, "Configuration of oscillograph data buffe")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:CN-SM-CB-0000-CGRWPNNPSP")
+{
+	field(DESC, "Charge Spectrum Buffer Size")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:CN-SM-EB-0000-CGRWPNNPSP")
+{
+	field(DESC, "Energy Spectrum Buffer Size")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:CO-OM-OC-0000-CGRWPNNPSP")
+{
+	field(DESC, "Configuration of oscillograph data buffe")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:CO-SM-CB-0000-CGRWPNNPSP")
+{
+	field(DESC, "Charge Spectrum Buffer Size")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:CO-SM-EB-0000-CGRWPNNPSP")
+{
+	field(DESC, "Energy Spectrum Buffer Size")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:D9-DP-EF-0000-ERREPNNPEN")
+{
+	field(DESC, "FIIFO Overflow error for diamond detecto")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:D9-DP-FC-0000-CGRWPNNPSP")
+{
+	field(DESC, "FIFO configuration for diamond detector")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:D9-DP-RD-0000-MUREDNNPRB")
+{
+	field(DESC, "Raw data of diamond detector")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:D9-FP-EF-0000-ERREPNNPEN")
+{
+	field(DESC, "FIIFO Overflow error for fission chamber")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:D9-FP-FC-0000-CGRWPNNPSP")
+{
+	field(DESC, "FIFO configuration for fission chamber r")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:D9-FP-RD-0000-MUREDNNPRB")
+{
+	field(DESC, "Raw data of fission chamber")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:DA-DP-EF-0000-ERREPNNPEN")
+{
+	field(DESC, "FIIFO Overflow error for diamond detecto")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:DA-DP-FC-0000-CGRWPNNPSP")
+{
+	field(DESC, "FIFO configuration for diamond detector")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:DA-DP-RD-0000-MUREDNNPRB")
+{
+	field(DESC, "Raw data of diamond detector")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:DA-FP-EF-0000-ERREPNNPEN")
+{
+	field(DESC, "FIIFO Overflow error for fission chamber")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:DA-FP-FC-0000-CGRWPNNPSP")
+{
+	field(DESC, "FIFO configuration for fission chamber r")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:DA-FP-RD-0000-MUREDNNPRB")
+{
+	field(DESC, "Raw data of fission chamber")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:DB-DP-EF-0000-ERREPNNPEN")
+{
+	field(DESC, "FIIFO Overflow error for diamond detecto")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:DB-DP-FC-0000-CGRWPNNPSP")
+{
+	field(DESC, "FIFO configuration for diamond detector")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:DB-DP-RD-0000-MUREDNNPRB")
+{
+	field(DESC, "Raw data of diamond detector")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:DB-FP-EF-0000-ERREPNNPEN")
+{
+	field(DESC, "FIIFO Overflow error for fission chamber")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:DB-FP-FC-0000-CGRWPNNPSP")
+{
+	field(DESC, "FIFO configuration for fission chamber r")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:DC-DP-EF-0000-ERREPNNPEN")
+{
+	field(DESC, "FIIFO Overflow error for diamond detecto")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:DC-DP-FC-0000-CGRWPNNPSP")
+{
+	field(DESC, "FIFO configuration for diamond detector")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:DC-DP-RD-0000-MUREDNNPRB")
+{
+	field(DESC, "Raw data of diamond detector")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:DC-FP-EF-0000-ERREPNNPEN")
+{
+	field(DESC, "FIIFO Overflow error for fission chamber")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-ADC:DC-FP-FC-0000-CGRWPNNPSP")
+{
+	field(DESC, "FIFO configuration for fission chamber r")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-PPC:D9-DP-MN-0000-CGSEPNNPMN")
+{
+	field(DESC, "min value for timing window of  diamond")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-PPC:D9-DP-MX-0000-CGSEPNNPMX")
+{
+	field(DESC, "max value for timing window of  diamond")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-PPC:D9-FP-MN-0000-CGSEPNNPMN")
+{
+	field(DESC, "min value for timing window of  fission")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-PPC:D9-FP-MX-0000-CGSEPNNPMX")
+{
+	field(DESC, "max value for timing window of  fission")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-PPC:DA-DP-MN-0000-CGSEPNNPMN")
+{
+	field(DESC, "min value for timing window of  diamond")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-PPC:DA-DP-MX-0000-CGSEPNNPMX")
+{
+	field(DESC, "max value for timing window of  diamond")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-PPC:DA-FP-MN-0000-CGSEPNNPMN")
+{
+	field(DESC, "min value for timing window of  fission")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-PPC:DA-FP-MX-0000-CGSEPNNPMX")
+{
+	field(DESC, "max value for timing window of  fission")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-PPC:DB-DP-MN-0000-CGSEPNNPMN")
+{
+	field(DESC, "min value for timing window of  diamond")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-PPC:DB-DP-MX-0000-CGSEPNNPMX")
+{
+	field(DESC, "max value for timing window of  diamond")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-PPC:DB-FP-MN-0000-CGSEPNNPMN")
+{
+	field(DESC, "min value for timing window of  fission")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-PPC:DB-FP-MX-0000-CGSEPNNPMX")
+{
+	field(DESC, "max value for timing window of  fission")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-PPC:DC-DP-MN-0000-CGSEPNNPMN")
+{
+	field(DESC, "min value for timing window of  diamond")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-PPC:DC-DP-MX-0000-CGSEPNNPMX")
+{
+	field(DESC, "max value for timing window of  diamond")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-PPC:DC-FP-MN-0000-CGSEPNNPMN")
+{
+	field(DESC, "min value for timing window of  fission")
+}
+
+record (ai,"D1-I2-B2A0-DAQ-PPC:DC-FP-MX-0000-CGSEPNNPMX")
+{
+	field(DESC, "max value for timing window of  fission")
+}
+

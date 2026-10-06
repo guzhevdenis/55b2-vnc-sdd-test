@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- 
+  BOY Files Navigation
+  CODAC-VERSION: 7.2.1
+  WARNING: This is an SDD generated file. Contact codac-support for any query.
+-->
+
+ <CBS name="PST" description="" enabled="true" opi_file="./mimics/D1-I2-B2A0-OPR-PST_Mimic.opi LEVEL=ITER-D1-I2-B2A0-OPR-PST" deprecated="false" alarm_root="/CODAC_AlarmHandler/D1/D1-I2/D1-I2-B2A0/D1-I2-B2A0-OPR/D1-I2-B2A0-OPR-PST" xmlns:xi="http://www.w3.org/2001/XInclude" >
+     <CBS name="dummy" description="dummy" enabled="false" opi_file="" deprecated="false" alarm_root="" xmlns:xi="http://www.w3.org/2001/XInclude" ></CBS>
+</CBS>

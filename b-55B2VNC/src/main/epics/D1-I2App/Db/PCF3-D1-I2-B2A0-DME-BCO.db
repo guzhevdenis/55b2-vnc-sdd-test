@@ -1,0 +1,60 @@
+record (ai,"D1-I2-B2A0-DME-BCO:BR-FP-ER-0000-ERREPNNPVL")
+{
+	field(DESC, "Error of Fusion power  for PON")
+}
+
+record (ai,"D1-I2-B2A0-DME-BCO:BR-FP-ME-0000-MPREPNPWVL")
+{
+	field(DESC, "Fusion power  measurement for PON")
+}
+
+record (ai,"D1-I2-B2A0-DME-BCO:BR-FP-QT-0000-QTREPNNPVL")
+{
+	field(DESC, "Quality  tag of Fusion power for PON")
+}
+
+record (ai,"D1-I2-B2A0-DME-BCO:BR-FP-TS-0000-TMREPNNPVL")
+{
+	field(DESC, "Timestamp of Fusion power  for PON")
+}
+
+record (ai,"D1-I2-B2A0-DME-BCO:BR-FR-ER-0000-ERREPNNPVL")
+{
+	field(DESC, "Error of Fuel ratio for PON")
+}
+
+record (ai,"D1-I2-B2A0-DME-BCO:BR-FR-ME-0000-MPREPNNPVL")
+{
+	field(DESC, "Fuel ratio measurement for PON")
+}
+
+record (ai,"D1-I2-B2A0-DME-BCO:BR-FR-QT-0000-QTREPNNPVL")
+{
+	field(DESC, "Quality  tag of Fuel ratio  for PON")
+}
+
+record (ai,"D1-I2-B2A0-DME-BCO:BR-FR-TS-0000-TMREPNNPVL")
+{
+	field(DESC, "Timestamp of Fuel ratio for PON")
+}
+
+record (ai,"D1-I2-B2A0-DME-BCO:PR-PD-ER-0000-ERREPNNPVL")
+{
+	field(DESC, "Error of fusion power density  for PON")
+}
+
+record (ai,"D1-I2-B2A0-DME-BCO:PR-PD-ME-0000-MPREPNPWBF")
+{
+	field(DESC, "Fusion power density measurement for PON")
+}
+
+record (ai,"D1-I2-B2A0-DME-BCO:PR-PD-QT-0000-QTREPNNPVL")
+{
+	field(DESC, "Quality  tag of fusion power density  fo")
+}
+
+record (ai,"D1-I2-B2A0-DME-BCO:PR-PD-TS-0000-TMREPNNPVL")
+{
+	field(DESC, "Timestamp of Fusion power density  for P")
+}
+

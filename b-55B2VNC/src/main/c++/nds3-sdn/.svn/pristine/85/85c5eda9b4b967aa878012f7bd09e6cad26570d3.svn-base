@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- Implicit size -->
+<topic name="test-topic-nds" version="1.0">
+  <attribute rank="0" name="int32_att" dataType="int32"/>
+  <attribute rank="1" name="int64_att" dataType="int64"/>
+  <attribute rank="2" name="float_att" dataType="float"/>
+  <attribute rank="3" name="double_att" dataType="double"/>
+  <attribute rank="4" name="timespec_att" dataType="int64" multiplicity="2"/>
+  <attribute rank="5" name="timestamp_att" dataType="uint8" multiplicity="24"/>
+  <attribute rank="6" name="string_att" dataType="string"/>  
+  <attribute rank="7" name="int32_to_int8_att" dataType="int8"/>
+  <attribute rank="8" name="int32_to_int16_att" dataType="int16"/>
+  <attribute rank="9" name="int32_to_int64_att" dataType="int64"/>  
+  <attribute rank="10" name="int64_to_int8_att" dataType="int8"/>
+  <attribute rank="11" name="int64_to_int16_att" dataType="int16"/>
+  <attribute rank="12" name="int64_to_int32_att" dataType="int32"/>  
+  <attribute rank="13" name="float_to_double_att" dataType="double"/>
+  <attribute rank="14" name="double_to_float_att" dataType="float"/>  
+</topic>
+

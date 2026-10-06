@@ -1,0 +1,13 @@
+# Nds3Receiver Driver DB file
+# CountRate-received - writable PV that receives data from sender via CA link
+
+record(ao, "$(PREFIX)-CountRate-received") {
+    field(DESC, "Received Count Rate")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(DEVICE),0)CountRate-received")
+    field(DOL, "$(SOURCE) CP")
+    field(OMSL, "closed_loop")
+    field(EGU, "cps")
+    field(PREC, "2")
+}

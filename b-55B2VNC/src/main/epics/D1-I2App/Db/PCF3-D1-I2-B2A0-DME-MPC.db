@@ -1,0 +1,20 @@
+record (ai,"D1-I2-B2A0-DME-MPC:BR-TF-ER-0000-ERREPNNPVL")
+{
+	field(DESC, "Error of Total neutron flux for PON")
+}
+
+record (ai,"D1-I2-B2A0-DME-MPC:BR-TF-ME-0000-MPREPNPWVL")
+{
+	field(DESC, "Total neutron flux  measurements for PON")
+}
+
+record (ai,"D1-I2-B2A0-DME-MPC:BR-TF-QT-0000-QTREPNNPVL")
+{
+	field(DESC, "Quality  tag of Total neutron flux for P")
+}
+
+record (ai,"D1-I2-B2A0-DME-MPC:BR-TF-TS-0000-TMREPNNPVL")
+{
+	field(DESC, "Timestamp of Total neutron flux for PON")
+}
+

@@ -1,0 +1,20 @@
+record (ai,"D1-I2-B2B0-DPC-CAL:D5-FF-NC-0000-CLRWPNNPVL")
+{
+	field(DESC, "Normalizing coefficient for fission cham")
+}
+
+record (ai,"D1-I2-B2B0-DPC-CAL:D6-FF-NC-0000-CLRWPNNPVL")
+{
+	field(DESC, "Normalizing coefficient for fission cham")
+}
+
+record (ai,"D1-I2-B2B0-DPC-CAL:D7-FF-NC-0000-CLRWPNNPVL")
+{
+	field(DESC, "Normalizing coefficient for fission cham")
+}
+
+record (ai,"D1-I2-B2B0-DPC-CAL:D8-FF-NC-0000-CLRWPNNPVL")
+{
+	field(DESC, "Normalizing coefficient for fission cham")
+}
+

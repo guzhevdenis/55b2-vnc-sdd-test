@@ -1,0 +1,583 @@
+<?xml version="1.0"?>
+
+ <pvtable version="3.0" >
+     <nbMeasure >1</nbMeasure>
+
+     <pvlist >
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D1-DD-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D1-DD-QP-DSNR-MRREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D1-DD-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D1-DD-QP-MXSV-MRREPNVOMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D1-FI-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D1-FI-QP-DSNR-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D1-FI-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D1-FI-QP-MXSV-MRREPNVOMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D2-DD-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D2-DD-QP-DSNR-MRREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D2-DD-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D2-DD-QP-MXSV-MRREPNVOMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D2-FI-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D2-FI-QP-DSNR-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D2-FI-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D2-FI-QP-MXSV-MRREPNVOMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D3-DD-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D3-DD-QP-DSNR-MRREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D3-DD-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D3-DD-QP-MXSV-MRREPNVOMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D3-FI-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D3-FI-QP-DSNR-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D3-FI-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D3-FI-QP-MXSV-MRREPNVOMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D4-DD-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D4-DD-QP-DSNR-MRREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D4-DD-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D4-DD-QP-MXSV-MRREPNVOMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D4-FI-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D4-FI-QP-DSNR-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D4-FI-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D4-FI-QP-MXSV-MRREPNVOMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D5-DD-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D5-DD-QP-DSNR-MRREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D5-DD-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D5-DD-QP-MXSV-MRREPNVOMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D5-FI-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D5-FI-QP-DSNR-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D5-FI-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D5-FI-QP-MXSV-MRREPNVOMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D6-DD-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D6-DD-QP-DSNR-MRREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D6-DD-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D6-DD-QP-MXSV-MRREPNVOMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D6-FI-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D6-FI-QP-DSNR-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D6-FI-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D6-FI-QP-MXSV-MRREPNVOMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D7-DD-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D7-DD-QP-DSNR-MRREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D7-DD-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D7-DD-QP-MXSV-MRREPNVOMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D7-FI-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D7-FI-QP-DSNR-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D7-FI-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D7-FI-QP-MXSV-MRREPNVOMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D8-DD-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D8-DD-QP-DSNR-MRREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D8-DD-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D8-DD-QP-MXSV-MRREPNVOMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D8-FI-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D8-FI-QP-DSNR-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D8-FI-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D8-FI-QP-MXSV-MRREPNVOMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D9-DD-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D9-DD-QP-DSNR-MRREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D9-DD-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D9-DD-QP-MXSV-MRREPNVOMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D9-FI-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D9-FI-QP-DSNR-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D9-FI-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:D9-FI-QP-MXSV-MRREPNVOMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DA-DD-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DA-DD-QP-DSNR-MRREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DA-DD-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DA-DD-QP-MXSV-MRREPNVOMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DA-FI-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DA-FI-QP-DSNR-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DA-FI-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DA-FI-QP-MXSV-MRREPNVOMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DB-DD-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DB-DD-QP-DSNR-MRREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DB-DD-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DB-DD-QP-MXSV-MRREPNVOMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DB-FI-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DB-FI-QP-DSNR-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DB-FI-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DB-FI-QP-MXSV-MRREPNVOMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DC-DD-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DC-DD-QP-DSNR-MRREPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DC-DD-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DC-DD-QP-MXSV-MRREPNVOMX</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DC-FI-QP-DRMS-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DC-FI-QP-DSNR-MRREPNVOVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DC-FI-QP-MNSV-MRREPNVOMN</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-ANA:DC-FI-QP-MXSV-MRREPNVOMX</name>
+</pv>
+</pvlist>
+</pvtable>

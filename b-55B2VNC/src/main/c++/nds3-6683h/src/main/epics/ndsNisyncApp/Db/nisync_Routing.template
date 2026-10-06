@@ -1,0 +1,207 @@
+#route clocks
+record(longout, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-ClkSrc") {
+    field(DESC, "Clock source")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(ROUTING_NAME)-ClkSrc")
+}
+
+
+record(longout, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-ClkDst") {
+    field(DESC, "Clock Destination")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(ROUTING_NAME)-ClkDst")
+}
+
+record(bo, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-ClkSet") {
+    field(DESC, "Clock Routing Set")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(ROUTING_NAME)-ClkSet")
+    field(ZNAM, "OFF")
+    field(ONAM, "ON")
+}
+
+record(mbbi, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-ClkSetCode") {
+    field(DESC, "Clock routing set status code")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(ROUTING_NAME)-ClkSetCode")
+    field(ZRVL, 0)
+    field(ZRST, "OK")
+    field(ZRSV, "NO_ALARM")
+    field(ONVL, 1)
+    field(ONST, "WARNING")
+    field(ONSV, "MINOR")
+    field(FFVL, 15)
+    field(FFST, "ERROR")
+    field(FFSV, "MAJOR")
+}
+
+record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-ClkSetStatus") {
+    field(DESC, "Clock routing set status message")
+    field(DTYP, "asynInt8ArrayIn")
+    field(FTVL, "CHAR")
+    field(SCAN, "I/O Intr")
+    field(NELM, "255")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(ROUTING_NAME)-ClkSetStatus")
+}
+#Clock Route Status
+
+record(longout, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-ClkDstRead") {
+    field(DESC, "Clock destination connection config read")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(ROUTING_NAME)-ClkDstRead")
+}
+
+record(longin, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-ClkSrcRead") {
+    field(DESC, "Selected clock destination source")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(ROUTING_NAME)-ClkSrcRead")
+}
+
+#Route terminals
+
+record(longout, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-TermSrc") {
+    field(DESC, "Terminal source")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(ROUTING_NAME)-TermSrc")
+}
+
+record(longout, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-TermDst") {
+    field(DESC, "Terminal destination")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(ROUTING_NAME)-TermDst")
+}
+
+record(bo, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-TermSyncSet") {
+    field(DESC, "Terminal sync mode set")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(ROUTING_NAME)-TermSyncSet")
+    field(ZNAM, "OFF")
+    field(ONAM, "ON")
+}
+
+
+record(bo, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-TermInvertSet") {
+    field(DESC, "Terminal inversion mode set")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(ROUTING_NAME)-TermInvertSet")
+    field(ZNAM, "OFF")
+    field(ONAM, "ON")
+}
+
+record(bo, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-TermSet") {
+    field(DESC, "Terminal Routing Set")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(ROUTING_NAME)-TermSet")
+    field(ZNAM, "OFF")
+    field(ONAM, "ON")
+}
+
+record(mbbi, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-TermSetCode") {
+    field(DESC, "Terminal routing set status code")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(ROUTING_NAME)-TermSetCode")
+    field(ZRVL, 0)
+    field(ZRST, "OK")
+    field(ZRSV, "NO_ALARM")
+    field(ONVL, 1)
+    field(ONST, "WARNING")
+    field(ONSV, "MINOR")
+    field(FFVL, 15)
+    field(FFST, "ERROR")
+    field(FFSV, "MAJOR")
+}
+
+record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-TermSetStatus") {
+    field(DESC, "Terminal routing set status message")
+    field(DTYP, "asynInt8ArrayIn")
+    field(FTVL, "CHAR")
+    field(NELM,"255")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(ROUTING_NAME)-TermSetStatus")
+}
+
+#Read Routing Configuration
+
+record(longin, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-TermSrcRead") {
+    field(DESC, "Selected terminal destination source")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(ROUTING_NAME)-TermSrcRead")
+}
+
+record(longout, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-TermDstRead") {
+    field(DESC, "Terminal dst connection config read")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(ROUTING_NAME)-TermDstRead")
+}
+
+record(bi, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-TermInvertRead") {
+    field(DESC, "Selected terminal invert mode")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(ROUTING_NAME)-TermInvertRead")
+}
+
+record(bi, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-TermSyncRead") {
+    field(DESC, "Selected terminal destination sync")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(ROUTING_NAME)-TermSyncRead")
+}
+
+#STATEMACHINE
+
+record(mbbi, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-STM-getState") {
+    field(DESC, "Get local state")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(ROUTING_NAME)-StateMachine-getState")
+    field(ZRVL, 0)
+    field(ZRST, "UNKNOWN")
+    field(ZRSV, "MINOR")
+    field(ONVL, 1)
+    field(ONST, "OFF")
+    field(TWVL, 2)
+    field(TWST, "SWITCHING_OFF")
+    field(THVL, 3)
+    field(THST, "INITIALIZING")
+    field(FRVL, 4)
+    field(FRST, "ON")
+    field(FVVL, 5)
+    field(FVST, "STOPPING")
+    field(SXVL, 6)
+    field(SXST, "STARTING")
+    field(SVVL, 7)
+    field(SVST, "RUNNING")
+    field(EIVL, 8)
+    field(EIST, "FAULT")
+    field(EISV, "MAJOR")
+    field(PINI, 1)
+}
+
+record(mbbo, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(ROUTING_NAME)-STM-setState") {
+    field(DESC, "Set local state")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(ROUTING_NAME)-StateMachine-setState")
+    field(ONVL, 1)
+    field(ONST, "OFF")
+    field(FRVL, 4)
+    field(FRST, "ON")
+    field(SVVL, 7)
+    field(SVST, "RUNNING")
+    field(PINI, 1)
+}

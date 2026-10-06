@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  DAN Configuration
+  Root: danApi
+  CODAC-VERSION: 6.0.0
+  WARNING: This is an automatically generated file. PLEASE DO NOT MODIFY.
+-->
+
+<danApi>
+	<version>1.0</version>
+	<ICprogram name="nds-dan-oscil_Ch0">
+		<source name="OscilSourceName_Ch0">
+			<itemDanType>danInt32</itemDanType>
+			<maxTransferRate>800000000</maxTransferRate>
+			<deviceInfo>
+				<deviceName>DAN-1</deviceName>
+				<deviceVersion>v1.0</deviceVersion>
+				<operationalMode>0</operationalMode>
+				<manufactureCode>NI5772</manufactureCode>
+			</deviceInfo>
+			<channelsInfo>
+				<channel number="0" variable="D1-I2-B2A0-DAQ-ADC:D1-DP-RD-0000-MUREDNNPRB" label="CHANNEL0" status="ENABLE">
+					<calibration sourceUnit="Null" calibratedUnit="Volts" calibrationType="raw" />
+				</channel>
+			</channelsInfo>
+		</source>
+		<danStreamer name="DAN1">
+			<link>ALL</link>
+			<internal>
+				<!-- Commented as it does not work correctly in CCS-6.0.0
+				<advanced>
+					<loopDelay>1000</loopDelay>
+					<profMonitoring>2</profMonitoring>
+					<maxnewDataTimeout>60</maxnewDataTimeout>
+				</advanced>
+				-->
+				<danInterface>ens16f1</danInterface>
+				<servers>
+					<policy >IF_FAIL_NEXT</policy>
+					<server>10.106.142.230:9999</server>
+				</servers>			
+			</internal>
+		</danStreamer>
+	</ICprogram>
+</danApi>

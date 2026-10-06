@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+
+ <pvtable version="3.0" >
+     <nbMeasure >1</nbMeasure>
+
+     <pvlist >
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:D1-DD-CC-0000-CGRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:D1-FC-CC-0000-CGRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:D2-DD-CC-0000-CGRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:D2-FC-CC-0000-CGRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:D3-DD-CC-0000-CGRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:D3-FC-CC-0000-CGRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:D4-DD-CC-0000-CGRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:D4-FC-CC-0000-CGRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:D5-DD-CC-0000-CGRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:D5-FC-CC-0000-CGRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:D6-DD-CC-0000-CGRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:D6-FC-CC-0000-CGRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:D7-DD-CC-0000-CGRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:D7-FC-CC-0000-CGRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:D8-DD-CC-0000-CGRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:D8-FC-CC-0000-CGRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:D9-DD-CC-0000-CGRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:D9-FC-CC-0000-CGRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:DA-DD-CC-0000-CGRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:DA-FC-CC-0000-CGRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:DB-DD-CC-0000-CGRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:DB-FC-CC-0000-CGRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:DC-DD-CC-0000-CGRWPNNPVL</name>
+</pv>
+
+         <pv >
+             <selected >true</selected>
+
+             <name >D1-I2-B2A0-DPC-CFG:DC-FC-CC-0000-CGRWPNNPVL</name>
+</pv>
+</pvlist>
+</pvtable>

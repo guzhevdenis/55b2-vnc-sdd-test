@@ -1,0 +1,215 @@
+# Based on the nds_StateMachine.template file, it is loaded and the 
+# reasons are modified in its PVs according to the local node.
+
+include "nds3_StateMachine.template"
+
+
+record(mbbi, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(STATEMACHINE_PARENT)$(STATEMACHINE_NAME)-getGlobalState") {
+    field(DESC, "$(DAN_NAME) - Get global state")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-StateMachine-getGlobalState")
+}
+
+record(mbbi, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(STATEMACHINE_PARENT)$(STATEMACHINE_NAME)-getState") {
+    field(DESC, "$(DAN_NAME) - Get local state")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-StateMachine-getState")
+}
+
+record(mbbo, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(STATEMACHINE_PARENT)$(STATEMACHINE_NAME)-setState") {
+    field(DESC, "$(DAN_NAME) - Set state")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-StateMachine-setState")
+}
+
+
+#Rest of PVs
+
+record(mbbi, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(DAN_NAME)-Status") {
+    field(DESC, "DAN status")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-Status")
+    field(ZRVL, 0)
+    field(ZRST, "SUCCESS")
+    field(ONVL, 1)
+    field(ONST, "UNKNOWN")
+    field(TWVL, 2)
+    field(TWST, "ERROR_XML")
+    field(THVL, 3)
+    field(THST, "ERROR_DAN_INIT")
+    field(FRVL, 4)
+    field(FRST, "ERROR_DAN_CLOSE")
+    field(FVVL, 5)
+    field(FVST, "ERROR_ICPROGRAM_UNLOAD")
+    field(SXVL, 6)
+    field(SXST, "ERROR_TCN_INIT")
+    field(SVVL, 7)
+    field(SVST, "ERROR_TCN_CLOSE")
+    field(EIVL, 8)
+    field(EIST, "ERROR_DATA_INIT")
+    field(NIVL, 9)
+    field(NIST, "ERROR_DATA_RELEASE")
+    field(TEVL, 10)
+    field(TEST, "ERROR_PUBLISH_SOURCE")
+    field(ELVL, 11)
+    field(ELST, "ERROR_UNPUBLISH_SOURCE")
+    field(TVVL, 12)
+    field(TVST, "ERROR_OPEN_STREAM")
+    field(TTVL, 13)
+    field(TTST, "ERROR_CLOSE_STREAM")
+    field(FTVL, 14)
+    field(FTST, "ERROR_PUT_DATABLOCK")
+    field(FFVL, 15)
+    field(FFST, "ERROR_UNKNOWN")
+    field(PINI, "YES")
+}
+
+record(mbbi, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(DAN_NAME)-StatusStream") {
+    field(DESC, "DAN Stream status")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-StatusStream")
+    field(ZRVL, 0)
+    field(ZRST, "SUCCESS_BLOCK")
+    field(ONVL, 1)
+    field(ONST, "UNKNOWN")
+    field(TWVL, 2)
+    field(TWST, "CLOSED")
+    field(THVL, 3)
+    field(THST, "IDLE")
+    field(FRVL, 4)
+    field(FRST, "ERROR_OFFSET_OUT_RANGE")
+    field(FVVL, 5)
+    field(FVST, "ERROR_NOT_OPEN_STREAM")
+    field(SXVL, 6)
+    field(SXST, "ERROR_OVERFLOW_ALL")
+    field(SVVL, 7)
+    field(SVST, "ERROR_OVERFLOW")
+    field(EIVL, 7)
+    field(EIST, "ERROR_UNKNOWN")
+    field(PINI, "YES")
+}
+
+record(longout, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(DAN_NAME)-BlockNumberOfSamples") {
+    field(DESC, "Set the DAN block size")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-BlockNumberOfSamples")
+}
+
+record(longin, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(DAN_NAME)-BlockNumberOfSamples_RBV") {
+    field(DESC, "Readback value of DAN block size")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-BlockNumberOfSamples_RBV")
+    field(PINI, "YES")
+}
+
+record(longout, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(DAN_NAME)-BufferSize") {
+    field(DESC, "Set the DAN buffer size")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-BufferSize")
+}
+
+record(longin, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(DAN_NAME)-BufferSize_RBV") {
+    field(DESC, "Readback value of DAN buffer size")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-BufferSize_RBV")
+    field(PINI, "YES")
+}
+
+record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(DAN_NAME)-ICProgramName") {
+    field(DESC, "Set the name of DAN ICProgram")
+    field(DTYP, "asynInt8ArrayOut")
+    field(FTVL, "CHAR")
+    field(NELM, 256)
+    field(SCAN, "Passive")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-ICProgramName")
+}
+
+record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(DAN_NAME)-ICProgramName_RBV") {
+    field(DESC, "Readback value of DAN ICProgram name")
+    field(DTYP, "asynInt8ArrayIn")
+    field(FTVL, "CHAR")
+    field(NELM, 256)
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-ICProgramName_RBV")
+    field(PINI, "YES")
+}
+
+record(longin, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(DAN_NAME)-NumberOfChannels") {
+    field(DESC, "Number of channels in DAN streamer")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-NumberOfChannels")
+    field(PINI, "YES")
+}
+
+record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(DAN_NAME)-PathXML") {
+    field(DESC, "Set the path of DAN XML file")
+    field(DTYP, "asynInt8ArrayOut")
+    field(FTVL, "CHAR")
+    field(NELM, 256)
+    field(SCAN, "Passive")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-PathXML")
+}
+
+record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(DAN_NAME)-PathXML_RBV") {
+    field(DESC, "Readback value of DAN XML file")
+    field(DTYP, "asynInt8ArrayIn")
+    field(FTVL, "CHAR")
+    field(NELM, 256)
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-PathXML_RBV")
+    field(PINI, "YES")
+}
+
+record(longout, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(DAN_NAME)-SampleSize") {
+    field(DESC, "Set the sample size of DAN publisher")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-SampleSize")
+}
+
+record(longin, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(DAN_NAME)-SampleSize_RBV") {
+    field(DESC, "Readback value of DAN sample size")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-SampleSize_RBV")
+    field(PINI, "YES")
+}
+
+record(longout, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(DAN_NAME)-SamplingRate") {
+    field(DESC, "Set the DAN sampling rate")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-SamplingRate")
+}
+
+record(longin, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(DAN_NAME)-SamplingRate_RBV") {
+    field(DESC, "Readback value of DAN sampling rate")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-SamplingRate_RBV")
+    field(PINI, "YES")
+}
+
+record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(DAN_NAME)-SourceName") {
+    field(DESC, "Set the name of DAN source")
+    field(DTYP, "asynInt8ArrayOut")
+    field(FTVL, "CHAR")
+    field(NELM, 256)
+    field(SCAN, "Passive")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-SourceName")
+}
+
+record(waveform, "$(CBS1)-$(CBS2)-HWCF:$(BOARDTYPE)-$(BOARDTYPEIDX)-$(DAN_NAME)-SourceName_RBV") {
+    field(DESC, "Readback value of DAN source name")
+    field(DTYP, "asynInt8ArrayIn")
+    field(FTVL, "CHAR")
+    field(NELM, 256)
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn($(BOARDTYPE)-$(BOARDTYPEIDX), 0)$(DAN_REASON)-SourceName_RBV")
+    field(PINI, "YES")
+}
+

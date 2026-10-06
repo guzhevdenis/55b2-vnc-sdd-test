@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <CBS name="Test" description="Test" enabled="true" opi_file="./../ITER-DIA-DFP-VC-Measurements-Test.opi LEVEL=ITER-DIA-DFP-VC-Measurements-Test" deprecated="false" alarm_root="/CODAC_AlarmHandler/D1" xmlns:xi="http://www.w3.org/2001/XInclude" ></CBS>

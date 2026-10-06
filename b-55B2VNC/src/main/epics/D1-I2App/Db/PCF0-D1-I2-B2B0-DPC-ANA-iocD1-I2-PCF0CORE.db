@@ -1,0 +1,160 @@
+record (ai,"D1-I2-B2B0-DPC-ANA:D1-DD-QP-DRMS-MRREPNVOVL")
+{
+	field(DESC, "Root Mean Square of Diamond Detector Sig")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D1-DD-QP-DSNR-MRREPNNPVL")
+{
+	field(DESC, "Signal to Noise Ratio for diamond detect")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D1-DD-QP-MNSV-MRREPNVOMN")
+{
+	field(DESC, "Minimum Value of Diamond Detector Signal")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D1-DD-QP-MXSV-MRREPNVOMX")
+{
+	field(DESC, "Maximum Value of Diamond Detector Signal")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D1-FI-QP-DRMS-MRREPNVOVL")
+{
+	field(DESC, "Root Mean Square of Fission chamber puls")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D1-FI-QP-DSNR-MRREPNVOVL")
+{
+	field(DESC, "Signal to Noise Ratio for fission chambe")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D1-FI-QP-MNSV-MRREPNVOMN")
+{
+	field(DESC, "Minimum Value of Fission Chamber Pulse c")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D1-FI-QP-MXSV-MRREPNVOMX")
+{
+	field(DESC, "Maximum Value of fission chamber pulse c")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D2-DD-QP-DRMS-MRREPNVOVL")
+{
+	field(DESC, "Root Mean Square of Diamond Detector Sig")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D2-DD-QP-DSNR-MRREPNNPVL")
+{
+	field(DESC, "Signal to Noise Ratio for diamond detect")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D2-DD-QP-MNSV-MRREPNVOMN")
+{
+	field(DESC, "Minimum Value of Diamond Detector Signal")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D2-DD-QP-MXSV-MRREPNVOMX")
+{
+	field(DESC, "Maximum Value of Diamond Detector Signal")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D2-FI-QP-DRMS-MRREPNVOVL")
+{
+	field(DESC, "Root Mean Square of Fission chamber puls")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D2-FI-QP-DSNR-MRREPNVOVL")
+{
+	field(DESC, "Signal to Noise Ratio for fission chambe")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D2-FI-QP-MNSV-MRREPNVOMN")
+{
+	field(DESC, "Minimum Value of Fission Chamber Pulse c")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D2-FI-QP-MXSV-MRREPNVOMX")
+{
+	field(DESC, "Maximum Value of fission chamber pulse c")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D3-DD-QP-DRMS-MRREPNVOVL")
+{
+	field(DESC, "Root Mean Square of Diamond Detector Sig")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D3-DD-QP-DSNR-MRREPNNPVL")
+{
+	field(DESC, "Signal to Noise Ratio for diamond detect")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D3-DD-QP-MNSV-MRREPNVOMN")
+{
+	field(DESC, "Minimum Value of Diamond Detector Signal")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D3-DD-QP-MXSV-MRREPNVOMX")
+{
+	field(DESC, "Maximum Value of Diamond Detector Signal")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D3-FI-QP-DRMS-MRREPNVOVL")
+{
+	field(DESC, "Root Mean Square of Fission chamber puls")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D3-FI-QP-DSNR-MRREPNVOVL")
+{
+	field(DESC, "Signal to Noise Ratio for fission chambe")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D3-FI-QP-MNSV-MRREPNVOMN")
+{
+	field(DESC, "Minimum Value of Fission Chamber Pulse c")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D3-FI-QP-MXSV-MRREPNVOMX")
+{
+	field(DESC, "Maximum Value of fission chamber pulse c")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D4-DD-QP-DRMS-MRREPNVOVL")
+{
+	field(DESC, "Root Mean Square of Diamond Detector Sig")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D4-DD-QP-DSNR-MRREPNNPVL")
+{
+	field(DESC, "Signal to Noise Ratio for diamond detect")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D4-DD-QP-MNSV-MRREPNVOMN")
+{
+	field(DESC, "Minimum Value of Diamond Detector Signal")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D4-DD-QP-MXSV-MRREPNVOMX")
+{
+	field(DESC, "Maximum Value of Diamond Detector Signal")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D4-FI-QP-DRMS-MRREPNVOVL")
+{
+	field(DESC, "Root Mean Square of Fission chamber puls")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D4-FI-QP-DSNR-MRREPNVOVL")
+{
+	field(DESC, "Signal to Noise Ratio for fission chambe")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D4-FI-QP-MNSV-MRREPNVOMN")
+{
+	field(DESC, "Minimum Value of Fission Chamber Pulse c")
+}
+
+record (ai,"D1-I2-B2B0-DPC-ANA:D4-FI-QP-MXSV-MRREPNVOMX")
+{
+	field(DESC, "Maximum Value of fission chamber pulse c")
+}
+

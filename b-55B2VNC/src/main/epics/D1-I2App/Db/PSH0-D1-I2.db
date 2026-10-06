@@ -1,0 +1,200 @@
+record (bi,"D1-I2:55B2_READY-STATUS")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bi,"D1-I2:ABORT-STATUS")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bi,"D1-I2:ABSENT-STATUS")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bi,"D1-I2:CONFIGURATION-STATUS")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bi,"D1-I2:FAULT-STATUS")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bi,"D1-I2:INCREADY-STATUS")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bi,"D1-I2:LOCAL-STATUS")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bi,"D1-I2:POST_CHECK-STATUS")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bi,"D1-I2:POWEROFF-STATUS")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bi,"D1-I2:POWERON-STATUS")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bi,"D1-I2:PREPARING-STATUS")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bi,"D1-I2:READY-STATUS")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bi,"D1-I2:RUNNING-STATUS")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bi,"D1-I2:SAFE-STATUS")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (mbbi,"D1-I2:STATE")
+{
+	field(EIST, "PREPARING FOR MEASUREMENT")
+	field(EIVL, "8")
+	field(ELST, "POST CHECK")
+	field(ELVL, "11")
+	field(FRST, "I&C READY")
+	field(FRVL, "4")
+	field(FVST, "CONFIGURATION")
+	field(FVVL, "5")
+	field(NIST, "READY FOR MEASUREMENTS")
+	field(NIVL, "9")
+	field(ONST, "ABSENT")
+	field(ONVL, "1")
+	field(SVST, "55.B2 READY")
+	field(SVVL, "7")
+	field(SXST, "LOCAL")
+	field(SXVL, "6")
+	field(TEST, "MEASUREMENT RUNNING")
+	field(TEVL, "10")
+	field(THST, "POWER ON")
+	field(THVL, "3")
+	field(TTST, "ABORT")
+	field(TTVL, "13")
+	field(TVST, "FAULT")
+	field(TVVL, "12")
+	field(TWST, "POWER OFF")
+	field(TWVL, "2")
+	field(ZRST, "SAFE")
+	field(ZRVL, "0")
+}
+
+record (bo,"D1-I2:55B2_READY-CMD")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bo,"D1-I2:ABORT-CMD")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bo,"D1-I2:ABSENT-CMD")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bo,"D1-I2:CONFIGURATION-CMD")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bo,"D1-I2:FAULT-CMD")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bo,"D1-I2:INCREADY-CMD")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bo,"D1-I2:LOCAL-CMD")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bo,"D1-I2:POST_CHECK-CMD")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bo,"D1-I2:POWEROFF-CMD")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bo,"D1-I2:POWERON-CMD")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bo,"D1-I2:PREPARING-CMD")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bo,"D1-I2:READY-CMD")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bo,"D1-I2:RUNNING-CMD")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+
+record (bo,"D1-I2:SAFE-CMD")
+{
+	field(ONAM, "ON")
+	field(ZNAM, "OFF")
+}
+

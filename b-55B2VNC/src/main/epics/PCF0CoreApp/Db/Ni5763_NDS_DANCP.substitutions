@@ -1,0 +1,40 @@
+file "nds3_StateMachine.template" {
+pattern
+{
+    BOARDTYPE,
+    BOARDTYPEIDX,
+    CBS1,
+    CBS2,
+    STATEMACHINE_NAME
+}
+{
+    "DAN",
+    "Ni5763",
+    "D1",
+    "I2",
+    "StateMachine"
+}		
+}
+file "nds-dan_NDSDANCP.template" {
+pattern
+{
+    BOARDTYPE,
+    BOARDTYPEIDX,
+    CBS1,
+    CBS2,
+    STATEMACHINE_PARENT,
+    STATEMACHINE_NAME,
+    DAN_NAME,
+    DAN_REASON
+}
+{
+    "DAN",
+    "Ni5763",
+    "D1",
+    "I2",
+    "",
+    "StateMachine_Ni5763",
+    "DAN_Ni5763",
+    "DAN_Ni5763"
+}
+}

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ $HeadURL: TBD.
+ $Id: TBD.
+ 
+ Project       : CODAC Data Management
+
+ Description   : PXIe7976R-NI5772 bundle for Fast Controller in PXIe format description
+		 		 The information is taken from the following sources:
+		 		 -http://sine.ni.com/nips/cds/view/p/lang/en/nid/208962
+		 		 -TODO:TBD
+
+ Author        : D. Avdyushkin
+
+ Copyright (c) : 2010-2024 ITER Organization,
+                 CS 90 046
+                 13067 St. Paul-lez-Durance Cedex
+                 France
+
+ This file is part of ITER CODAC software.
+ For the terms and conditions of redistribution or use of this software
+ refer to the file ITER-LICENSE.TXT located in the top level directory
+ of the distribution package.
+-->
+<IOBoard name="7976RNI5772" shortName="7976RNI5772" xmlns="http://www.iter.org/CODAC/Hardware/2013" xmlns:cat="http://www.iter.org/CODAC/Catalog/2010">
+	<catalogReference>
+		<cat:reference>7976RNI5772</cat:reference>
+		<cat:manufacturer>National Instruments</cat:manufacturer>
+		<cat:commercialName>FlexRIO PXIe7976R with NI5772 Adpater module </cat:commercialName>
+		<cat:description>12-Bit, 800 MS/s Adapter Module for NI FlexRIO </cat:description>
+		<cat:datasheetRef>https://www.ni.com/docs/en-US/bundle/ni-5772-seri/resource/373625b.pdf</cat:datasheetRef>
+		<cat:class>High-Speed Digital I/O Module</cat:class>
+		<cat:subClass>PXIe card</cat:subClass>
+	</catalogReference>
+	<technicalData>
+		<busType>PXI</busType>
+		<channels>
+		<!-- Digital channels -->
+			<!-- Digital channels in Micro–D connector-->
+			<channel number="0">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>AUXIO0</name>
+				<pin connectorNumber="0" number="1" type="signal"/>
+				<pin connectorNumber="0" number="2" type="ground"/>
+			</channel>
+			<channel number="1">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>AUXIO1</name>
+				<pin connectorNumber="0" number="3" type="signal"/>
+				<pin connectorNumber="0" number="2" type="ground"/>
+			</channel>
+			<channel number="2">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>AUXIO2</name>
+				<pin connectorNumber="0" number="4" type="signal"/>
+				<pin connectorNumber="0" number="5" type="ground"/>
+			</channel>
+			<channel number="3">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>AUXIO3</name>
+				<pin connectorNumber="0" number="6" type="signal"/>
+				<pin connectorNumber="0" number="5" type="ground"/>
+			</channel>
+			<channel number="4">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>AUXIO4</name>
+				<pin connectorNumber="0" number="7" type="signal"/>
+				<pin connectorNumber="0" number="8" type="ground"/>
+			</channel>
+			<channel number="5">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>AUXIO5</name>
+				<pin connectorNumber="0" number="9" type="signal"/>
+				<pin connectorNumber="0" number="8" type="ground"/>
+			</channel>
+			<channel number="6">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>AUXIO6</name>
+				<pin connectorNumber="0" number="10" type="signal"/>
+				<pin connectorNumber="0" number="11" type="ground"/>
+			</channel>
+			<channel number="7">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>AUXIO7</name>
+				<pin connectorNumber="0" number="12" type="signal"/>
+				<pin connectorNumber="0" number="11" type="ground"/>
+			</channel>
+			<channel number="8">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>PFI 0</name>
+				<PFI/>
+				<pin connectorNumber="0" number="13" type="signal"/>
+				<pin connectorNumber="0" number="11" type="ground"/>
+			</channel>
+			<channel number="9">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>PFI 1</name>
+				<PFI/>
+				<pin connectorNumber="0" number="15" type="signal"/>
+				<pin connectorNumber="0" number="17" type="ground"/>
+			</channel>
+			<channel number="10">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>PFI 2</name>
+				<PFI/>
+				<pin connectorNumber="0" number="16" type="signal"/>
+				<pin connectorNumber="0" number="17" type="ground"/>
+			</channel>
+			<channel number="11">
+				<type>digital</type>
+				<direction>bidirectional</direction>
+				<name>PFI 3</name>
+				<PFI/>
+				<pin connectorNumber="0" number="19" type="signal"/>
+				<pin connectorNumber="0" number="17" type="ground"/>
+			</channel>
+		<!-- Analog channels -->
+			<!-- Analog channels in SMA connector-->
+			<channel number="0">
+				<type>analog</type>
+				<direction>input</direction>
+				<name>AI0</name>
+				<pin connectorNumber="1" number="1" type="signal"/>
+			</channel>
+			<channel number="1">
+				<type>analog</type>
+				<direction>input</direction>
+				<name>AI1</name>
+				<pin connectorNumber="2" number="1" type="signal"/>
+			</channel>
+		<!--Trigger in SMA connector-->
+			<channel number="0">
+				<type>analog</type>
+				<direction>input</direction>
+				<name>TRIG</name>
+				<pin connectorNumber="3" number="1" type="signal"/>
+			</channel>
+		<!--Clk in, in SMA connector-->
+			<channel number="0">
+				<type>analog</type>
+				<direction>input</direction>
+				<name>CLKIN</name>
+				<pin connectorNumber="4" number="1" type="signal"/>
+			</channel>
+		<!--Ref in, in SMA connector-->
+			<channel number="0">
+				<type>analog</type>
+				<direction>input</direction>
+				<name>REFIN</name>
+				<pin connectorNumber="5" number="1" type="signal"/>
+			</channel>
+		</channels>
+		<pinouts>
+			<connector type="third-party HDMI cable" numPins="19" ID="0">
+				<pin name="AUXIO0"/>
+				<pin name="GND" shared="true"/>
+				<pin name="AUXIO1"/>
+				<pin name="AUXIO2"/>
+				<pin name="GND" shared="true"/>
+				<pin name="AUXIO3"/>
+				<pin name="AUXIO4"/>
+				<pin name="GND" shared="true"/>
+				<pin name="AUXIO5"/>
+				<pin name="AUXIO6"/>
+				<pin name="GND" shared="true"/>
+				<pin name="AUXIO7"/>
+				<pin name="PFI 0"/>
+				<pin name="NC"/>
+				<pin name="PFI 1"/>
+				<pin name="PFI 2"/>
+				<pin name="GND" shared="true"/>
+				<pin name="+5 V"/>
+				<pin name="PFI 3"/>
+			</connector>
+			<connector type="SMA" numPins="1" ID="1">
+				<pin name="AI0"/>
+			</connector>
+			<connector type="SMA" numPins="1" ID="2">
+				<pin name="AI1"/>
+			</connector>
+			<connector type="SMA" numPins="1" ID="3">
+				<pin name="TRIG"/>
+			</connector>
+			<connector type="SMA" numPins="1" ID="4">
+				<pin name="CLKIN"/>
+			</connector>
+			<connector type="SMA" numPins="1" ID="5">
+				<pin name="REFIN"/>
+			</connector>
+		</pinouts>
+		<size>
+			<length>0.129</length>
+			<width>0.02</width>
+			<height>0.121</height>
+		</size>
+		<chassisType>PXI</chassisType>
+		<USize>1</USize>
+		<weight>0.660</weight>
+		<minOperatingTemperature>0</minOperatingTemperature>
+		<maxOperatingTemperature>55</maxOperatingTemperature>
+		<minOperatingHumidity>10</minOperatingHumidity>
+		<maxOperatingHumidity>90</maxOperatingHumidity>
+	</technicalData>
+	<controllerType>PCF</controllerType>
+	<TTTCode>IOB</TTTCode>
+</IOBoard>

@@ -1,0 +1,255 @@
+# Data-acquisition node state machine (device-level STM is loaded separately).
+
+record(mbbi, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-getGlobalState") {
+    field(DESC, "Get global state")
+    field(DTYP, "asynInt32")
+    field(SCAN, ".1 second")
+    field(INP, "@asyn(B-8,0)DataAcquisitionNode_FissCh-StateMachine-getGlobalState")
+    field(ZRVL, 0)
+    field(ZRST, "UNKNOWN")
+    field(ZRSV, "MINOR")
+    field(ONVL, 1)
+    field(ONST, "OFF")
+    field(TWVL, 2)
+    field(TWST, "SWITCHING_OFF")
+    field(THVL, 3)
+    field(THST, "INITIALIZING")
+    field(FRVL, 4)
+    field(FRST, "ON")
+    field(FVVL, 5)
+    field(FVST, "STOPPING")
+    field(SXVL, 6)
+    field(SXST, "STARTING")
+    field(SVVL, 7)
+    field(SVST, "RUNNING")
+    field(EIVL, 8)
+    field(EIST, "FAULT")
+    field(EISV, "MAJOR")
+    field(PINI, 1)
+}
+
+record(mbbi, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-getState") {
+    field(DESC, "Get local state")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-8,0)DataAcquisitionNode_FissCh-StateMachine-getState")
+    field(ZRVL, 0)
+    field(ZRST, "UNKNOWN")
+    field(ZRSV, "MINOR")
+    field(ONVL, 1)
+    field(ONST, "OFF")
+    field(TWVL, 2)
+    field(TWST, "SWITCHING_OFF")
+    field(THVL, 3)
+    field(THST, "INITIALIZING")
+    field(FRVL, 4)
+    field(FRST, "ON")
+    field(FVVL, 5)
+    field(FVST, "STOPPING")
+    field(SXVL, 6)
+    field(SXST, "STARTING")
+    field(SVVL, 7)
+    field(SVST, "RUNNING")
+    field(EIVL, 8)
+    field(EIST, "FAULT")
+    field(EISV, "MAJOR")
+    field(PINI, 1)
+}
+
+record(mbbo, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-setState") {
+    field(DESC, "Set local state")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)DataAcquisitionNode_FissCh-StateMachine-setState")
+    field(ONVL, 1)
+    field(ONST, "OFF")
+    field(FRVL, 4)
+    field(FRST, "ON")
+    field(SVVL, 7)
+    field(SVST, "RUNNING")
+    field(PINI, 1)
+}
+
+# Rest of PVs
+
+record(waveform, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-Data") {
+    field(DESC, "Acquired data")
+    field(DTYP, "asynInt32ArrayIn")
+    field(FTVL, "LONG")
+    field(NELM, "10240")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-8,0)DataAcquisitionNode_FissCh-Data")
+}
+
+record(ao, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-Decimation") {
+    field(DESC, "Decimation")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)DataAcquisitionNode_FissCh-Decimation")
+}
+
+record(ao, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-DecimationType") {
+    field(DESC, "Decimation")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)DataAcquisitionNode_FissCh-DecimationType")
+}
+
+record(ao, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-Gain") {
+    field(DESC, "Gain of the Channel")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)DataAcquisitionNode_FissCh-Gain")
+}
+
+record(ai, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-Gain_RBV") {
+    field(DESC, "Gain of the Channel")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-8,0)DataAcquisitionNode_FissCh-Gain_RBV")
+}
+
+record(ao, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-Offset") {
+    field(DESC, "Offset")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)DataAcquisitionNode_FissCh-Offset")
+}
+
+record(ai, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-Offset_RBV") {
+    field(DESC, "Offset ReadBack")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-8,0)DataAcquisitionNode_FissCh-Offset_RBV")
+}
+
+record(ao, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-BandWidth") {
+    field(DESC, "BandWidth")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)DataAcquisitionNode_FissCh-BandWidth")
+}
+
+record(ai, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-BandWidth_RBV") {
+    field(DESC, "BandWidth ReadBack")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-8,0)DataAcquisitionNode_FissCh-BandWidth_RBV")
+}
+
+record(ao, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-Resolution") {
+    field(DESC, "Number of Bits per Sample")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)DataAcquisitionNode_FissCh-Resolution")
+}
+
+record(ai, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-Resolution_RBV") {
+    field(DESC, "Number of Bits per Sample ReadBack")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-8,0)DataAcquisitionNode_FissCh-Resolution_RBV")
+}
+
+record(ao, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-Impedance") {
+    field(DESC, "Impedance")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)DataAcquisitionNode_FissCh-Impedance")
+}
+
+record(ai, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-Impedance_RBV") {
+    field(DESC, "Impedance ReadBack")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-8,0)DataAcquisitionNode_FissCh-Impedance_RBV")
+}
+
+record(bo, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-Coupling") {
+    field(DESC, "Coupling: AC or DC")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)DataAcquisitionNode_FissCh-Coupling")
+    field(ZNAM, "AC")
+    field(ONAM, "DC")
+}
+
+record(bi, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-Coupling_RBV") {
+    field(DESC, "Coupling: AC or DC ReadBack")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-8,0)DataAcquisitionNode_FissCh-Coupling_RBV")
+    field(ZNAM, "AC")
+    field(ONAM, "DC")
+}
+
+record(bo, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-SignalRefType") {
+    field(DESC, "Differential or Single Ended")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)DataAcquisitionNode_FissCh-SignalRefType")
+    field(ZNAM, "SingleEnded")
+    field(ONAM, "Differential")
+}
+
+record(bi, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-SignalRefType_RBV") {
+    field(DESC, "Differential or Single Ended")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-8,0)DataAcquisitionNode_FissCh-SignalRefType_RBV")
+    field(ZNAM, "SingleEnded")
+    field(ONAM, "Differential")
+}
+
+record(bo, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-Ground") {
+    field(DESC, "Ground State")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)DataAcquisitionNode_FissCh-Ground")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+}
+
+record(bi, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-Ground_RBV") {
+    field(DESC, "Ground State ReadBack")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-8,0)DataAcquisitionNode_FissCh-Ground_RBV")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+}
+
+record(ai, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-NoB") {
+    field(DESC, "Number Of Pushed Data Blocks")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-8,0)DataAcquisitionNode_FissCh-NumberOfPushedDataBlocks")
+}
+
+record(ao, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-DMAEnable") {
+    field(DESC, "Number Of Pushed Data Blocks")
+    field(DTYP, "asynInt32")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)DataAcquisitionNode_FissCh-DMAEnable")
+}
+
+record(ai, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-DMAEnable_RBV") {
+    field(DESC, "Number Of Pushed Data Blocks")
+    field(DTYP, "asynInt32")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-8,0)DataAcquisitionNode_FissCh-DMAEnable_RBV")
+}
+
+record(ao, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-SamplingRate") {
+    field(DESC, "Number of Bits per Sample")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "Passive")
+    field(OUT, "@asyn(B-8,0)DataAcquisitionNode_FissCh-SamplingRate")
+}
+
+record(ai, "D1-I2-HWCF:B-8-DataAcquisitionNode_FissCh-SamplingRate_RBV") {
+    field(DESC, "Number of Bits per Sample ReadBack")
+    field(DTYP, "asynFloat64")
+    field(SCAN, "I/O Intr")
+    field(INP, "@asyn(B-8,0)DataAcquisitionNode_FissCh-SamplingRate_RBV")
+}

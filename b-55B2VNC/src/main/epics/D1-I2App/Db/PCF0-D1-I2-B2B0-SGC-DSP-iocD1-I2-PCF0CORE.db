@@ -1,0 +1,40 @@
+record (ai,"D1-I2-B2B0-SGC-DSP:FL-C1-FT-0000-STSEPNNPEN")
+{
+	field(DESC, "Digital filter type for input signal")
+}
+
+record (ai,"D1-I2-B2B0-SGC-DSP:FL-C2-FT-0000-STSEPNNPEN")
+{
+	field(DESC, "Digital filter type for input signal")
+}
+
+record (ai,"D1-I2-B2B0-SGC-DSP:FL-C3-FT-0000-STSEPNNPEN")
+{
+	field(DESC, "Digital filter type for input signal")
+}
+
+record (ai,"D1-I2-B2B0-SGC-DSP:FL-C4-FT-0000-STSEPNNPEN")
+{
+	field(DESC, "Digital filter type for input signal")
+}
+
+record (ai,"D1-I2-B2B0-SGC-DSP:FL-C5-FT-0000-STSEPNNPEN")
+{
+	field(DESC, "Digital filter type for input signal")
+}
+
+record (ai,"D1-I2-B2B0-SGC-DSP:FL-C6-FT-0000-STSEPNNPEN")
+{
+	field(DESC, "Digital filter type for input signal")
+}
+
+record (ai,"D1-I2-B2B0-SGC-DSP:FL-C7-FT-0000-STSEPNNPEN")
+{
+	field(DESC, "Digital filter type for input signal")
+}
+
+record (ai,"D1-I2-B2B0-SGC-DSP:FL-C8-FT-0000-STSEPNNPEN")
+{
+	field(DESC, "Digital filter type for input signal")
+}
+
