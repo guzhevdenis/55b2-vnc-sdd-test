@@ -1,10 +1,10 @@
 ## nds3-ni5763
 
-NDS3 driver for National Instruments NI-5763 ADC module with PXIe-7976R FPGA board.
+NDS3 driver for National Instruments NI-5763 Data Acquisition Board.
 
 ## Description
 
-This driver provides NDS3 (Nominal Device Support v3) device support for the National Instruments NI-5763 module combined with the PXIe-7976R FPGA board. It enables real-time data acquisition, signal processing, and integration with the CODAC Core System for the VNC (Vertical Neutron Camera) data acquisition system.
+This driver provides NDS3 (Nominal Device Support v3) device support for the National Instruments NI-5763 Board. It enables real-time data acquisition, signal processing, and integration with the CODAC Core System for the VNC (Vertical Neutron Camera) data acquisition system.
 ## Features
 
 - **State Machine Management**: Full state machine implementation (OFF → ON → RUNNING) with proper state transitions
@@ -14,8 +14,7 @@ This driver provides NDS3 (Nominal Device Support v3) device support for the Nat
 
 ## Hardware/software Requirements
 
-- National Instruments PXIe-7976R FPGA board
-- National Instruments NI-5763 ADC module
+- National Instruments NI-5763 DAQ Board
 - CODAC Core System 7.4.0 or later
 - NI FPGA Runtime and drivers
 
@@ -106,11 +105,11 @@ NDS3 standard state machine for the whole device (OFF → ON → RUNNING).
 | `FirstExpCoeff`              | int32 (I16)          | Set 1st exponential filter coefficient |
 | `FirstExpCoeff`              | int32 (I16)          | Set 2nd exponential filter coefficient |
 | `Type`                       | int32 (U16)          | Set type of filtration                 |
-| `CalibrationCoefficient`     | float64 (U64)        | Set calibration coefficient            |
-| `Threshold`                  | float64 (I16)        | Set threshold                          |
-| `SinglePulseMax`             | int32 (U16)          | Set maximum single pulses              |
-| `SinglePulseMin`             | int32 (U16)          | Set minimum single pulses              |
-| `TotalPulseMin`              | int32 (U16)          | Set minimum total pulses               |
+| `CalibrationCoefficient`     | float64              | Set calibration coefficient            |
+| `Threshold`                  | float64              | Set threshold                          |
+| `SinglePulseMax`             | int32                | Set maximum single pulses              |
+| `SinglePulseMin`             | int32                | Set minimum single pulses              |
+| `TotalPulseMin`              | int32                | Set minimum total pulses               |
 | `FluctCountRate_Hz`          | float64              | Fluctuation count rate                 |
 | `SinglePules`                | int32                | Single pulses                          |
 | `SingleRate`                 | float64              | Single rate                            |
@@ -123,7 +122,7 @@ NDS3 standard state machine for the whole device (OFF → ON → RUNNING).
 
 ### 3. DataAcquisitionNode (child node)
 
-NDS3 **DataAcquisition** nodes named `DataAcquisitionNode_Ch0` and `DataAcquisitionNode_Ch1`. Each node has its own state machine and standard data-acquisition PVs. Data type: `vector<int32_t>`, buffer size 800000.
+NDS3 **DataAcquisition** node named `DataAcquisitionNode_FissCh`. The node has its own state machine and standard data-acquisition PVs. Data type: `vector<int32_t>`, buffer size 800000.
 
 #### 3.1 DataAcquisitionNode_Ch0
 
@@ -184,7 +183,7 @@ NDS3 **DataAcquisition** nodes named `DataAcquisitionNode_Ch0` and `DataAcquisit
 - **DataAcquisitionNode**:
   - **RAW_DAQ_CH0** thread: reads RawData FIFO (I16) and pushes raw blocks to DataAcquisition.
   - **DAQ_CH0** thread: reads FluctCountRate_Hz_ToHost FIFO (U32) PulseChain FIFO (U32); updates `FluctCountRate_Hz`, `SinglePules`, `SingleRate`, `TotalPulses`, `TotalRate`, 
-                                                                                                 `SingleRateData` and `TotalRateData`; pushes to DataAcquisition_Ch1.
+                                                                                                 `SingleRateData` and `TotalRateData`; pushes to DataAcquisition_FissCh.
 - Root-level PVs are read from or written to the FPGA via NiFpga API (indicators/controls);
 
 ## FPGA Bitfiles

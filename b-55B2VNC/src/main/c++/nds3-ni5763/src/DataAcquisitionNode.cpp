@@ -54,10 +54,9 @@ double Ni5763Main::count_average(std::vector<std::int64_t>& data_buffer, size_t 
 void Ni5763Main::RawDataAcquisition_Ch0_thread_body() {
     NiFpga_Status RawData_status;
     std::int16_t* pFIFO_Ch0_RawData;
-    std::vector<int32_t> FIFO_Ch0_RawData;
+    std::vector<int16_t> FIFO_Ch0_RawData;
   
     size_t NumberOfPushedDataBlocks_Ch0 = 0;
-    size_t elements_requested_Ch0 = 2047;
 
     size_t FIFO_Ch0_RawDataAvailable = 0;
 
@@ -107,7 +106,6 @@ void Ni5763Main::DataAcquisition_Ch0_thread_body() {
   std::vector<double> TotalRate_Data;
 
   size_t NumberOfPushedDataBlocks_Ch0 = 0;
-  size_t elements_requested_Ch0 = 2047;
 
   size_t FluctCountRate_Hz_DataAvailable = 0;
   size_t PulseChain_DataAvailable = 0;

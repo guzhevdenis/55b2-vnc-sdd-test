@@ -67,7 +67,7 @@ class Ni5763Main
     nds::PVBaseIn TotalRateData_m;
 
     /*Data Acquisition node*/
-    nds::DataAcquisition<std::vector<std::int32_t>> m_DataAcquisition_Ch0; //Channel 0
+    nds::DataAcquisition<std::vector<std::int16_t>> m_DataAcquisition_Ch0; //Channel 0
     
     //Methods to control DataAcquisition Node state machine for channel 0.
     void switchOn_DataAcquisition_Ch0();    //called to switch on the DataAcquisition node

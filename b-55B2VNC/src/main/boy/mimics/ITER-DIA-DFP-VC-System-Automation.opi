@@ -8567,6 +8567,149 @@ $(pv_value)</tooltip>
           <x>164</x>
           <y>805</y>
         </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0.0">
+          <actions hook="false" hook_all="false" />
+          <alarm_pulsing>false</alarm_pulsing>
+          <alpha>255</alpha>
+          <anti_alias>true</anti_alias>
+          <backcolor_alarm_sensitive>true</backcolor_alarm_sensitive>
+          <background_color>
+            <color name="IO Background" red="235" green="235" blue="235" />
+          </background_color>
+          <bg_gradient_color>
+            <color name="IO Foreground" red="0" green="0" blue="0" />
+          </bg_gradient_color>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_color>
+            <color name="IO Border" red="0" green="0" blue="0" />
+          </border_color>
+          <border_style>0</border_style>
+          <border_width>2</border_width>
+          <enabled>true</enabled>
+          <fg_gradient_color>
+            <color name="IO Foreground" red="0" green="0" blue="0" />
+          </fg_gradient_color>
+          <fill_level>100.0</fill_level>
+          <font>
+            <opifont.name fontName="DejaVu Sans Mono" height="12" style="0" pixels="false">IO Label</opifont.name>
+          </font>
+          <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+          <foreground_color>
+            <color name="IO Grid" red="215" green="215" blue="215" />
+          </foreground_color>
+          <gradient>false</gradient>
+          <height>92</height>
+          <horizontal_fill>true</horizontal_fill>
+          <line_color>
+            <color name="IO Line" red="0" green="0" blue="0" />
+          </line_color>
+          <line_style>1</line_style>
+          <line_width>3</line_width>
+          <name>Rectangle Template_38</name>
+          <pv_name></pv_name>
+          <pv_value />
+          <rules />
+          <scale_options>
+            <width_scalable>false</width_scalable>
+            <height_scalable>false</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <scripts />
+          <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+          <transparent>false</transparent>
+          <visible>true</visible>
+          <widget_type>Rectangle</widget_type>
+          <width>347</width>
+          <wuid>601eab4d:1a168db850a:109a</wuid>
+          <x>2380</x>
+          <y>120</y>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+          <actions_from_pv>true</actions_from_pv>
+          <alarm_pulsing>false</alarm_pulsing>
+          <backcolor_alarm_sensitive>true</backcolor_alarm_sensitive>
+          <background_color>
+            <color name="IO Button" red="178" green="178" blue="178" />
+          </background_color>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_color>
+            <color name="IO Border" red="0" green="0" blue="0" />
+          </border_color>
+          <border_style>6</border_style>
+          <border_width>2</border_width>
+          <enabled>true</enabled>
+          <font>
+            <opifont.name fontName="DejaVu Sans Mono" height="12" style="0" pixels="false">IO Label</opifont.name>
+          </font>
+          <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+          <foreground_color>
+            <color name="IO Foreground" red="0" green="0" blue="0" />
+          </foreground_color>
+          <height>38</height>
+          <label>Menu</label>
+          <name>Menu Button Template</name>
+          <pv_name>D1-I2:STATE-PSOS</pv_name>
+          <pv_value />
+          <rules />
+          <scale_options>
+            <width_scalable>false</width_scalable>
+            <height_scalable>false</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <scripts />
+          <show_down_arrow>false</show_down_arrow>
+          <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+          <transparent>false</transparent>
+          <visible>true</visible>
+          <widget_type>Menu Button</widget_type>
+          <width>280</width>
+          <wuid>601eab4d:1a168db850a:1153</wuid>
+          <x>2408</x>
+          <y>155</y>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+          <actions hook="false" hook_all="false" />
+          <auto_size>true</auto_size>
+          <background_color>
+            <color name="IO Background" red="235" green="235" blue="235" />
+          </background_color>
+          <border_color>
+            <color name="IO Border" red="0" green="0" blue="0" />
+          </border_color>
+          <border_style>0</border_style>
+          <border_width>2</border_width>
+          <enabled>false</enabled>
+          <font>
+            <fontdata fontName="DejaVu Sans Mono" height="16" style="1" pixels="false" />
+          </font>
+          <foreground_color>
+            <color name="IO Text Fg" red="0" green="0" blue="0" />
+          </foreground_color>
+          <height>26</height>
+          <horizontal_alignment>0</horizontal_alignment>
+          <name>Label Template_51</name>
+          <rules />
+          <scale_options>
+            <width_scalable>false</width_scalable>
+            <height_scalable>false</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <scripts />
+          <show_scrollbar>false</show_scrollbar>
+          <text>Master STM</text>
+          <tooltip></tooltip>
+          <transparent>true</transparent>
+          <vertical_alignment>1</vertical_alignment>
+          <visible>true</visible>
+          <widget_type>Label</widget_type>
+          <width>164</width>
+          <wrap_words>true</wrap_words>
+          <wuid>601eab4d:1a168db850a:118d</wuid>
+          <x>2481</x>
+          <y>132</y>
+        </widget>
       </widget>
     </widget>
     <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
@@ -8628,7 +8771,7 @@ Label</opifont.name>
           <color name="IO Foreground" red="0" green="0" blue="0" />
         </foreground_color>
         <group_name></group_name>
-        <height>502</height>
+        <height>1</height>
         <macros>
           <include_parent_macros>true</include_parent_macros>
         </macros>
@@ -8646,7 +8789,7 @@ Label</opifont.name>
         <transparent>false</transparent>
         <visible>true</visible>
         <widget_type>Linking Container</widget_type>
-        <width>288</width>
+        <width>1</width>
         <wuid>52998e39:14fb2a50e57:-7e3e</wuid>
         <x>0</x>
         <y>0</y>

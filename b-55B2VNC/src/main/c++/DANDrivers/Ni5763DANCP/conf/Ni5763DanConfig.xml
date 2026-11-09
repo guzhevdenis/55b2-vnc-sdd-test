@@ -34,10 +34,10 @@
 					<maxnewDataTimeout>60</maxnewDataTimeout>
 				</advanced>
 				-->
-				<danInterface>ens16f1</danInterface>
+				<danInterface>ens192</danInterface>
 				<servers>
 					<policy >IF_FAIL_NEXT</policy>
-					<server>10.106.142.230:9999</server>
+					<server>10.106.142.203:9999</server>
 				</servers>			
 			</internal>
 		</danStreamer>

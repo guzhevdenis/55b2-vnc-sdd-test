@@ -26,11 +26,13 @@ record (ai,"D1-I2-B2A0-OPR-AUT:CD-CO-AE-0000-CDREPNNPVL")
 record (ai,"D1-I2-B2A0-OPR-AUT:CD-CO-CA-0000-CDREPNNPVL")
 {
 	field(DESC, "Calibration control and data available v")
+	field(VAL, "1")
 }
 
 record (ai,"D1-I2-B2A0-OPR-AUT:CD-CO-CP-0000-CDREPNNPVL")
 {
 	field(DESC, "Command and information of pulse receive")
+	field(VAL, "1")
 }
 
 record (ai,"D1-I2-B2A0-OPR-AUT:CD-CO-FO-0000-CDREPNNPVL")
@@ -51,11 +53,13 @@ record (ai,"D1-I2-B2A0-OPR-AUT:CD-CO-LR-0000-CDREPNNPVL")
 record (ai,"D1-I2-B2A0-OPR-AUT:CD-CO-SC-0000-CDREPNNPVL")
 {
 	field(DESC, "Specific configuration for pulse is done")
+	field(VAL, "1")
 }
 
 record (ai,"D1-I2-B2A0-OPR-AUT:CD-CO-SM-0000-CDREPNNPVL")
 {
 	field(DESC, "Start measurement command received varia")
+	field(VAL, "0")
 }
 
 record (ai,"D1-I2-B2A0-OPR-AUT:CD-CO-TP-0000-CDREPNNPVL")
@@ -71,16 +75,19 @@ record (ai,"D1-I2-B2A0-OPR-AUT:CD-PC-NE-0000-CDREPNNPVL")
 record (ai,"D1-I2-B2A0-OPR-AUT:CD-PS-AA-0000-CDREPNNPVL")
 {
 	field(DESC, "Assemblance and accessibility of 55B2")
+	field(VAL, "0")
 }
 
 record (ai,"D1-I2-B2A0-OPR-AUT:CD-PS-CD-0000-CDREPNNPVL")
 {
 	field(DESC, "Plant system configuration is done")
+	field(VAL, "1")
 }
 
 record (ai,"D1-I2-B2A0-OPR-AUT:CD-PS-ER-0000-CDREPNNPVL")
 {
 	field(DESC, "Plant system equipment is ready")
+	field(VAL, "1")
 }
 
 record (ai,"D1-I2-B2A0-OPR-AUT:CD-PS-IC-0000-CDREPNNPVL")
@@ -96,11 +103,13 @@ record (ai,"D1-I2-B2A0-OPR-AUT:CD-PS-IR-0000-CDREPNNPVL")
 record (ai,"D1-I2-B2A0-OPR-AUT:CD-PS-PO-0000-CDREPNNPVL")
 {
 	field(DESC, "Plant System is Power Off?")
+	field(VAL, "1")
 }
 
 record (ai,"D1-I2-B2A0-OPR-AUT:CD-PS-PP-0000-CDREPNNPVL")
 {
 	field(DESC, "Plant System Present?")
+	field(VAL, "1")
 }
 
 record (ai,"D1-I2-B2A0-OPR-AUT:CD-PS-SA-0000-CDREPNNPVL")
@@ -111,6 +120,7 @@ record (ai,"D1-I2-B2A0-OPR-AUT:CD-PS-SA-0000-CDREPNNPVL")
 record (ai,"D1-I2-B2A0-OPR-AUT:CD-PS-SH-0000-CDREPNNPVL")
 {
 	field(DESC, "System Health is OK?")
+	field(VAL, "1")
 }
 
 record (ai,"D1-I2-B2A0-OPR-AUT:CD-PS-SS-0000-CDREPNNPVL")

@@ -249,7 +249,7 @@ Ni5763Main::Ni5763Main(nds::Factory& factory, const std::string& deviceName, con
                             std::placeholders::_1, std::placeholders::_2)));
 
     m_DataAcquisition_Ch0 =
-        rootNode.addChild(nds::DataAcquisition<std::vector<std::int32_t>>(
+        rootNode.addChild(nds::DataAcquisition<std::vector<std::int16_t>>(
             "DataAcquisitionNode_FissCh", SIZE,
             std::bind(&Ni5763Main::switchOn_DataAcquisition_Ch0, this),
             std::bind(&Ni5763Main::switchOff_DataAcquisition_Ch0, this),
