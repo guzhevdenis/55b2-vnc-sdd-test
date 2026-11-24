@@ -19,6 +19,6 @@ nds subscribe DAN-1-buffer_Ch0 B-7-DataAcquisitionNode_Ch0-Data
 nds subscribe DAN-1-buffer_Ch1 B-7-DataAcquisitionNode_Ch1-Data
 
 ndsLoadDriver $(PWD)/../c++/nds-sdn-oscil/lib/libnds3-sdn-oscil.so
-ndsCreateDevice(DeviceNDSSDNPUB, "SDN-0","INTERFACE=lo","TOPICNAME=topic-nds-oscil","PVS_CONFIG_PATH=../resources/input.xml")
+ndsCreateDevice(DeviceNDSSDNPUB, "SDN-0","INTERFACE=enp37s0f0","TOPICNAME=oscil-nds-sdn-topic","PVS_CONFIG_PATH=./../resources/oscil-nds-sdn-conf.xml")
 
 #- End-of-file marker - do not delete or add lines below!

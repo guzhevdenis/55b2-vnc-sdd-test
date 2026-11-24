@@ -10,7 +10,7 @@
 	<version>1.0</version>
 	<ICprogram name="nds-dan-ni5763">
 		<source name="Ni5763SourceName">
-			<itemDanType>danInt32</itemDanType>
+			<itemDanType>danInt16</itemDanType>
 			<maxTransferRate>800000000</maxTransferRate>
 			<deviceInfo>
 				<deviceName>DAN-Ni5763</deviceName>
@@ -34,7 +34,7 @@
 					<maxnewDataTimeout>60</maxnewDataTimeout>
 				</advanced>
 				-->
-				<danInterface>ens192</danInterface>
+				<danInterface>ens16f1</danInterface>
 				<servers>
 					<policy >IF_FAIL_NEXT</policy>
 					<server>10.106.142.203:9999</server>

@@ -1,7 +1,8 @@
 record(ao, "D1-I2-HWCF:SDN-0-publishingRate") {
     field(DESC, "Publishing rate (us) for the SDN Topic. ")
     field(DTYP, "asynInt32")
-    field(OUT, "@asyn(SDN-0, 0)publishingRate")    
+    field(OUT, "@asyn(SDN-0, 0)publishingRate")
+    field(PINI, "YES")
 }
 
 record(mbbi, "D1-I2-HWCF:SDN-0-StateMachine-getGlobalState") {

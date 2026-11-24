@@ -1,0 +1,4 @@
+<topic name="oscil-nds-sdn-topic" version="1.0" description="SDN variables for oscilloscope mode">
+  <attribute name="NumberOfPushedDataBlocks_Ch0" dataType="int32" description="NoB for channel 0" unit="" qualifier="" rank="1"/>
+  <attribute name="NumberOfPushedDataBlocks_Ch1" dataType="int32" description="NoB for channel 1" unit="" qualifier="" rank="2"/>
+</topic>

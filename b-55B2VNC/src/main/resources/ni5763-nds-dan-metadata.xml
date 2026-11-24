@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nds-dan-device>
+	<nds-dan method="copy" id="0">
+		<sourceName>PluginNi5763</sourceName>
+		<ICProgram>nds-dan-plugin-ni5763</ICProgram>
+		<samplingRate>80000000</samplingRate>
+		<numBlocks>81920</numBlocks>
+		<danType>int16</danType>
+		<xml>../resources/ni5763-dan-config.xml</xml>
+		<nds-pv name="B-8-DataAcquisitionNode_FissCh-Data" type="int16A" nelm="40960"/>
+		<attribute name="attrInt16A" nds-pv="B-8-DataAcquisitionNode_FissCh-Data" pv-type="int16A"/>
+	</nds-dan>
+</nds-dan-device>

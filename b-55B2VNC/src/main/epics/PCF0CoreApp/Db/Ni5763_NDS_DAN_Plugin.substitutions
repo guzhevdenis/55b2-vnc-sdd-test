@@ -1,0 +1,17 @@
+file "nds3_StateMachine.template" {
+pattern
+{
+    BOARDTYPE,
+    BOARDTYPEIDX,
+    CBS1,
+    CBS2,
+    STATEMACHINE_NAME
+}
+{
+    "NDSDAN",
+    "0",
+    "D1",
+    "I2",
+    "StateMachine"
+}		
+}

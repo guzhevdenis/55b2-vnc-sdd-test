@@ -236,7 +236,7 @@ private:
   void PV_buffer_writer_Ch0(const timespec& timestamp, const std::vector<std::int32_t>& value);
   void PV_buffer_writer_Ch1(const timespec& timestamp, const std::vector<std::int32_t>& value);
 
-
+  volatile bool m_DAN_Running;
 };
 
 #endif /* NDS_DAN_EXAMPLES_INCLUDE_OscilDANCP_H_ */

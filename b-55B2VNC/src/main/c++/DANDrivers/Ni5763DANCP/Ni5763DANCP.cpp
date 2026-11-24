@@ -25,6 +25,8 @@ Ni5763DANCP::Ni5763DANCP (nds::Factory& factory,
                   std::bind(&Ni5763DANCP::PV_buffer_writer, this, std::placeholders::_1, std::placeholders::_2)),
       m_MaxChannels_PV(nds::PVDelegateOut<std::int32_t>("MaxChannels",
                   std::bind(&Ni5763DANCP::setMaxChannels, this, std::placeholders::_1, std::placeholders::_2)))
+    //m_FifoSize(nds::PVDelegateIn<std::int32_t>("FIFO_Size",
+      //             std::bind(&Ni5763DANCP::getFifoSize, this, std::placeholders::_1, std::placeholders::_2)))
 {
 
   m_stateMachine = rootNode.addChild(nds::StateMachine(true,
@@ -45,6 +47,12 @@ Ni5763DANCP::Ni5763DANCP (nds::Factory& factory,
 
   m_MaxChannels_RBVPV = nds::PVVariableIn<std::int32_t>("MaxChannels_RBV");
   m_MaxChannels_RBVPV.setValue(static_cast<int32_t>(0));
+
+  nds::PVBaseOut FIFO_Size_m = 
+        rootNode.addChild(nds::PVDelegateOut<std::int32_t>(
+            "FIFO_Size",
+            std::bind(&Ni5763DANCP::getFifoSize, this,
+                    std::placeholders::_1, std::placeholders::_2)));
 
   rootNode.addChild(m_data_PV);
   rootNode.addChild(m_MaxChannels_PV);
@@ -149,9 +157,9 @@ Ni5763DANCP::allowChange_Device(const nds::state_t currentState, const nds::stat
 void*
 Ni5763DANCP::dancp_initData (ndsdan::dataDAN_t* dataDAN)
 {
-  std::int32_t bufferSize = m_DANCP.getBufferSize();
+  std::int16_t bufferSize = m_DANCP.getBufferSize();
   if (bufferSize > 0) {
-    m_danBuffer = (int32_t *) malloc(bufferSize);
+    m_danBuffer = (int16_t *) malloc(bufferSize);
     memset(m_danBuffer, 0, bufferSize);
     return m_danBuffer;
   } else {
@@ -159,15 +167,16 @@ Ni5763DANCP::dancp_initData (ndsdan::dataDAN_t* dataDAN)
   }
 }
 
-void Ni5763DANCP::PV_buffer_writer(const timespec& timestamp, const std::vector<std::int32_t>& value){
+void Ni5763DANCP::PV_buffer_writer(const timespec& timestamp, const std::vector<std::int16_t>& value){
   if(!m_DAN_Running) {
     return;
   }
+
   std::int32_t blockSize = m_DANCP.getBlockNumberOfSamples();
   std::int32_t nChannels = m_DANCP.getNumberOfChannels();
   std::int32_t sampleSize = m_DANCP.getSampleSize();
   std::int32_t blockSizeInBytes = blockSize*nChannels*sampleSize;
-  std::int32_t vectorSize = value.size() * 4; //Received vector size in bytes
+  std::int32_t vectorSize = value.size() * 2; //Received vector size in bytes
   timespec actualTime;
   std::uint64_t currentTimeNs;
   if(vectorSize==blockSizeInBytes){
@@ -175,7 +184,7 @@ void Ni5763DANCP::PV_buffer_writer(const timespec& timestamp, const std::vector<
           actualTime = m_DANCP.getTimestamp();
           currentTimeNs = actualTime.tv_sec*S2NS + actualTime.tv_nsec;
           m_DANCP.putDataBlock(currentTimeNs);
-          usleep(50000);
+          usleep(delay);
   }else{
           ndsErrorStream(m_DANCP) << "DAN buffer size is different to received vector." << std::endl;
   }
@@ -204,26 +213,20 @@ Ni5763DANCP::initializePVs(void)
   std::string initICProgramName("nds-dan-ni5763");
   std::int32_t initSamplingRate(80000000);
 
-  //the size of the int32_t in Bytes
-  std::int32_t initSampleSize(4);
-
-  std::int32_t initBlockNumberOfSamples(10240);
-
+  //the size of the int16_t in Bytes
+  std::int16_t initSampleSize(2);
 
   std::uint64_t initTimeBetweenBlocks(10);
   std::uint64_t initMaxAcquisitionTime(80000000);
   std::int32_t initNumberOfBlocks(20480);
   std::int32_t initMaxChannels(1);
-  std::int32_t initBufferSize(initBlockNumberOfSamples*initMaxChannels*initSampleSize);
 
   std::string initPathXML("../../../c++/DANDrivers/Ni5763DANCP/conf/Ni5763DanConfig.xml");
 
   m_DANCP.setSourceName(timestamp, initSourceName);
   m_DANCP.setICProgramName(timestamp, initICProgramName);
   m_DANCP.setSamplingRate(timestamp, initSamplingRate);
-  m_DANCP.setBufferSize(timestamp, initBufferSize);
   m_DANCP.setSampleSize(timestamp, initSampleSize);
-  m_DANCP.setBlockNumberOfSamples(timestamp, initBlockNumberOfSamples);
 
   m_DANCP.setTimeBetweenBlocks(timestamp, static_cast<double>(initTimeBetweenBlocks));
   m_DANCP.setMaxAcquisitionTime(timestamp, static_cast<double>(initMaxAcquisitionTime));
@@ -232,4 +235,17 @@ Ni5763DANCP::initializePVs(void)
   m_DANCP.setPathXML(timestamp, initPathXML);
 
   setMaxChannels(timestamp, initMaxChannels);
+}
+
+void Ni5763DANCP::getFifoSize(
+    const timespec& timestamp, const std::int32_t& pOut) { 
+      if(pOut != 0) {
+        fifoSize = pOut;
+        m_DANCP.setBlockNumberOfSamples(timestamp, fifoSize);
+        m_DANCP.setBufferSize(timestamp, (fifoSize*2));
+        delay = 600 * (fifoSize / 2048);
+      }
+      else {
+        fifoSize = 10240;
+      }
 }

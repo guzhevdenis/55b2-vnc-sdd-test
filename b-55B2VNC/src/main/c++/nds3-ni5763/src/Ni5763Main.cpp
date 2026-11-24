@@ -135,24 +135,6 @@ Ni5763Main::Ni5763Main(nds::Factory& factory, const std::string& deviceName, con
             std::bind(&Ni5763Main::Temperature_degC_Reader, this,
                     std::placeholders::_1, std::placeholders::_2)));
 
-    nds::PVBaseIn RawDataFIFO_Depth_m = 
-        rootNode.addChild(nds::PVDelegateIn<std::int32_t>(
-            "RawDataFIFO_Depth",
-            std::bind(&Ni5763Main::RawDataFIFO_Depth_Reader, this,
-                    std::placeholders::_1, std::placeholders::_2)));
-
-    nds::PVBaseIn FluctCountRate_Hz_FIFO_Depth_m = 
-        rootNode.addChild(nds::PVDelegateIn<std::int32_t>(
-            "FluctCountRate_Hz_FIFO_Depth",
-            std::bind(&Ni5763Main::FluctCountRate_Hz_FIFO_Depth_Reader, this,
-                    std::placeholders::_1, std::placeholders::_2)));
-
-    nds::PVBaseIn PulseChainFIFO_Depth_m = 
-        rootNode.addChild(nds::PVDelegateIn<std::int32_t>(
-            "PulseChainFIFO_Depth",
-            std::bind(&Ni5763Main::PulseChainFIFO_Depth_Reader, this,
-                    std::placeholders::_1, std::placeholders::_2)));
-
     //Config FIFO depth
     nds::PVBaseOut ConfigFIFO_Depth_m =
         rootNode.addChild(nds::PVDelegateOut<std::int32_t>(
@@ -239,6 +221,18 @@ Ni5763Main::Ni5763Main(nds::Factory& factory, const std::string& deviceName, con
     TotalRateData_m =
         rootNode.addChild(nds::PVVariableIn<std::vector<double>>(
             "TotalRateData"));
+
+    RawDataFIFO_Depth_m = 
+        rootNode.addChild(nds::PVVariableIn<std::int32_t>(
+            "RawDataFIFO_Depth"));
+
+    FluctCountRate_Hz_FIFO_Depth_m = 
+        rootNode.addChild(nds::PVVariableIn<std::int32_t>(
+            "FluctCountRate_Hz_FIFO_Depth"));
+
+    PulseChainFIFO_Depth_m = 
+        rootNode.addChild(nds::PVVariableIn<std::int32_t>(
+            "PulseChainFIFO_Depth"));
 
     nds::PVBaseIn Status_m = 
         rootNode.addChild(nds::PVDelegateIn<std::int32_t>(
@@ -579,22 +573,6 @@ void Ni5763Main::Temperature_degC_Reader(
         
         std::int8_t temp = Dev_Status_Cluster.Temperature_degC;
         *pIn = temp; //taking the value
-}
-
-//Actual FIFO depth
-void Ni5763Main::RawDataFIFO_Depth_Reader(
-    const timespec* timestamp, std::int32_t *pIn) {
-        *pIn = RawData_depth;
-}
-
-void Ni5763Main::FluctCountRate_Hz_FIFO_Depth_Reader(
-    const timespec* timestamp, std::int32_t *pIn) {
-        *pIn = FluctCountRate_Hz_depth;
-}
-
-void Ni5763Main::PulseChainFIFO_Depth_Reader(
-    const timespec* timestamp, std::int32_t *pIn) {
-        *pIn = PulseChain_depth;
 }
 
 //Configure FIFO depth

@@ -103,19 +103,19 @@ record(ai, "D1-I2-HWCF:B-8-Temperature_degC") {
 record(ai, "D1-I2-HWCF:B-8-RawDataFIFO_Depth") {
     field(DESC, "Actual depth of Raw data FIFO")
     field(DTYP, "asynInt32")
-    field(SCAN, "1 second")
+    field(SCAN, "I/O Intr")
     field(INP, "@asyn(B-8,0)RawDataFIFO_Depth")
 }
 record(ai, "D1-I2-HWCF:B-8-FluctCountRate_Hz_FIFO_Depth") {
     field(DESC, "Actual depth of FluctCountRate_Hz FIFO")
     field(DTYP, "asynInt32")
-    field(SCAN, "1 second")
+    field(SCAN, "I/O Intr")
     field(INP, "@asyn(B-8,0)FluctCountRate_Hz_FIFO_Depth")
 }
 record(ai, "D1-I2-HWCF:B-8-PulseChainFIFO_Depth") {
     field(DESC, "Actual depth of PulseChain FIFO")
     field(DTYP, "asynInt32")
-    field(SCAN, "1 second")
+    field(SCAN, "I/O Intr")
     field(INP, "@asyn(B-8,0)PulseChainFIFO_Depth")
 }
 
@@ -220,6 +220,7 @@ record(ai, "D1-I2-HWCF:B-8-FluctCountRate_Hz") {
     field(INP, "@asyn(B-8,0)FluctCountRate_Hz")
     field(PINI, "YES")
 }
+
 record(ai, "D1-I2-HWCF:B-8-SinglePules") {
     field(DESC, "Single pulses")
     field(DTYP, "asynInt64")

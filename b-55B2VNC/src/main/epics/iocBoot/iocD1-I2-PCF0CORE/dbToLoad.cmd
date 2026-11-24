@@ -17,7 +17,7 @@ dbLoadRecords("PCF0-D1-I2-SYSM-iocD1-I2-PCF0CORE.db")
 dbLoadRecords("Ni5763_NDS_LabVIEW_Variables.db")
 dbLoadRecords("Ni5763_NDS_DataAcquisition.db")
 dbLoadTemplate("StateMachine.substitutions")
-dbLoadTemplate("Ni5763_NDS_DANCP.substitutions")
+dbLoadTemplate("Ni5763_NDS_DAN_Plugin.substitutions")
 # dbLoadTemplate("nisyncDevice6683H-basic.substitutions")
 # dbLoadTemplate("nisyncDevice6683H-terminal.substitutions")
 

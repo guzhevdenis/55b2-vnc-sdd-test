@@ -187,7 +187,7 @@ private:
   /**
    * @brief: Pointer to the internal buffer to store the data.
    */
-  int32_t* m_danBuffer;
+  int16_t* m_danBuffer;
   /**
    * @brief Root node of the device driver.
    */
@@ -196,7 +196,7 @@ private:
    * @brief PV to deal with the data that are received from other device.
    * Whenever new data is received in this PV, the function @ref Ni5763DANCP::PV_buffer_writer is called.
    */
-  nds::PVDelegateOut<std::vector<std::int32_t>> m_data_PV; //PV: Using this datatype to manage a generic buffer with Data
+  nds::PVDelegateOut<std::vector<std::int16_t>> m_data_PV; //PV: Using this datatype to manage a generic buffer with Data
   /**
    * @brief PV to set the Maximum number of channels.
    */
@@ -224,7 +224,11 @@ private:
    * @param value
    * It copies the received data into the local storage buffer to be published with %DAN.
    */
-  void PV_buffer_writer(const timespec& timestamp, const std::vector<std::int32_t>& value);
+  void PV_buffer_writer(const timespec& timestamp, const std::vector<std::int16_t>& value);
+
+  int fifoSize = 10240;
+  int delay = 2500;
+  void getFifoSize(const timespec& timestamp, const std::int32_t& pOut);
 
   volatile bool m_DAN_Running;
 };

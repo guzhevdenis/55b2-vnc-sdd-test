@@ -65,6 +65,9 @@ class Ni5763Main
     nds::PVBaseIn TotalRate_m;
     nds::PVBaseIn SingleRateData_m;
     nds::PVBaseIn TotalRateData_m;
+    nds::PVBaseIn RawDataFIFO_Depth_m;
+    nds::PVBaseIn FluctCountRate_Hz_FIFO_Depth_m;
+    nds::PVBaseIn PulseChainFIFO_Depth_m;
 
     /*Data Acquisition node*/
     nds::DataAcquisition<std::vector<std::int16_t>> m_DataAcquisition_Ch0; //Channel 0
@@ -163,10 +166,6 @@ class Ni5763Main
     void TotalPulseMin_Writer(const timespec& timestamp, const std::int32_t& pOut);
 
     void ConfigFIFO_Depth_Writer(const timespec& timestamp, const std::int32_t& pOut);
-
-    void RawDataFIFO_Depth_Reader(const timespec* timestamp, std::int32_t *pIn);
-    void FluctCountRate_Hz_FIFO_Depth_Reader(const timespec* timestamp, std::int32_t *pIn);
-    void PulseChainFIFO_Depth_Reader(const timespec* timestamp, std::int32_t *pIn);
 
     size_t RawData_depth = 0;
     size_t FluctCountRate_Hz_depth = 0;

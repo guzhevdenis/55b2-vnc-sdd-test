@@ -10,19 +10,21 @@ include $(TOP)/configure/CONFIG
 #----------------------------------------------------
 # Create and install (or just install)
 # databases, templates, substitutions like this
-DB += OscilStateMachine.substitutions
-DB += OscilDANCP.substitutions
-DB += LocalPVs.template
+
+#DBs for nds-oscilloscope driver	
+DB += Oscil_NDS_StateMachine.substitutions
+DB += Oscil_NDS_LabVIEW_Variables.db
+DB += Oscil_NDS_DataAcquisition_Ch0.db
+DB += Oscil_NDS_DataAcquisition_Ch1.db
+
+#DBs for nds-dan-cp driver
+DB += Oscil_NDS_DANCP.substitutions
+
+#DBs for nds-sdn driver
+DB += Oscil_NDS_SDN.db
 
 # Automagically install .proto files
 DB += $(notdir $(wildcard ../*.proto))
-
-#DataAcquisition db file
-DB += DataAcquisition_Ch0.db
-DB += DataAcquisition_Ch1.db
-DB += OscilNDS-SDN.db
-#OscilloscopeData db file
-DB += OscilloscopeData.db
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add

@@ -74,6 +74,7 @@ OscilDANCP::OscilDANCP (nds::Factory& factory,
   if (findParam != namedParameters.end() && findParam->second=="YES") {
     initializePVs();
   }
+  m_DAN_Running = false;
 }
 
 
@@ -149,6 +150,7 @@ void
 OscilDANCP::start_Device (void)
 {
   ndsDebugStream(m_stateMachine) << (m_deviceName + "-STM: Starting" ) << std::endl;
+  m_DAN_Running = true;
 }
 
 void
@@ -156,6 +158,7 @@ OscilDANCP::stop_Device (void)
 {
   ndsDebugStream(m_stateMachine) << (m_deviceName + "-STM: Stopping" ) << std::endl;
   ndsDebugStream(m_stateMachine) << "DAN-DAQ successfully stopped." << std::endl;
+  m_DAN_Running = false;
 }
 
 void
@@ -204,7 +207,9 @@ OscilDANCP::dancp_initData_Ch1 (ndsdan::dataDAN_t* dataDAN)
 }
 
 void OscilDANCP::PV_buffer_writer_Ch0(const timespec& timestamp, const std::vector<std::int32_t>& value){
-
+  if(!m_DAN_Running) {
+    return;
+  }
   std::int32_t blockSize = m_DANCP_Ch0.getBlockNumberOfSamples();
   std::int32_t nChannels = m_DANCP_Ch0.getNumberOfChannels();
   std::int32_t sampleSize = m_DANCP_Ch0.getSampleSize();
@@ -225,7 +230,9 @@ void OscilDANCP::PV_buffer_writer_Ch0(const timespec& timestamp, const std::vect
 }
 
 void OscilDANCP::PV_buffer_writer_Ch1(const timespec& timestamp, const std::vector<std::int32_t>& value){
-
+  if(!m_DAN_Running) {
+    return;
+  }
   std::int32_t blockSize = m_DANCP_Ch1.getBlockNumberOfSamples();
   std::int32_t nChannels = m_DANCP_Ch1.getNumberOfChannels();
   std::int32_t sampleSize = m_DANCP_Ch1.getSampleSize();

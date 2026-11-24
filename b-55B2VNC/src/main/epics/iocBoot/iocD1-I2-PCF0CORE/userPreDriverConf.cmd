@@ -15,9 +15,14 @@ callbackParallelThreads
 ndsLoadDriver $(PWD)/../c++/nds3-ni5763/target/lib/libnds3-Ni5763.so
 ndsCreateDevice Ni5763 B-8
 
-ndsLoadDriver $(PWD)/../c++/DANDrivers/Ni5763DANCP/lib/libnds-dan-ni5763.so
-ndsCreateDevice(Ni5763DANCP, DAN-Ni5763, "INIT=YES")
+ndsLoadDriver $(PWD)/../c++/DANDrivers/nds-dan-plugin/lib/libnds3-dev-nds-dan-plugin.so
+ndsCreateDevice(PluginNDSDAN, "NDSDAN-0", "DAN_PLUGIN_XML=../resources/ni5763-nds-dan-metadata.xml", "DAN=YES")
 
-nds subscribe DAN-Ni5763-buffer B-8-DataAcquisitionNode_FissCh-Data
+nds setLogLevelDebug NDSDAN-0
+
+# ndsLoadDriver $(PWD)/../c++/DANDrivers/Ni5763DANCP/lib/libnds-dan-ni5763.so
+# ndsCreateDevice(Ni5763DANCP, DAN-Ni5763, "INIT=YES")
+
+# nds subscribe DAN-Ni5763-buffer B-8-DataAcquisitionNode_FissCh-Data
 ## Load record instances
 #- End-of-file marker - do not delete or add lines below!

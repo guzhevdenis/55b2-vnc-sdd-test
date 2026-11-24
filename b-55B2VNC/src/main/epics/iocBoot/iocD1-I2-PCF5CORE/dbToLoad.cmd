@@ -14,12 +14,12 @@ dbLoadRecords("PCF5-D1-I2-B2A0-OPR-INT-iocD1-I2-PCF5CORE.db")
 dbLoadRecords("PCF5-D1-I2-B2A0-SGC-DSP-iocD1-I2-PCF5CORE.db")
 dbLoadRecords("PCF5-D1-I2-SYSM-iocD1-I2-PCF5CORE.db")
 
-# Nds-Oscliloscope driver
-dbLoadRecords("DataAcquisition_Ch0.db")
-dbLoadRecords("DataAcquisition_Ch1.db")
-dbLoadRecords("OscilloscopeData.db")
-dbLoadRecords("OscilNDS-SDN.db")
-dbLoadTemplate("OscilStateMachine.substitutions")
-dbLoadTemplate("OscilDANCP.substitutions")
+# Nds-oscilloscope and its associated nds-dan and nds-sdn drivers
+dbLoadRecords("Oscil_NDS_DataAcquisition_Ch0.db")
+dbLoadRecords("Oscil_NDS_DataAcquisition_Ch1.db")
+dbLoadRecords("Oscil_NDS_LabVIEW_Variables.db")
+dbLoadRecords("Oscil_NDS_SDN.db")
+dbLoadTemplate("Oscil_NDS_StateMachine.substitutions")
+dbLoadTemplate("Oscil_NDS_DANCP.substitutions")
 
 #- End-of-file marker - do not delete or add lines below!

@@ -11,7 +11,7 @@ include $(TOP)/configure/CONFIG
 # Create and install (or just install)
 # databases, templates, substitutions like this
 DB+=Ni5763_NDS_DataAcquisition.db
-DB+=Ni5763_NDS_DANCP.substitutions
+DB+=Ni5763_NDS_DAN_Plugin.substitutions
 DB+=DataAcquisition.substitutions
 DB+=StateMachine.substitutions
 DB+=nisyncDevice6683H-basic.substitutions

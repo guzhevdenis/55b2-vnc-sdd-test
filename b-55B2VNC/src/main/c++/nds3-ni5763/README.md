@@ -122,9 +122,9 @@ NDS3 standard state machine for the whole device (OFF → ON → RUNNING).
 
 ### 3. DataAcquisitionNode (child node)
 
-NDS3 **DataAcquisition** node named `DataAcquisitionNode_FissCh`. The node has its own state machine and standard data-acquisition PVs. Data type: `vector<int32_t>`, buffer size 800000.
+NDS3 **DataAcquisition** node named `DataAcquisitionNode_FissCh`. The node has its own state machine and standard data-acquisition PVs.
 
-#### 3.1 DataAcquisitionNode_Ch0
+#### 3.1 DataAcquisitionNode_FissCh
 
 #### 3.1.1 DataAcquisitionNode state machine
 
@@ -152,7 +152,6 @@ NDS3 **DataAcquisition** node named `DataAcquisitionNode_FissCh`. The node has i
 
 | PV Name                    | Type                  | Description                            |
 |----------------------------|-----------------------|----------------------------------------|
-| `Data`                     | vector&lt;int32_t&gt; | Acquired data stream                   |
 | `NumberOfPushedDataBlocks` | (internal)            | Number of pushed data blocks           |
 
 ---
@@ -171,7 +170,6 @@ NDS3 **DataAcquisition** node named `DataAcquisitionNode_FissCh`. The node has i
     │   └── setState  (Out, int32)
     ├── Gain, Offset, Bandwidth, Resolution, Impedance
     ├── Coupling, SignalRefType, Ground, DMAEnable, SamplingRate
-    ├── Data
     └── NumberOfPushedDataBlocks
 ```
 

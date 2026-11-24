@@ -1,98 +1,115 @@
 ## nds-sdn-oscil
 
-NDS3-SDN driver for oscilloscope mode
+NDS3-SDN driver for any other nds-driver 
 
 ## Description
 
-This driver provides NDS3-SDN (Nominal Device Support v3 Synchronous Data bus Network) device support for transmitting Number of pushed data blocks varaiable of oscilloscope mode. It enables SDN transmitting and integration with the CODAC Core System for the VNC (Vertical Neutron Camera) data acquisition system.
+This module provides an NDS-SDN driver that publishes data to SDN topics. Each instance receives data from another NDS driver and publishes it through the configured network interface according to an XML mapping.
 
-## Features
+The driver and its topic are configured with two XML files in `src/main/resources`:
 
-- **State Machine Management**: Full state machine implementation (OFF → ON → RUNNING) with proper state transitions
-- **Data Transimitting**: Data transmitting from nds-oscilloscope with SDN
-- **EPICS Integration**: Seamless integration with EPICS IOCs through NDS3-EPICS interface
+- A driver configuration file that defines the NDS-SDN settings and PV-to-topic mapping.
+- A topic-definition file that describes the SDN topic payload.
 
-## Hardware/software Requirements
+## XML Configuration
 
-- nds-oscilloscope driver
-- CODAC Core System 7.4.0 or later
+`oscil-nds-sdn-conf.xml` is the driver configuration file. It declares the SDN topic, which must be defined in the topic-definition file, and maps each topic attribute to a source NDS PV. Set `trigger_pub` to `yes` when an update to that PV must publish the topic immediately.
 
-## Building
+```xml
+<?xml version="1.0"?>
+<nds-sdn>
+	<topic name="oscil-nds-sdn-topic">
+		<attribute name="NumberOfPushedDataBlocks_Ch0">
+			<nds-pv name="B-7-DataAcquisitionNode_Ch0-NumberOfPushedDataBlocks" type="int32" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+		<attribute name="NumberOfPushedDataBlocks_Ch1">
+			<nds-pv name="B-7-DataAcquisitionNode_Ch1-NumberOfPushedDataBlocks" type="int32" />
+			<trigger_pub>yes</trigger_pub>
+		</attribute>
+	</topic>
+</nds-sdn>
+```
+
+`oscil-nds-sdn-topic.xml` is the SDN topic-definition file. It specifies the payload, including each attribute's name, rank, and SDN data type. Its `name` must match the topic name in `oscil-nds-sdn-conf.xml`; the driver uses that name to find the file.
+
+```xml
+<topic name="oscil-nds-sdn-topic" version="1.0" description="SDN variables for oscilloscope mode">
+  <attribute name="NumberOfPushedDataBlocks_Ch0" dataType="int32" description="NoB for channel 0" unit="" qualifier="" rank="1"/>
+  <attribute name="NumberOfPushedDataBlocks_Ch1" dataType="int32" description="NoB for channel 1" unit="" qualifier="" rank="2"/>
+</topic>
+
+```
+
+The topic-definition filename must exactly match the topic name: `<topic_name>.xml`.
+
+## SDN Archiver Configuration
+To allow the SDN Archiver to store the topic in an HDF5 archive, copy the topic-definition XML file (`<topic_name>.xml`) to the SDN configuration directory on the archiver host. This directory is normally set by `SDN_CONFIG_DIRECTORY`; its default location is `${CODAC_CONF}/sdn` or `/etc/opt/codac/sdn`.
+
+On both the publisher host and the host running `sdn-archiver`, `SDN_INTERFACE_NAME` must identify the physical interface used for SDN traffic. For example, use `eth0` rather than the loopback interface `lo`. Configure it with:
 
 ```bash
-cd nds-sdn-oscil
-make
+codac-configure sdn_interface eth0
+export SDN_INTERFACE_NAME=eth0
 ```
 
-The build process will create the shared library:
-- `target/lib/libnds3-sdn-oscil.so`
+By default, `sdn-archiver` stores data in `/tmp/sdn-record/`.
 
-## Usage
-
-### Loading the Driver in EPICS IOC
-
-Add the following to your `userPreDriverConf.cmd`:
+Start the `sdn-archiver` service:
 
 ```bash
-ndsLoadDriver $(PWD)/../c++/nds-sdn-oscil/lib/libnds3-sdn-oscil.so
-ndsCreateDevice(DeviceNDSSDNPUB, "SDN-0","INTERFACE=lo","TOPICNAME=topic-nds-oscil","PVS_CONFIG_PATH=../resources/input.xml")
+sdn-archiver-service start
 ```
 
-### Device Initialization
+Verify that `SDN_INTERFACE_NAME` has not changed after the service starts.
 
-The device can be initialized in a single state:
+Start SDN discovery:
 
 ```bash
-# Start in OFF state (default)
-ndsCreateDevice(DeviceNDSSDNPUB, "SDN-0","INTERFACE=lo","TOPICNAME=topic-nds-oscil","PVS_CONFIG_PATH=../resources/input.xml")
+sdn-discover start
 ```
 
-## Driver Structure (Nodes and Process Variables)
+Both services write to `ccslog-local.log`:
 
-The driver exposes a single **Port** (root node) named by the device instance (e.g. `SDN-0`). Under it is one **StateMachine** node, and a root-level Process Variable.
-
-Full PV path format: `{DeviceName}-{NodeName}-{PVName}` (e.g. `SDN-0-StateMachine-getState`, `SDN-0-publishingRate`).
-
----
-
-### 1. StateMachine (Device state machine)
-
-NDS3 standard state machine for the whole device (OFF → ON → RUNNING).
-
-| PV Name     | Direction | Type   | Description                   |
-|------------|-----------|--------|--------------------------------|
-| `getState` | In        | int32  | Current state (read-only)      |
-| `setState` | Out       | int32  | Command to change state (write)|
-
----
-
-### 2. Root-level Process Variable (direct children of Port)
-
-| PV Name             | Type  | Description                             |
-|---------------------|-------|-----------------------------------------|
-| `publishingRate`    | int32 | Publishing rate (us) for the SDN Topic  |
-
----
-
-### 4. Structure overview (tree)
-
-```
-{DeviceName}  (Port - root)
-├── StateMachine
-│   ├── getState      (In,  int32)
-│   └── setState      (Out, int32)
-└── [Root-level PVs - see tables above]
+```bash
+tail -f "${LOG_FILE_PATH}/ccslog-local.log"
 ```
 
-### 5. Threads and data flow
+Start archiving the topic:
 
-- **Device StateMachine**: `switchOn_Device`, `switchOff_Device`, `start_Device`, `stop_Device`, `recover_Device` are implemented (currently empty); transitions are allowed.
-- **Main thread**:
-  - **PV_int32Attribute_writer** function: receives data from NDS PV and pushes it to SDN.
+```bash
+sdn-archiver -t oscil-nds-sdn-topic
+```
 
-## Testing
+Ensure that the archiver can write to the output directory:
 
-...
+```bash
+chmod 777 /tmp/sdn-record
+```
+
+View an HDF5 archive file:
+
+```bash
+QT_QPA_PLATFORM=xcb sdn-plot VN  oscil_nds_sdn_topic_sdn_archiver_1789645670492539774.h5   oscil-nds-sdn-topic.NumberOfPushedDataBlocks_Ch0,oscil-nds-sdn-topic.NumberOfPushedDataBlocks_Ch1
+```
+
+Inspect sent and received packets:
+
+```bash
+sudo tcpdump -i enp37s0f0 port 29542
+```
+
+## IOC Driver Configuration
+Configure and create the driver instance in `userPreDriverConf.cmd`. The `ndsCreateDevice` command specifies the SDN network interface, topic name, and driver-mapping XML file:
+
+```bash
+ndsCreateDevice(DeviceNDSSDNPUB, "SDN-0","INTERFACE=lo","TOPICNAME=oscil-nds-sdn-topic","PVS_CONFIG_PATH=../resources/oscil-nds-sdn-conf.xml")
+```
+
+Load the associated EPICS DB or substitutions file to create the driver's state-machine and control-PV records.
+
+You can create as many NDS-SDN driver instances as the application requires. Each instance publishes one SDN topic.
+
 
 ## Dependencies
 

@@ -8704,11 +8704,188 @@ $(pv_value)</tooltip>
           <vertical_alignment>1</vertical_alignment>
           <visible>true</visible>
           <widget_type>Label</widget_type>
-          <width>164</width>
+          <width>130</width>
           <wrap_words>true</wrap_words>
           <wuid>601eab4d:1a168db850a:118d</wuid>
           <x>2481</x>
           <y>132</y>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.polyline" version="1.0.0">
+          <actions hook="false" hook_all="false" />
+          <alarm_pulsing>false</alarm_pulsing>
+          <alpha>255</alpha>
+          <anti_alias>true</anti_alias>
+          <arrow_length>20</arrow_length>
+          <arrows>1</arrows>
+          <backcolor_alarm_sensitive>true</backcolor_alarm_sensitive>
+          <background_color>
+            <color name="IO Background" red="235" green="235" blue="235" />
+          </background_color>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_color>
+            <color name="IO Border" red="0" green="0" blue="0" />
+          </border_color>
+          <border_style>0</border_style>
+          <border_width>2</border_width>
+          <enabled>true</enabled>
+          <fill_arrow>true</fill_arrow>
+          <fill_level>100.0</fill_level>
+          <font>
+            <opifont.name fontName="DejaVu Sans Mono" height="12" style="0" pixels="false">IO Label</opifont.name>
+          </font>
+          <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+          <foreground_color>
+            <color name="IO Link" red="0" green="0" blue="0" />
+          </foreground_color>
+          <height>36</height>
+          <horizontal_fill>true</horizontal_fill>
+          <line_style>0</line_style>
+          <line_width>4</line_width>
+          <name>Polyline Template_29</name>
+          <points>
+            <point x="23373" y="9969" />
+            <point x="23421" y="9969" />
+            <point x="23399" y="9989" />
+            <point x="23421" y="10004" />
+            <point x="23373" y="10004" />
+            <point x="23373" y="9969" />
+          </points>
+          <pv_name></pv_name>
+          <pv_value />
+          <rotation_angle>0.0</rotation_angle>
+          <rules />
+          <scale_options>
+            <width_scalable>false</width_scalable>
+            <height_scalable>false</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <scripts />
+          <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+          <transparent>false</transparent>
+          <visible>true</visible>
+          <widget_type>Polyline</widget_type>
+          <width>49</width>
+          <wuid>601eab4d:1a168db850a:3a51</wuid>
+          <x>23373</x>
+          <y>9969</y>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.polyline" version="1.0.0">
+          <actions hook="false" hook_all="false" />
+          <alarm_pulsing>false</alarm_pulsing>
+          <alpha>255</alpha>
+          <anti_alias>true</anti_alias>
+          <arrow_length>20</arrow_length>
+          <arrows>1</arrows>
+          <backcolor_alarm_sensitive>true</backcolor_alarm_sensitive>
+          <background_color>
+            <color name="IO Background" red="235" green="235" blue="235" />
+          </background_color>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_color>
+            <color name="IO Border" red="0" green="0" blue="0" />
+          </border_color>
+          <border_style>0</border_style>
+          <border_width>2</border_width>
+          <enabled>true</enabled>
+          <fill_arrow>true</fill_arrow>
+          <fill_level>100.0</fill_level>
+          <font>
+            <opifont.name fontName="DejaVu Sans Mono" height="12" style="0" pixels="false">IO Label</opifont.name>
+          </font>
+          <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+          <foreground_color>
+            <color name="IO Link" red="0" green="0" blue="0" />
+          </foreground_color>
+          <height>498</height>
+          <horizontal_fill>true</horizontal_fill>
+          <line_style>0</line_style>
+          <line_width>4</line_width>
+          <name>Polyline Template_16</name>
+          <points>
+            <point x="2841" y="1128" />
+            <point x="2841" y="1625" />
+            <point x="2596" y="1625" />
+            <point x="2596" y="1625" />
+            <point x="2596" y="1625" />
+          </points>
+          <pv_name></pv_name>
+          <pv_value />
+          <rotation_angle>0.0</rotation_angle>
+          <rules />
+          <scale_options>
+            <width_scalable>false</width_scalable>
+            <height_scalable>false</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <scripts />
+          <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+          <transparent>false</transparent>
+          <visible>true</visible>
+          <widget_type>Polyline</widget_type>
+          <width>246</width>
+          <wuid>601eab4d:1a168db850a:3af1</wuid>
+          <x>2596</x>
+          <y>1128</y>
+        </widget>
+        <widget typeId="org.csstudio.opibuilder.widgets.polyline" version="1.0.0">
+          <actions hook="false" hook_all="false" />
+          <alarm_pulsing>false</alarm_pulsing>
+          <alpha>255</alpha>
+          <anti_alias>true</anti_alias>
+          <arrow_length>20</arrow_length>
+          <arrows>1</arrows>
+          <backcolor_alarm_sensitive>true</backcolor_alarm_sensitive>
+          <background_color>
+            <color name="IO Background" red="235" green="235" blue="235" />
+          </background_color>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_color>
+            <color name="IO Border" red="0" green="0" blue="0" />
+          </border_color>
+          <border_style>0</border_style>
+          <border_width>2</border_width>
+          <enabled>true</enabled>
+          <fill_arrow>true</fill_arrow>
+          <fill_level>100.0</fill_level>
+          <font>
+            <opifont.name fontName="DejaVu Sans Mono" height="12" style="0" pixels="false">IO Label</opifont.name>
+          </font>
+          <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+          <foreground_color>
+            <color name="IO Link" red="0" green="0" blue="0" />
+          </foreground_color>
+          <height>429</height>
+          <horizontal_fill>true</horizontal_fill>
+          <line_style>0</line_style>
+          <line_width>4</line_width>
+          <name>Polyline Template_31</name>
+          <points>
+            <point x="2332" y="1218" />
+            <point x="2264" y="1218" />
+            <point x="2264" y="1646" />
+            <point x="2332" y="1646" />
+          </points>
+          <pv_name></pv_name>
+          <pv_value />
+          <rotation_angle>0.0</rotation_angle>
+          <rules />
+          <scale_options>
+            <width_scalable>false</width_scalable>
+            <height_scalable>false</height_scalable>
+            <keep_wh_ratio>false</keep_wh_ratio>
+          </scale_options>
+          <scripts />
+          <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+          <transparent>false</transparent>
+          <visible>true</visible>
+          <widget_type>Polyline</widget_type>
+          <width>69</width>
+          <wuid>601eab4d:1a168db850a:433f</wuid>
+          <x>2264</x>
+          <y>1218</y>
         </widget>
       </widget>
     </widget>

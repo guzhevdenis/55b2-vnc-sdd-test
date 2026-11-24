@@ -224,6 +224,7 @@ record(ai, "D1-I2-HWCF:B-7-DataAcquisitionNode_Ch1-NoB") {
     field(DTYP, "asynInt32")
     field(SCAN, "I/O Intr")
     field(INP, "@asyn(B-7,0)DataAcquisitionNode_Ch1-NumberOfPushedDataBlocks")
+    field(PINI, "YES")
 }
 
 record(ao, "D1-I2-HWCF:B-7-DataAcquisitionNode_Ch1-DMAEnable") {

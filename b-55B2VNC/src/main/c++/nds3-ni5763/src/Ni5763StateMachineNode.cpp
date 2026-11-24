@@ -6,7 +6,7 @@ void Ni5763Main::switchOn_Device() {
     NiFpga_MergeStatus(&status, NiFpga_Open("../../../c++/nds3-ni5763/bitfile/NiFpga_Fission_Chamber_DAQ_FPGA_Top.lvbitx", NiFpga_Fission_Chamber_DAQ_FPGA_Top_Signature, "RIO0", 0, &session));
     
     NiFpga_Run(session, 0);
-
+    
     status = NiFpga_ConfigureFifo2(
         session, NiFpga_Fission_Chamber_DAQ_FPGA_Top_TargetToHostFifoI16_RawData_ToHost_Ch0,
         ConfigFIFO_Depth, &RawData_depth);
@@ -18,6 +18,10 @@ void Ni5763Main::switchOn_Device() {
     status = NiFpga_ConfigureFifo2(
         session, NiFpga_Fission_Chamber_DAQ_FPGA_Top_TargetToHostFifoU32_PulseChain_ToHost_Ch0,
         ConfigFIFO_Depth, &PulseChain_depth);
+
+    RawDataFIFO_Depth_m.push(m_DataAcquisition_Ch0.getTimestamp(), (static_cast<std::int32_t>(RawData_depth)));
+    FluctCountRate_Hz_FIFO_Depth_m.push(m_DataAcquisition_Ch0.getTimestamp(), (static_cast<std::int32_t>(FluctCountRate_Hz_depth)));
+    PulseChainFIFO_Depth_m.push(m_DataAcquisition_Ch0.getTimestamp(), (static_cast<std::int32_t>(PulseChain_depth)));
 }
 
 void Ni5763Main::switchOff_Device() {

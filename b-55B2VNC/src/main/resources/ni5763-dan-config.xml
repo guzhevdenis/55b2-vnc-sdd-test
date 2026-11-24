@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<danApi>
+	<version>1.0</version>
+	<ICprogram name="nds-dan-plugin-ni5763">
+		<source name="PluginNi5763">
+			<itemDanType>danInt16</itemDanType>
+			<maxTransferRate>800000000</maxTransferRate>
+			<deviceInfo>
+				<deviceName>DeviceNDSDANCP</deviceName>
+				<deviceVersion>v1.0</deviceVersion>
+				<operationalMode>0</operationalMode>
+				<manufactureCode>NI5763</manufactureCode>
+			</deviceInfo>
+<!--  			<advancedSource>
+				<streamUserAttributes>
+					<streamAtt name="test1" value="0" unit="TEST" description="Test"/>
+				</streamUserAttributes>
+			</advancedSource> -->
+			<channelsInfo>
+				<channel number="0" variable="DataAcquisitionNode_FissCh-Data" label="CHANNEL0" status="ENABLE">
+					<calibration sourceUnit="Null" calibratedUnit="Volts" calibrationType="raw" />
+				</channel>
+			</channelsInfo>
+		</source>
+		<danStreamer name="DAN3">
+			<link>ALL</link>
+			<internal>
+				<danInterface>ens16f1</danInterface>
+				<servers>
+					<policy >IF_FAIL_NEXT</policy>
+					<server>10.106.142.203:9999</server>
+				</servers>			
+			</internal>
+		</danStreamer>
+	</ICprogram>
+</danApi>
