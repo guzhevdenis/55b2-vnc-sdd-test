@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CBS name="PCF0 Diamond DAQ" description="Two NI5772 boards and NI6683H" enabled="true" opi_file="./../PCF0CORE-DiamondDetectorDAQ.opi" deprecated="false" alarm_root="/CODAC_AlarmHandler/D1"/>
